@@ -107,6 +107,18 @@ h2{font-size:clamp(32px,5vw,50px);margin:16px 0 14px}
 .quote>div{background:var(--surface);border-radius:18px;padding:22px 24px;max-width:760px}
 .quote p{font-family:"Host Grotesk",sans-serif;font-weight:800;color:var(--head);font-size:clamp(26px,3.6vw,38px);line-height:1.1}
 .quote span{display:block;margin-top:10px;color:var(--muted);font-size:15px}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));margin:8px 0 6px}
+@media (min-width:760px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.stat b{display:block;font:800 30px/1.05 "Host Grotesk",sans-serif;color:var(--orange-ink)}
+.stat b small{font-size:.55em;color:var(--muted)}
+.stat span{font-size:14.5px;color:#2A3B57}
+.stat.big{grid-column:span 2}
+.stat.big b{font-size:52px}
+.stat.ok b{color:var(--green)}
+.ask{display:grid;gap:12px;margin-top:20px;max-width:760px}
+.ask p{background:var(--surface);border:1px dashed var(--line);border-radius:18px;padding:16px 20px;color:#2A3B57}
+.ask b{color:var(--head)}
 .pijlers{display:grid;gap:14px}
 @media (min-width:760px){.pijlers{grid-template-columns:repeat(3,1fr)}}
 
@@ -146,7 +158,8 @@ tr.us td{background:var(--orange-bg)}
 .blok li:before{content:"";position:absolute;left:-20px;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--blue2)}
 @media (max-width:560px){.blok ul{padding-left:20px}.blok .labels,.blok>p{padding-left:0!important}}
 .labels{display:grid;gap:10px;margin-top:4px}
-@media (min-width:760px){.labels{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:760px){.labels{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.labels{grid-template-columns:repeat(4,1fr)}}
 .lab{border-radius:16px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);font-size:15px}
 .lab b{display:flex;align-items:center;gap:8px;font:800 18px "Host Grotesk",sans-serif;color:var(--head);margin-bottom:2px}
 .lab b:before{content:"";width:11px;height:11px;border-radius:50%;background:var(--c)}
@@ -185,7 +198,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="by"><img src="media/ruben.jpg" alt="Ruben Feldblum"><div><b>Ruben Feldblum</b><span>Marketing bij ditisABC. Nam de site, zes concurrenten en de zoekcijfers onder de loep.</span></div></div>
     <div class="qa">
         <div class="qa1"><b>Kan de site jaarrond in campagne?</b><span>Ja, zodra de basis staat. Nu komt een aanvraag via het mailadres niet binnen en kent Google de site nog niet.</span></div>
-        <div class="qa1"><b>Wat is duurzaam voor de bezoeker?</b><span>Gered. Daar maakt geen van de zes concurrenten het hoofdverhaal van. Met drie labels (gered, bewust, klassiek) klopt wat er staat.</span></div>
+        <div class="qa1"><b>Wat is duurzaam voor de bezoeker?</b><span>Dat alles wat hij ziet duurzaam is. Nu staat bij 287 van de 467 producten nergens wat er duurzaam aan is. Die passen beter op kadoburo.nl.</span></div>
       </div>
     <div class="knoppen"><a class="btn p" href="tel:+31628530305">Bel of app Michel</a><a class="btn o" href="#eerst">Lees de analyse</a></div>
   </div>
@@ -223,19 +236,30 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <section id="verhaal">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> jullie verhaal</span>
-    <h2>Geschenken van geredde producten</h2>
-    <p class="intro">Op jullie Over ons-pagina staat het sterkste verhaal van de hele site. Alleen leest bijna niemand het daar.</p>
+    <h2>Duurzaam is alles wat de bezoeker ziet</h2>
+    <p class="intro">Jullie hebben kadoburo.nl voor het brede aanbod. Dan mag duurzamegeefmomenten.nl streng zijn: wie hier bestelt, koopt altijd iets duurzaams. Nu klopt dat bij ruim de helft van de producten niet.</p>
+    <div class="stats">
+      <div class="stat big"><b>287 <small>van 467</small></b><span>producten zonder duurzaam kenmerk in naam of omschrijving</span></div>
+      <div class="stat"><b>52 <small>/ 54</small></b><span>Sintpakketten</span></div>
+      <div class="stat"><b>76 <small>/ 81</small></b><span>Paasgeschenken</span></div>
+      <div class="stat"><b>47 <small>/ 48</small></b><span>Zomerpakketten</span></div>
+      <div class="stat"><b>21 <small>/ 21</small></b><span>Fit en Vitaal</span></div>
+      <div class="stat"><b>5 <small>/ 5</small></b><span>Rituals-sets</span></div>
+      <div class="stat ok"><b>0 <small>/ 38</small></b><span>Kerstpakketten Duurzaam: op orde</span></div>
+    </div>
+    <p class="note" style="max-width:70ch">Hoe we telden: alle 467 producten uit de shop, gezocht op termen als biologisch, fairtrade, gerecycled, FSC, bamboe, vegan, circulair, gered en duurzaam. Een ruwe telling op tekst: een product kan duurzamer zijn dan er staat. Dan is het advies hetzelfde: zet het erbij.</p>
+    <div class="quote"><div><p>"Wat geen label krijgt, gaat naar kadoburo.nl."</p><span>Zo blijft duurzamegeefmomenten.nl een site waar een inkoper blind op kan vertrouwen, en verlies je geen omzet: het brede aanbod staat een klik verderop.</span></div></div>
+
+    <h3 style="font-size:26px;margin:40px 0 8px">En dan een vraag aan jullie</h3>
+    <p style="max-width:64ch;color:#2A3B57;margin-bottom:16px">Op jullie Over ons-pagina noemen jullie deze producten. In de shop vinden we ze niet terug: geen van de 467 producten is van geredde of restproducten gemaakt.</p>
     <div class="trio">
       <div class="tile"><div class="ic"><svg width="30" height="30" viewBox="0 0 60 60"><path d="M6 26 H54 C54 42 44 52 30 52 C16 52 6 42 6 26 Z" fill="#418EFF"/><path d="M22 18 C18 13 26 10 22 4 M32 18 C28 13 36 10 32 4" stroke="#418EFF" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div><h3>Soep</h3><p>van restgroenten</p></div>
       <div class="tile"><div class="ic"><svg width="30" height="30" viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="#418EFF"/><circle cx="22" cy="24" r="4" fill="#C6DDFF"/><circle cx="36" cy="20" r="3" fill="#C6DDFF"/><circle cx="38" cy="36" r="4" fill="#C6DDFF"/><circle cx="24" cy="40" r="3" fill="#C6DDFF"/></svg></div><h3>Koekjes</h3><p>van oud brood</p></div>
       <div class="tile"><div class="ic"><svg width="30" height="30" viewBox="0 0 60 60"><path d="M25 4 H35 V16 C35 20 42 22 42 30 V54 C42 56 40 57 38 57 H22 C20 57 18 56 18 54 V30 C18 22 25 20 25 16 Z" fill="#418EFF"/><rect x="18" y="34" width="24" height="12" fill="#C6DDFF"/></svg></div><h3>Bier</h3><p>van geredde aardappelen</p></div>
     </div>
-    <p style="max-width:64ch;color:#2A3B57">Geen van de zes concurrenten maakt van gered en circulair het hoofdverhaal. Dat terrein ligt open. Tegelijk staat er nu een breed regulier assortiment onder de naam "duurzaam": een "Duurzaam kerstpakket" met onder andere Verkade, woksaus en basmatirijst, Sintpakketten met A-merken en Rituals-sets. Een inkoper die zijn keuze intern verantwoordt, ziet dat ook. Dat risico is met een paar duidelijke labels weg.</p>
-    <div class="quote"><div><p>"Geschenken die iets redden."</p><span>Voorstel voor de kernbelofte, ter bespreking. Relatiegeschenken en pakketten van geredde en restproducten, samengesteld in jullie showroom in Nieuw-Vennep, met een impactoverzicht voor het MVO-verslag van je klant.</span></div></div>
-    <div class="pijlers">
-      <div class="li"><div class="L">A</div><div><h3>Gered</h3><p>Wat er gered is (brood, groente, aardappelen) en bij welke maker. Met foto en verhaal.</p></div></div>
-      <div class="li"><div class="L">B</div><div><h3>Gemeten</h3><p>Per bestelling een impactkaart, bijvoorbeeld "Jullie 120 pakketten redden 85 kg voedsel". Daarvoor verzamelen we per product de cijfers van leveranciers.</p></div></div>
-      <div class="li"><div class="L">C</div><div><h3>Persoonlijk</h3><p>Eigen samenstelling en advies in de showroom, met gezichten: Patrick en Lonneke.</p></div></div>
+    <div class="ask">
+      <p><b>Leveren jullie die?</b> Dan is dát jullie sterkste verhaal. Geen van de zes concurrenten maakt van geredde producten het hoofdverhaal. Dan bouwen we er pakketten, een makerspagina en per bestelling een impactoverzicht omheen.</p>
+      <p><b>Leveren jullie die niet (meer)?</b> Dan halen we ze van de Over ons-pagina. Een belofte die de shop niet waarmaakt, kost vertrouwen.</p>
     </div>
   </div>
 </section>
@@ -254,7 +278,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         <tr><td><b>Greengiving</b></td><td>Bedrukte eco-giveaways</td><td><span class="chip">Green Score per product</span></td><td>Gemiddeld: EcoVadis Zilver</td><td>Trusted Shops 9,6 (442)</td></tr>
         <tr><td><b>Duurzamekerstpakketten.com</b></td><td>Kerstpakketten uit showroom, sinds 1995</td><td><span class="chip">Groene logistiek</span></td><td>Zwak: algemene MVO-tekst</td><td>2 testimonials</td></tr>
         <tr><td><b>SocialGoodz</b></td><td>Relatiegeschenken met logo en sociale impact</td><td><span class="chip">Sociale werkplaatsen</span></td><td>Onbekend</td><td>Niet gevonden</td></tr>
-        <tr class="us"><td><b>Duurzame Geefmomenten</b></td><td>"Voor organisaties die vooruitdenken"</td><td><span class="chip" style="background:#fff;color:var(--orange-ink)">Gered, nog niet uitgewerkt</span></td><td>Geen</td><td>Geen</td></tr>
+        <tr class="us"><td><b>Duurzame Geefmomenten</b></td><td>"Voor organisaties die vooruitdenken"</td><td><span class="chip" style="background:#fff;color:var(--orange-ink)">Nog geen keuze</span></td><td>Geen: ruim de helft zonder duurzaam kenmerk</td><td>Geen</td></tr>
       </tbody>
     </table></div>
     <p class="note">Eén naam uit jullie lijst konden we niet vinden (purelabsl.nl). Welke partij bedoelden jullie? Dan nemen we die mee. SocialGoodz was niet volledig te bekijken; dat profiel is gebaseerd op zoekresultaten.</p>
@@ -262,9 +286,9 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <h3 style="font-size:26px;margin:40px 0 12px">Wat niemand goed doet</h3>
     <div class="list">
       <div class="li"><div class="L">A</div><div><h3>Impact meetbaar maken per bestelling</h3><p>Niemand geeft de klant een impactrapport, bijvoorbeeld kilo's geredde voeding. Inkopers hebben dat nodig voor hun MVO-verslag.</p></div></div>
-      <div class="li"><div class="L">B</div><div><h3>Verhalen van makers</h3><p>Nergens zie je de bakker die oud brood tot koekjes maakt. Juist bij circulaire producten ligt dat voor de hand.</p></div></div>
+      <div class="li"><div class="L">B</div><div><h3>Verhalen van makers</h3><p>Nergens zie je wie het product maakt. Juist bij duurzame producten ligt dat voor de hand.</p></div></div>
       <div class="li"><div class="L">C</div><div><h3>Circulair als kern</h3><p>Geredde en restproducten zijn bij geen enkele concurrent het hoofdverhaal.</p></div></div>
-      <div class="li"><div class="L">D</div><div><h3>Open zijn over het assortiment</h3><p>Alleen More Than Gifts benoemt het dilemma van niet-duurzame producten. Dat maakt een breed aanbod geloofwaardig.</p></div></div>
+      <div class="li"><div class="L">D</div><div><h3>Per product laten zien waarom</h3><p>Alleen More Than Gifts benoemt het dilemma van niet-duurzame producten. Wie bij elk product laat zien wat er duurzaam aan is, valt op.</p></div></div>
       <div class="li"><div class="L">E</div><div><h3>Kiezen op budget én duurzaamheid</h3><p>Niemand laat inkopers op beide tegelijk filteren.</p></div></div>
     </div>
   </div>
@@ -297,7 +321,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
             <tr><td>circulair kerstpakket</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td></tr>
           </tbody>
         </table></div>
-        <p class="note">Moeilijkheid op een schaal van 0 tot 100. Niemand zoekt op "circulair": dat is het verhaal, niet de paginanaam. Gebruik "duurzaam kerstpakket" als titel en vertel daaronder wat er gered is.</p>
+        <p class="note">Moeilijkheid op een schaal van 0 tot 100. Niemand zoekt op "circulair": dat is het verhaal, niet de paginanaam. Gebruik "duurzaam kerstpakket" als titel en vertel daaronder per pakket wat er duurzaam aan is.</p>
       </div>
     </div>
   </div>
@@ -320,17 +344,18 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         </ul>
       </div>
       <div class="blok">
-        <div class="hd"><div class="L">B</div><h3>Eén helder verhaal</h3></div>
+        <div class="hd"><div class="L">B</div><h3>Een duurzaam assortiment</h3></div>
         <ul>
           <li>Homepage opnieuw opbouwen: kernbelofte als H1, knoppen "Bekijk kerstpakketten 2026" en "Vraag advies aan", daaronder showroom, vanaf 12 stuks, gratis levering vanaf €500.</li>
-          <li>Het verhaal van gered en circulair, met 2 tot 3 makers en jullie video "Een kijkje in onze keuken".</li>
+          <li>Elk product doorlopen. Wat geen label krijgt, gaat naar kadoburo.nl. Leveren jullie geredde producten, dan worden die het hoofdverhaal, met 2 tot 3 makers en jullie video "Een kijkje in onze keuken".</li>
           <li>Navigatie per moment, per budget (tot €15, €15 tot €30, €30 tot €50, €50+) en per duurzaamheid.</li>
-          <li>Elk product een label, met een pagina "Hoe wij kiezen" die uitlegt waarom er ook klassieke producten zijn:</li>
+          <li>Elk product een label, met een pagina "Hoe wij kiezen" die per label uitlegt wat het betekent:</li>
         </ul>
         <div class="labels" style="padding-left:68px">
-          <div class="lab" style="--c:var(--green-base)"><b>Gered &amp; circulair</b>Hoofdbestanddelen van geredde of restproducten</div>
-          <div class="lab" style="--c:var(--blue)"><b>Bewust</b>Keurmerk (EKO, Fairtrade, FSC) of gerecycled materiaal</div>
-          <div class="lab" style="--c:var(--yellow)"><b>Klassiek</b>Geen duurzaamheidsclaim, wel een mooi cadeau</div>
+          <div class="lab" style="--c:var(--green-base)"><b>Gerecycled</b>Van gerecycled materiaal of geredde producten</div>
+          <div class="lab" style="--c:var(--blue)"><b>Biologisch of fairtrade</b>Met keurmerk, zoals EKO, Skal of Fairtrade</div>
+          <div class="lab" style="--c:var(--yellow)"><b>Natuurlijk materiaal</b>FSC-hout, bamboe of kurk</div>
+          <div class="lab" style="--c:var(--orange)"><b>Circulair</b>Herbruikbaar, navulbaar of terug te nemen</div>
         </div>
       </div>
       <div class="blok">
