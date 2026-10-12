@@ -254,6 +254,41 @@ footer{padding:26px 0;font-size:13px;color:var(--zacht);text-align:center}
   v.forEach(function(a){a.addEventListener('play',function(){v.forEach(function(b){if(b!==a)b.pause()})})});
 })();
 </script>
-<!-- Plek voor jullie eigen analytics-snippet, zodat je ziet wanneer de pagina bekeken wordt -->
+<script>
+/* Bezoekmelding: stuurt Michel een mail bij openen, afspelen en klikken. Geen cookies.
+   Eigen apparaat uitsluiten: open de pagina eenmalig met ?ik=1 (weer aan met ?ik=0). */
+(function(){
+  var PAGE='ditisdressing', q=location.search;
+  function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
+  if(/[?&]ik=1/.test(q))ls('ditisabc-intern','1'); if(/[?&]ik=0/.test(q))ls('ditisabc-intern',null);
+  if(ls('ditisabc-intern')==='1')return;
+  var sid; try{sid=sessionStorage.getItem('dsid')||Math.random().toString(36).slice(2,8);sessionStorage.setItem('dsid',sid)}catch(e){sid=Math.random().toString(36).slice(2,8)}
+  var sent={};
+  function ping(e){
+    if(sent[e])return; sent[e]=1;
+    var d=JSON.stringify({page:PAGE,e:e,sid:sid,ref:document.referrer});
+    try{ if(navigator.sendBeacon&&navigator.sendBeacon('/api/ping/',new Blob([d],{type:'text/plain'})))return; }catch(x){}
+    try{ fetch('/api/ping/',{method:'POST',body:d,keepalive:true,headers:{'Content-Type':'text/plain'}}); }catch(x){}
+  }
+  ping('open');
+  var vids=document.querySelectorAll('video'), hoofd=vids[0], reel=vids[1];
+  if(hoofd){
+    hoofd.addEventListener('play',function(){ping('play')});
+    hoofd.addEventListener('timeupdate',function(){
+      if(!hoofd.duration)return; var f=hoofd.currentTime/hoofd.duration;
+      if(f>=.25)ping('p25'); if(f>=.5)ping('p50'); if(f>=.95)ping('p100');
+    });
+  }
+  if(reel)reel.addEventListener('play',function(){ping('reel')});
+  var t=document.getElementById('track');
+  if(t)t.addEventListener('scroll',function(){if(t.scrollLeft>t.clientWidth*.5)ping('carr')},{passive:true});
+  [].forEach.call(document.querySelectorAll('a[href]'),function(a){
+    var h=a.getAttribute('href');
+    var e=/^tel:/.test(h)?'bel':/wa\.me/.test(h)?'app':/^mailto:/.test(h)?'mail':null;
+    if(e)a.addEventListener('click',function(){ping(e)});
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
