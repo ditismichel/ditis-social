@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>ditisABC breidt uit: welkom foome! | ditisABC</title>
+<meta name="description" content="Vanaf 1 november gaat foome uit Sassenheim verder als onderdeel van ditisABC in Hillegom. Lees wat dit voor jou betekent en hoe je ons bereikt.">
+<meta property="og:title" content="ditisABC breidt uit: welkom foome!">
+<meta property="og:description" content="Vanaf 1 november één team voor je website én je zichtbaarheid. Lees wat dit voor jou betekent.">
+<meta property="og:image" content="https://www.ditis.social/foome/media/poster.jpg">
+<meta property="og:url" content="https://www.ditis.social/foome/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#418eff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;700;800&family=Geist:wght@400;500;600&display=swap">
+<style>
+/* Stijl: ditisABC-concept van Chelsea Doeleman. Host Grotesk koppen, Geist tekst,
+   blauw paneel met pixelpatroon, witte kaarten, pixelvormige stippen als markeringen. */
+:root {
+  --page: #f5fbff;
+  --surface: #ffffff;
+  --ink: #003e99;
+  --ink-deep: #00132e;
+  --muted: #3a5a8c;
+  --line: #d9e8fb;
+  --blue: #418eff;
+  --blue-tint: #c6ddff;
+  --blue-pattern: #67a5ff;
+  --on-blue: #ffffff;
+  --orange: #ff7141;
+  --yellow: #fcb72b;
+  --green: #4c893b;
+  --quote-bg: #00132e;
+  --quote-ink: #f5fbff;
+  --quote-muted: #c6ddff;
+  --display: "Host Grotesk", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Geist", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #00132e; --surface: #0a2147; --ink: #eef5ff; --ink-deep: #ffffff; --muted: #b3c8e8;
+    --line: #1d3a66; --blue: #2f6fd6; --blue-tint: #1d3a66; --blue-pattern: #4a86e8; --on-blue: #ffffff;
+    --green: #6fb35c; --quote-bg: #0a2147; --quote-ink: #f5fbff; --quote-muted: #b3c8e8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #00132e; --surface: #0a2147; --ink: #eef5ff; --ink-deep: #ffffff; --muted: #b3c8e8;
+  --line: #1d3a66; --blue: #2f6fd6; --blue-tint: #1d3a66; --blue-pattern: #4a86e8; --on-blue: #ffffff;
+  --green: #6fb35c; --quote-bg: #0a2147; --quote-ink: #f5fbff; --quote-muted: #b3c8e8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.08; letter-spacing: -0.015em; margin: 0; color: var(--ink); text-wrap: balance; }
+h2 { font-size: clamp(1.875rem, 4.4vw, 2.875rem); }
+p { margin: 0; }
+
+/* Pixelstip uit het concept */
+.px { display: inline-block; width: 0.9em; height: 0.9em; flex: none; vertical-align: -0.1em; }
+.px path { fill: currentColor; }
+
+/* Kop */
+header.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.logo-abc {
+  display: block; width: 168px; aspect-ratio: 200 / 30; background: var(--blue);
+  -webkit-mask: url(media/ditisabc-logo.svg) left center / contain no-repeat;
+  mask: url(media/ditisabc-logo.svg) left center / contain no-repeat;
+}
+:root[data-theme="dark"] .logo-abc { background: #67a5ff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-abc { background: #67a5ff; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 10px 22px;
+  border-radius: 999px; font: 700 1rem/1.2 var(--display); text-decoration: none; white-space: nowrap;
+  transition: transform .15s, background-color .15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible, .mail-row a:focus-visible, .route:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.btn-primary { background: var(--blue); color: var(--ink-deep); }
+:root[data-theme="dark"] .btn-primary { color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary { color: #fff; } }
+.btn-primary::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+.btn-ghost { border: 1.5px solid var(--blue); color: var(--ink); background: transparent; }
+
+/* Held */
+.hero {
+  position: relative; border-radius: 28px; overflow: hidden; background-color: var(--blue);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cpath transform='translate(9.5 9.5)' fill='%2367a5ff' d='M9.625 2.42V1.705a.33.33 0 0 0-.33-.33H8.58a.33.33 0 0 1-.33-.33V.33A.33.33 0 0 0 7.92 0H3.08a.33.33 0 0 0-.33.33v.715a.33.33 0 0 1-.33.33h-.715a.33.33 0 0 0-.33.33v.715a.33.33 0 0 1-.33.33H.33a.33.33 0 0 0-.33.33v4.84c0 .182.148.33.33.33h.715a.33.33 0 0 1 .33.33v.715c0 .182.148.33.33.33h.715a.33.33 0 0 1 .33.33v.715c0 .182.148.33.33.33h4.84a.33.33 0 0 0 .33-.33v-.715a.33.33 0 0 1 .33-.33h.715a.33.33 0 0 0 .33-.33v-.715a.33.33 0 0 1 .33-.33h.715a.33.33 0 0 0 .33-.33V3.08a.33.33 0 0 0-.33-.33h-.715a.33.33 0 0 1-.33-.33Z'/%3E%3C/svg%3E");
+  background-size: 30px 30px;
+  padding: clamp(16px, 5vw, 72px);
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(16px, 3vw, 40px); align-items: center;
+}
+.hero-card { background: var(--surface); border-radius: 26px; padding: clamp(24px, 4vw, 48px); display: grid; gap: 20px; }
+.tag {
+  justify-self: start; display: inline-flex; align-items: center; gap: 7px; padding: 4px 14px;
+  border: 1.5px solid var(--green); border-radius: 999px; color: var(--green); font: 400 1.0625rem/1.4 var(--display);
+}
+.tag b { font-weight: 700; }
+.hero h1 { font-size: clamp(2.375rem, 6vw, 4.25rem); }
+.lede { color: var(--muted); font-size: 1.125rem; max-width: 58ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.lockup {
+  background: var(--surface); border-radius: 26px; padding: clamp(24px, 4vw, 44px);
+  display: grid; gap: 22px; justify-items: center; text-align: center;
+}
+.lockup .marks { display: grid; gap: 18px; justify-items: center; width: 100%; }
+.lockup .logo-abc { width: min(240px, 80%); }
+.lockup .plus { width: 44px; height: 44px; color: var(--ink-deep); }
+.lockup .plus .plus-cross { fill: var(--surface); }
+.lockup .foome { width: min(230px, 76%); height: auto; }
+.lockup .when { font: 800 1.375rem/1.2 var(--display); }
+.lockup .when span { display: block; font: 400 1rem/1.4 var(--body); color: var(--muted); margin-top: 4px; }
+
+/* Secties */
+section.block { padding-block: clamp(56px, 9vw, 104px) 0; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 80px); align-items: start; }
+.prose { display: grid; gap: 18px; color: var(--muted); font-size: 1.125rem; max-width: 60ch; }
+.prose strong { color: var(--ink); }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.facts li {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 22px;
+}
+.facts .px { width: 18px; height: 18px; grid-row: span 2; }
+.facts b { font: 800 1.25rem/1.2 var(--display); color: var(--ink); }
+.facts span { color: var(--muted); font-size: 0.98rem; }
+
+/* Pascale */
+.quote { background: var(--quote-bg); color: var(--quote-ink); border-radius: 28px; padding: clamp(28px, 6vw, 72px); display: grid; gap: 26px; }
+.quote h2 { color: var(--quote-ink); font-size: clamp(1.5rem, 3vw, 2rem); display: flex; align-items: center; gap: 12px; }
+.quote h2 .px { color: var(--orange); }
+.quote blockquote { margin: 0; font: 400 clamp(1.1875rem, 2.2vw, 1.5rem)/1.55 var(--display); max-width: 62ch; display: grid; gap: 16px; }
+.quote figcaption { color: var(--quote-muted); font-size: 1rem; }
+.quote figcaption b { color: var(--quote-ink); font-family: var(--display); }
+
+/* A B C */
+.abc { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.abc li { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: grid; gap: 12px; align-content: start; }
+.abc .letter { position: relative; width: 56px; height: 56px; display: grid; place-items: center; color: var(--ink-deep); font: 800 1.5rem/1 var(--display); }
+.abc .letter .px { position: absolute; inset: 0; width: 100%; height: 100%; }
+.abc .letter i { position: relative; font-style: normal; }
+.abc li:nth-child(1) .px { color: var(--orange); }
+.abc li:nth-child(2) .px { color: var(--yellow); }
+.abc li:nth-child(3) .px { color: #7fb06f; }
+.abc h3 { font-size: 1.375rem; }
+.abc p { color: var(--muted); }
+
+/* 14 jaar */
+.birthday { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: clamp(32px, 5vw, 56px); }
+.birthday .big { position: relative; width: clamp(110px, 16vw, 168px); aspect-ratio: 1; display: grid; place-items: center; color: var(--ink-deep); font: 800 clamp(2.75rem, 6vw, 4.5rem)/1 var(--display); }
+.birthday .big .px { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--yellow); }
+.birthday .big i { position: relative; font-style: normal; }
+.birthday .prose { max-width: 56ch; }
+
+/* Contact */
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: clamp(24px, 5vw, 56px); display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 56px); margin-top: 32px; }
+.contact h2 { font-size: clamp(1.75rem, 3.6vw, 2.5rem); }
+.hours { color: var(--muted); margin-top: 8px; }
+.phone { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px; font: 800 clamp(1.75rem, 4vw, 2.5rem)/1.1 var(--display); color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; }
+.phone .px { color: var(--blue); width: 0.7em; height: 0.7em; }
+.phone:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.mails { list-style: none; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.mail-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 20px; align-items: baseline; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.mail-row span { color: var(--muted); }
+.mail-row a { font: 700 1.0625rem/1.3 var(--display); color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.mail-row a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.visit { display: grid; gap: 18px; align-content: start; }
+.visit img { width: min(280px, 100%); height: auto; }
+.visit h3 { font-size: 1.375rem; }
+.visit address { font-style: normal; color: var(--muted); }
+.visit address b { color: var(--ink); font-family: var(--display); }
+.route { justify-self: start; }
+
+footer.sign { margin-top: clamp(56px, 9vw, 96px); background: var(--blue); color: var(--on-blue); }
+footer.sign .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; justify-content: space-between; align-items: center; padding-block: 36px; }
+footer.sign .claim { font: 800 clamp(1.375rem, 3vw, 1.875rem)/1.2 var(--display); }
+footer.sign .meta { display: grid; gap: 2px; font-size: 0.98rem; }
+footer.sign a { color: var(--on-blue); font-weight: 600; }
+:root[data-theme="dark"] footer.sign { background: #0a2147; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) footer.sign { background: #0a2147; } }
+
+@media (max-width: 900px) {
+  .hero, .split, .contact { grid-template-columns: minmax(0, 1fr); }
+  .abc { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .hero { border-radius: 20px; background-size: 24px 24px; }
+  .hero-card, .lockup { border-radius: 18px; }
+  .birthday { grid-template-columns: minmax(0, 1fr); }
+  .mail-row { grid-template-columns: minmax(0, 1fr); }
+  .btn { white-space: normal; }
+  header.bar .btn { min-height: 40px; padding: 8px 16px; font-size: 0.9375rem; white-space: nowrap; }
+  .logo-abc { width: 140px; }
+  .lockup .logo-abc { width: min(220px, 80%); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="px" viewBox="0 0 16 16"><path fill="currentColor" d="M14 3.52V2.48a.48.48 0 0 0-.48-.48h-1.04a.48.48 0 0 1-.48-.48V.48a.48.48 0 0 0-.48-.48H4.48A.48.48 0 0 0 4 .48v1.04a.48.48 0 0 1-.48.48H2.48a.48.48 0 0 0-.48.48v1.04a.48.48 0 0 1-.48.48H.48a.48.48 0 0 0-.48.48v7.04c0 .265.215.48.48.48h1.04c.265 0 .48.215.48.48v1.04c0 .265.215.48.48.48h1.04c.265 0 .48.215.48.48v1.04c0 .265.215.48.48.48h7.04a.48.48 0 0 0 .48-.48v-1.04a.48.48 0 0 1 .48-.48h1.04a.48.48 0 0 0 .48-.48v-1.04a.48.48 0 0 1 .48-.48h1.04a.48.48 0 0 0 .48-.48V4.48a.48.48 0 0 0-.48-.48h-1.04a.48.48 0 0 1-.48-.48Z"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="bar">
+    <a href="https://ditisabc.nl" target="_blank" rel="noopener" aria-label="ditisABC, naar ditisabc.nl"><span class="logo-abc"></span></a>
+    <a class="btn btn-primary" href="#contact">Zo bereik je ons</a>
+  </header>
+
+  <section class="hero" aria-labelledby="titel">
+    <div class="hero-card">
+      <span class="tag">dit is <svg class="px" aria-hidden="true"><use href="#px"/></svg> <b>nieuws</b></span>
+      <h1 id="titel">ditisABC breidt uit: welkom foome!</h1>
+      <p class="lede">We zijn trots om een prachtige mijlpaal met je te delen: ditisABC slaat de armen ineen met foome. Lees hieronder wat dit voor jou betekent en hoe we onze dienstverlening nog beter inzetten voor jouw groei.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#voor-jou">Wat betekent dit voor jou?</a>
+        <a class="btn btn-ghost" href="#contact">Zo bereik je ons</a>
+      </div>
+    </div>
+    <div class="lockup">
+      <div class="marks">
+        <span class="logo-abc" role="img" aria-label="ditisABC"></span>
+        <svg class="plus" viewBox="0 0 34 34" aria-hidden="true"><path fill="currentColor" d="M29.75 7.48V5.27c0-.564-.456-1.02-1.02-1.02h-2.21c-.564 0-1.02-.456-1.02-1.02V1.02C25.5.456 25.044 0 24.48 0H9.52C8.956 0 8.5.456 8.5 1.02v2.21c0 .564-.456 1.02-1.02 1.02H5.27c-.564 0-1.02.456-1.02 1.02v2.21c0 .564-.456 1.02-1.02 1.02H1.02C.456 8.5 0 8.956 0 9.52v14.96c0 .564.456 1.02 1.02 1.02h2.21c.564 0 1.02.456 1.02 1.02v2.21c0 .564.456 1.02 1.02 1.02h2.21c.564 0 1.02.456 1.02 1.02v2.21c0 .564.456 1.02 1.02 1.02h14.96c.564 0 1.02-.456 1.02-1.02v-2.21c0-.564.456-1.02 1.02-1.02h2.21c.564 0 1.02-.456 1.02-1.02v-2.21c0-.564.456-1.02 1.02-1.02h2.21c.564 0 1.02-.456 1.02-1.02V9.52c0-.564-.456-1.02-1.02-1.02h-2.21c-.564 0-1.02-.456-1.02-1.02Z"/><path class="plus-cross" d="M16 10h2v6h6v2h-6v6h-2v-6h-6v-2h6z"/></svg>
+        <img class="foome" src="media/foome-logo.png" alt="foome" width="872" height="152">
+      </div>
+      <p class="when">Vanaf 1 november één team<span>voor je website én je zichtbaarheid, in Hillegom</span></p>
+    </div>
+  </section>
+
+  <section class="block split" aria-labelledby="krachten">
+    <div class="prose">
+      <h2 id="krachten">Twee agencies bundelen de krachten</h2>
+      <p>Vanaf 1 november gaat marketingbureau foome uit Sassenheim verder als onderdeel van ditisABC in Hillegom. foome zorgt sinds 2018 voor social media, content en advertenties die ondernemers zichtbaar maken.</p>
+      <p>We zitten om de hoek bij elkaar en zagen allebei hetzelfde: ondernemers willen <strong>één partner voor hun website én voor hun zichtbaarheid</strong>. Daarom bundelen we onze krachten.</p>
+    </div>
+    <ul class="facts">
+      <li><svg class="px" style="color:var(--orange)" aria-hidden="true"><use href="#px"/></svg><b>Sinds 2018</b><span>foome maakt ondernemers zichtbaar met social media, content en advertenties</span></li>
+      <li><svg class="px" style="color:var(--yellow)" aria-hidden="true"><use href="#px"/></svg><b>Sassenheim en Hillegom</b><span>twee bureaus uit de Bollenstreek, om de hoek bij elkaar</span></li>
+      <li><svg class="px" style="color:var(--green)" aria-hidden="true"><use href="#px"/></svg><b>1 november</b><span>vanaf dan werken we samen verder als ditisABC</span></li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="pascale">
+    <figure class="quote" style="margin:0">
+      <h2 id="pascale"><svg class="px" aria-hidden="true"><use href="#px"/></svg>Een persoonlijk woord van Pascale</h2>
+      <blockquote>
+        <p>In 2018 ben ik foome begonnen, en ik ben trots op wat we sindsdien samen met onze klanten hebben neergezet. Het afgelopen jaar is er veel gebeurd, en er komt nog iets moois bij: ik ben zwanger.</p>
+        <p>Ik wilde twee dingen tegelijk: mijn klanten en mijn team goed overdragen, en de tijd en rust nemen voor mijn zwangerschap. Ik ben blij dat ik daarvoor bij ditisABC terecht kon. Mijn team gaat mee naar Hillegom, dus je werkt met dezelfde vertrouwde gezichten.</p>
+        <p>Tot mijn verlof zorg ik zelf voor een zorgvuldige overdracht. Daarna wil ik me richten op CRO en strategie, en het idee dat ik daarvoor weer bij ditisABC kan aankloppen, vind ik een mooi vooruitzicht.</p>
+      </blockquote>
+      <figcaption><b>Pascale Griffioen</b>, oprichter van foome</figcaption>
+    </figure>
+  </section>
+
+  <section class="block" id="voor-jou" aria-labelledby="betekent">
+    <h2 id="betekent">Wat betekent dit voor jou?</h2>
+    <ul class="abc">
+      <li>
+        <span class="letter"><svg class="px" aria-hidden="true"><use href="#px"/></svg><i>A</i></span>
+        <h3>Meer marketingkracht</h3>
+        <p>Je krijgt er extra kennis van social media, content en advertising bij, zodat je online nog harder kunt groeien.</p>
+      </li>
+      <li>
+        <span class="letter"><svg class="px" aria-hidden="true"><use href="#px"/></svg><i>B</i></span>
+        <h3>Vertrouwde basis</h3>
+        <p>Je afspraken blijven zoals ze zijn, en je werkt met dezelfde mensen als nu. Verandert er iets? Dan hoor je het ruim van tevoren.</p>
+      </li>
+      <li>
+        <span class="letter"><svg class="px" aria-hidden="true"><use href="#px"/></svg><i>C</i></span>
+        <h3>Grotere capaciteit</h3>
+        <p>Dankzij het grotere team kunnen we sneller en flexibeler inspringen op jouw vragen en uitdagingen.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="jaar">
+    <div class="birthday">
+      <span class="big" aria-hidden="true"><svg class="px"><use href="#px"/></svg><i>14</i></span>
+      <div class="prose">
+        <h2 id="jaar">ditisABC bestaat 14 jaar!</h2>
+        <p>En er is nog meer te vieren: in oktober bestaat ditisABC 14 jaar. Dat vierden we op 14 oktober op ons kantoor in Hillegom, met taart en voor het eerst met het hele nieuwe team bij elkaar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" aria-labelledby="bereik">
+    <div class="prose">
+      <h2>Samen bouwen we de toekomst</h2>
+      <p>We kijken ernaar uit om de opgebouwde samenwerking met nog meer slagkracht voort te zetten. Heb je vragen over deze uitbreiding of wil je weten wat onze nieuwe expertises voor jouw organisatie kunnen betekenen? Laat het ons gerust weten.</p>
+    </div>
+
+    <div class="contact">
+      <div>
+        <h2 id="bereik">Zo bereik je ons</h2>
+        <p class="hours">We zijn er op werkdagen van 08:30 tot 17:00.</p>
+        <a class="phone" href="tel:+31233020409"><svg class="px" aria-hidden="true"><use href="#px"/></svg>023 302 04 09</a>
+        <ul class="mails">
+          <li class="mail-row"><span>Je website, hosting of een storing</span><a href="mailto:support@ditisabc.nl">support@ditisabc.nl</a></li>
+          <li class="mail-row"><span>Een lopend project</span><a href="mailto:project@ditisabc.nl">project@ditisabc.nl</a></li>
+          <li class="mail-row"><span>Social media, content en advertenties</span><a href="mailto:marketing@ditisabc.nl">marketing@ditisabc.nl</a></li>
+          <li class="mail-row"><span>Je factuur</span><a href="mailto:administratie@ditisabc.nl">administratie@ditisabc.nl</a></li>
+          <li class="mail-row"><span>Al het andere</span><a href="mailto:hallo@ditisabc.nl">hallo@ditisabc.nl</a></li>
+        </ul>
+      </div>
+      <div class="visit">
+        <img src="media/michel.webp" alt="Michel Goulmy aan de telefoon" width="600" height="533" decoding="async">
+        <h3>Kom gerust langs</h3>
+        <address><b>ditisABC</b><br>Satellietbaan 41A<br>2181 MG Hillegom</address>
+        <p class="hours">Liever eerst een afspraak? Bel of mail ons, dan plannen we een moment dat jou past.</p>
+        <a class="btn btn-ghost route" href="https://www.google.com/maps/search/?api=1&amp;query=ditisABC%2C+Satellietbaan+41A%2C+2181+MG+Hillegom" target="_blank" rel="noopener">Route plannen</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="sign">
+  <div class="wrap">
+    <p class="claim">Hét webbureau uit de Bollenstreek</p>
+    <div class="meta">
+      <a href="https://ditisabc.nl" target="_blank" rel="noopener">ditisabc.nl</a>
+      <span>foome is vanaf 1 november onderdeel van ditisABC</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
