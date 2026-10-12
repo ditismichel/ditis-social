@@ -1,0 +1,12 @@
+{
+  "name": "ditis-social",
+  "version": "1.0.0",
+  "description": "Persoonlijke pitchpagina's van ditisABC",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
