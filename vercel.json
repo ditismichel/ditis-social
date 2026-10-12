@@ -1,0 +1,9 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/", "destination": "https://www.ditisabc.nl", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
+  ]
+}
