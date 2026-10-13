@@ -242,29 +242,11 @@ td small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .seg button{font:600 15px "Geist",sans-serif;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}
 .seg button small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
 .seg button[aria-pressed="true"]{border-color:var(--head);box-shadow:inset 0 0 0 1.5px var(--head);background:var(--blue4)}
-.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px}
-.days button{flex:0 0 auto;font:600 14px "Geist",sans-serif;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:8px 12px;cursor:pointer;color:var(--ink);text-align:center}
-.days button small{display:block;font-weight:400;color:var(--muted);font-size:12px}
-.days button[aria-pressed="true"]{border-color:var(--head);background:var(--head);color:#fff}
-.days button[aria-pressed="true"] small{color:#C6DDFF}
-.times{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
-.times button{font:600 15px "Geist",sans-serif;border:1.5px solid var(--blue3);background:#fff;color:var(--head);border-radius:12px;padding:9px 14px;cursor:pointer}
-.times button[aria-pressed="true"]{background:var(--blue2);border-color:var(--blue2);color:var(--ink)}
-.afform{display:grid;gap:10px;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
-.afform .gek{font-weight:600;color:var(--head)}
-.afform label{display:grid;gap:4px;font-size:14px;color:var(--muted)}
-.afform input,.afform textarea{font:16px "Geist",sans-serif;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink);background:#fff;width:100%}
-.afform .two{display:grid;gap:10px}
-@media (min-width:640px){.afform .two{grid-template-columns:1fr 1fr}}
-.afform button[type=submit]{justify-self:start;cursor:pointer}
+.alt{background:var(--blue4);border-radius:16px;padding:16px 18px;color:#2A3B57;margin-top:6px}
+.alt a{color:var(--head);font-weight:600}
 .gcal{margin-top:6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
 .gcal iframe{display:block;width:100%;height:640px;border:0}
 @media (max-width:640px){.gcal iframe{height:760px}}
-.gnote{font-size:14px;color:var(--green);margin:4px 0 8px}
-.afok{margin-top:14px;background:var(--green-bg);border-radius:16px;padding:16px;color:var(--green)}
-.afok b{display:block;font:800 19px "Host Grotesk",sans-serif;margin-bottom:4px}
-.afok a{color:var(--green);font-weight:600}
-.err{color:var(--orange-ink);font-size:14px}
 
 /* cta */
 .cta{padding:16px 0 56px}
@@ -529,29 +511,14 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
       </div>
       <div class="plan">
         <h3>Plan direct een afspraak</h3>
-        <p class="sm">Kies hoe en wanneer. De tijden komen rechtstreeks uit Michels agenda.</p>
+        <p class="sm">Kies hoe je wilt afspreken en kies een tijd. De afspraak staat dan direct in Michels agenda en je krijgt zelf een uitnodiging.</p>
         <div class="seg" id="seg">
           <button type="button" data-t="bel" aria-pressed="true">Bellen<small>30 minuten, Michel belt jou</small></button>
-          <button type="button" data-t="hil" aria-pressed="false">Bij ons in Hillegom<small>1 uur, koffie staat klaar</small></button>
-          <button type="button" data-t="nv" aria-pressed="false">In jullie showroom<small>1 uur, Michel komt naar Nieuw-Vennep</small></button>
+          <button type="button" data-t="hil" aria-pressed="false">Bij ons in Hillegom<small>Op kantoor, koffie staat klaar</small></button>
+          <button type="button" data-t="nv" aria-pressed="false">In jullie showroom<small>Michel komt naar Nieuw-Vennep</small></button>
         </div>
-        <p class="gnote" id="gnote" hidden>Kies een tijd. De afspraak staat dan direct in Michels agenda en je krijgt zelf een uitnodiging.</p>
-        <div class="gcal" id="gcal" hidden></div>
-        <div class="days" id="days"></div>
-        <div class="times" id="times"></div>
-        <p class="sm" id="geen" hidden>Geen vrije tijd meer in deze periode. App Michel even, dan prikken we samen een moment.</p>
-        <form class="afform" id="afform" hidden novalidate>
-          <div class="gek" id="gekozen"></div>
-          <div class="two">
-            <label>Naam<input name="naam" autocomplete="name" required maxlength="80" value="Patrick Vergeer"></label>
-            <label>Telefoon<input name="tel" type="tel" autocomplete="tel" maxlength="30" placeholder="Waarop Michel je kan bereiken"></label>
-          </div>
-          <label>E-mail (voor de uitnodiging)<input name="mail" type="email" autocomplete="email" maxlength="120" placeholder="naam@kadoburo.nl"></label>
-          <label>Wil je vooraf iets meegeven?<textarea name="opm" rows="2" maxlength="500"></textarea></label>
-          <button class="btn p" type="submit">Afspraak aanvragen</button>
-          <p class="err" id="aferr" hidden></p>
-        </form>
-        <div class="afok" id="afok" hidden></div>
+        <div class="gcal" id="gcal"></div>
+        <p class="alt" id="alt" hidden></p>
         <p class="sm" style="margin-top:12px">Geen passend moment? <a href="https://wa.me/31628530305?text=Hoi%20Michel%2C%20zullen%20we%20een%20moment%20prikken%20voor%20duurzamegeefmomenten.nl%3F">App Michel</a>, dan zoeken we samen iets.</p>
       </div>
     </div>
@@ -610,96 +577,29 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   draw();
 })();
 
-/* Afspraak plannen. Vrije blokken uit Michels agenda (Europe/Amsterdam). */
+/* Afspraak plannen via Google-afsprakenplanning */
 (function(){
-  var FREE=[
-    ['2026-10-14T09:00:00+02:00','2026-10-14T10:00:00+02:00'],
-    ['2026-10-14T11:00:00+02:00','2026-10-14T15:00:00+02:00'],
-    ['2026-10-14T16:00:00+02:00','2026-10-14T17:00:00+02:00'],
-    ['2026-10-15T11:00:00+02:00','2026-10-15T17:00:00+02:00'],
-    ['2026-10-21T13:00:00+02:00','2026-10-21T15:00:00+02:00'],
-    ['2026-10-21T16:00:00+02:00','2026-10-21T17:00:00+02:00'],
-    ['2026-10-27T11:00:00+01:00','2026-10-27T13:00:00+01:00']
-  ];
-  var T={
-    bel:{dur:30,buf:0,naam:'Belafspraak',plek:'Telefonisch: Michel belt jou'},
-    hil:{dur:60,buf:0,naam:'Afspraak bij ditisABC',plek:'ditisABC, Satellietbaan 41A, 2181 MG Hillegom'},
-    nv:{dur:60,buf:30,naam:'Afspraak in de showroom',plek:'Kadoburo, Boekweitstraat 82, 2153 GL Nieuw-Vennep'}
+  var GCAL={
+    bel:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Ln0A0rEU2lAb-DraLshQGOPObq5Axjyc1EOghXaUpjO8gIRM9d8wGVNv-Iw9U-rtDbipvV4gQ?gv=true',
+    hil:'',
+    nv:''
   };
-  var seg=document.getElementById('seg'); if(!seg)return;
-  var daysEl=document.getElementById('days'), timesEl=document.getElementById('times'), form=document.getElementById('afform'),
-      gek=document.getElementById('gekozen'), ok=document.getElementById('afok'), err=document.getElementById('aferr'), geen=document.getElementById('geen');
-  var type='bel', day=null, slot=null, MIN=6e4;
-  var GCAL={bel:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Ln0A0rEU2lAb-DraLshQGOPObq5Axjyc1EOghXaUpjO8gIRM9d8wGVNv-Iw9U-rtDbipvV4gQ?gv=true'};
-  var gcal=document.getElementById('gcal'), gnote=document.getElementById('gnote');
-  var fD=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',day:'numeric',month:'short'});
-  var fL=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'long',day:'numeric',month:'long'});
-  var fT=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'});
-  var fK=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Amsterdam',year:'numeric',month:'2-digit',day:'2-digit'});
-  function slots(){
-    var t=T[type], out={}, now=Date.now()+3*60*MIN;
-    FREE.forEach(function(b){
-      var a=new Date(b[0]).getTime()+t.buf*MIN, e=new Date(b[1]).getTime()-t.buf*MIN;
-      for(var x=a;x+t.dur*MIN<=e;x+=30*MIN){ if(x<now)continue; var k=fK.format(new Date(x)); (out[k]=out[k]||[]).push(x); }
-    });
-    return out;
-  }
-  function drawDays(){
-    var g=GCAL[type]; gcal.hidden=!g; gnote.hidden=!g; daysEl.hidden=!!g; timesEl.hidden=!!g;
-    if(g){ form.hidden=true; ok.hidden=true; geen.hidden=true; if(gcal.getAttribute('data-src')!==g){gcal.innerHTML='<iframe title="Belafspraak met Michel plannen" loading="lazy" src="'+g+'"></iframe>'; gcal.setAttribute('data-src',g)} return; }
-    var S=slots(), keys=Object.keys(S).sort(); daysEl.innerHTML=''; timesEl.innerHTML=''; form.hidden=true; slot=null;
-    geen.hidden=keys.length>0; if(!keys.length)return;
-    if(keys.indexOf(day)<0)day=keys[0];
-    keys.forEach(function(k){
-      var b=document.createElement('button'); b.type='button'; var d=new Date(S[k][0]); var p=fD.format(d).split(' ');
-      b.innerHTML=p[0].replace('.','')+'<small>'+p.slice(1).join(' ')+'</small>'; b.setAttribute('aria-pressed',k===day?'true':'false');
-      b.onclick=function(){day=k;drawDays()}; daysEl.appendChild(b);
-    });
-    S[day].forEach(function(x){
-      var b=document.createElement('button'); b.type='button'; b.textContent=fT.format(new Date(x)); b.setAttribute('aria-pressed','false');
-      b.onclick=function(){ [].forEach.call(timesEl.children,function(c){c.setAttribute('aria-pressed','false')}); b.setAttribute('aria-pressed','true'); slot=x; showForm(); };
-      timesEl.appendChild(b);
-    });
-  }
-  function showForm(){
-    var t=T[type], a=new Date(slot), e=new Date(slot+t.dur*MIN);
-    gek.textContent=t.naam+' op '+fL.format(a)+', '+fT.format(a)+' tot '+fT.format(e)+'. '+t.plek+'.';
-    form.hidden=false; ok.hidden=true; err.hidden=true;
+  var ALT={
+    hil:'Een afspraak op kantoor in Hillegom plannen we nog even samen. <a href="https://wa.me/31628530305?text=Hoi%20Michel%2C%20ik%20kom%20graag%20langs%20in%20Hillegom.">App Michel</a> of bel <a href="tel:+31628530305">06-28530305</a>.',
+    nv:'Michel komt graag naar jullie showroom. <a href="https://wa.me/31628530305?text=Hoi%20Michel%2C%20kom%20je%20langs%20in%20onze%20showroom%3F">App Michel</a> of bel <a href="tel:+31628530305">06-28530305</a>, dan prikken we een moment.'
+  };
+  var seg=document.getElementById('seg'), gcal=document.getElementById('gcal'), alt=document.getElementById('alt'); if(!seg)return;
+  function show(t){
+    var g=GCAL[t];
+    gcal.hidden=!g; alt.hidden=!!g;
+    if(g){ if(gcal.getAttribute('data-src')!==g){ gcal.innerHTML='<iframe title="Afspraak met Michel plannen" src="'+g+'"></iframe>'; gcal.setAttribute('data-src',g); } }
+    else alt.innerHTML=ALT[t]||'';
   }
   seg.addEventListener('click',function(e){
-    var b=e.target.closest('button'); if(!b)return; type=b.getAttribute('data-t');
-    [].forEach.call(seg.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false')}); drawDays();
+    var b=e.target.closest('button'); if(!b)return;
+    [].forEach.call(seg.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false')}); show(b.getAttribute('data-t'));
   });
-  function z(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'')}
-  function esc(v){return String(v).replace(/\\/g,'\\\\').replace(/;/g,'\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')}
-  function ics(a,e,t){
-    return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ditisABC//afspraak//NL','METHOD:PUBLISH','BEGIN:VEVENT',
-      'UID:'+a.getTime()+'-kadoburo@ditis.marketing','DTSTAMP:'+z(new Date()),'DTSTART:'+z(a),'DTEND:'+z(e),
-      'SUMMARY:'+esc('ditisABC x Kadoburo: '+t.naam.toLowerCase()),'LOCATION:'+esc(t.plek),
-      'DESCRIPTION:'+esc('Over duurzamegeefmomenten.nl. Michel Goulmy, 06-28530305.'),'END:VEVENT','END:VCALENDAR'].join('\r\n');
-  }
-  form.addEventListener('submit',function(ev){
-    ev.preventDefault(); if(!slot)return;
-    var f=new FormData(form), t=T[type], a=new Date(slot), e=new Date(slot+t.dur*MIN);
-    if(!String(f.get('naam')||'').trim()){err.textContent='Vul even je naam in.';err.hidden=false;return}
-    if(type==='bel'&&!String(f.get('tel')||'').trim()){err.textContent='Vul een telefoonnummer in, dan belt Michel je.';err.hidden=false;return}
-    var body={page:'kadoburo',type:type,start:a.toISOString(),end:e.toISOString(),naam:f.get('naam'),tel:f.get('tel'),mail:f.get('mail'),opm:f.get('opm')};
-    var btn=form.querySelector('[type=submit]'); btn.disabled=true; btn.textContent='Versturen...';
-    fetch('/api/afspraak/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
-      .then(function(r){if(!r.ok)throw 0; return r.json()})
-      .then(function(){
-        try{navigator.sendBeacon('/api/ping/',new Blob([JSON.stringify({page:'kadoburo',e:'afspraak',sid:'form',ref:type+' '+a.toISOString()})],{type:'text/plain'}))}catch(x){}
-        var url=URL.createObjectURL(new Blob([ics(a,e,t)],{type:'text/calendar'}));
-        form.hidden=true; ok.hidden=false;
-        ok.innerHTML='<b>Staat genoteerd.</b>'+t.naam+' op '+fL.format(a)+' om '+fT.format(a)+'. Michel bevestigt het per mail of app. <br><a href="'+url+'" download="afspraak-ditisabc.ics">Zet hem alvast in je eigen agenda</a>';
-      })
-      .catch(function(){
-        btn.disabled=false; btn.textContent='Afspraak aanvragen';
-        var txt='Hoi Michel, ik wil graag een '+t.naam.toLowerCase()+' op '+fL.format(a)+' om '+fT.format(a)+'. '+(f.get('naam')||'');
-        err.innerHTML='Versturen lukte niet. <a href="https://wa.me/31628530305?text='+encodeURIComponent(txt)+'">Stuur het via WhatsApp</a>.'; err.hidden=false;
-      });
-  });
-  drawDays();
+  show('bel');
 })();
 </script>
 <script>
