@@ -523,7 +523,6 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
           </div>
           <label>E-mail (voor de uitnodiging)<input name="mail" type="email" autocomplete="email" maxlength="120" placeholder="naam@kadoburo.nl"></label>
           <label>Wil je vooraf iets meegeven?<textarea name="opm" rows="2" maxlength="500"></textarea></label>
-          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn p" type="submit">Afspraak aanvragen</button>
           <p class="err" id="aferr" hidden></p>
         </form>
@@ -655,11 +654,12 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     var f=new FormData(form), t=T[type], a=new Date(slot), e=new Date(slot+t.dur*MIN);
     if(!String(f.get('naam')||'').trim()){err.textContent='Vul even je naam in.';err.hidden=false;return}
     if(type==='bel'&&!String(f.get('tel')||'').trim()){err.textContent='Vul een telefoonnummer in, dan belt Michel je.';err.hidden=false;return}
-    var body={page:'kadoburo',type:type,start:a.toISOString(),end:e.toISOString(),naam:f.get('naam'),tel:f.get('tel'),mail:f.get('mail'),opm:f.get('opm'),website:f.get('website')};
+    var body={page:'kadoburo',type:type,start:a.toISOString(),end:e.toISOString(),naam:f.get('naam'),tel:f.get('tel'),mail:f.get('mail'),opm:f.get('opm')};
     var btn=form.querySelector('[type=submit]'); btn.disabled=true; btn.textContent='Versturen...';
     fetch('/api/afspraak/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
       .then(function(r){if(!r.ok)throw 0; return r.json()})
       .then(function(){
+        try{navigator.sendBeacon('/api/ping/',new Blob([JSON.stringify({page:'kadoburo',e:'afspraak',sid:'form',ref:type+' '+a.toISOString()})],{type:'text/plain'}))}catch(x){}
         var url=URL.createObjectURL(new Blob([ics(a,e,t)],{type:'text/calendar'}));
         form.hidden=true; ok.hidden=false;
         ok.innerHTML='<b>Staat genoteerd.</b>'+t.naam+' op '+fL.format(a)+' om '+fT.format(a)+'. Michel bevestigt het per mail of app. <br><a href="'+url+'" download="afspraak-ditisabc.ics">Zet hem alvast in je eigen agenda</a>';

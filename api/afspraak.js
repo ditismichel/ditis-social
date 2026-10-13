@@ -26,7 +26,6 @@ module.exports = async (req, res) => {
   const out = (code, obj) => { res.statusCode = code; res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(obj)); };
   if (req.method !== 'POST') return out(405, { ok: false });
   const b = await readBody(req);
-  if (b.website) return out(200, { ok: true }); // honeypot
 
   const page = String(b.page || '').toLowerCase();
   const t = TYPES[b.type];
@@ -79,6 +78,6 @@ module.exports = async (req, res) => {
       attachments: [{ filename: 'afspraak.ics', content: Buffer.from(ics).toString('base64') }],
     }),
   });
-  if (!r.ok) return out(502, { ok: false });
+  if (!r.ok) { console.error('resend', r.status, (await r.text()).slice(0, 300)); return out(502, { ok: false }); }
   return out(200, { ok: true });
 };

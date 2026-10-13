@@ -11,6 +11,7 @@ const EVENTS = {
   bel: 'op bellen geklikt',
   app: 'op WhatsApp geklikt',
   mail: 'op mailen geklikt',
+  afspraak: 'afspraak aangevraagd via het formulier',
 };
 
 function apparaat(ua) {
