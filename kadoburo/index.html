@@ -238,7 +238,10 @@ td small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .afform .two{display:grid;gap:10px}
 @media (min-width:640px){.afform .two{grid-template-columns:1fr 1fr}}
 .afform button[type=submit]{justify-self:start;cursor:pointer}
-.hp{position:absolute;left:-9999px}
+.gcal{margin-top:6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.gcal iframe{display:block;width:100%;height:640px;border:0}
+@media (max-width:640px){.gcal iframe{height:760px}}
+.gnote{font-size:14px;color:var(--green);margin:4px 0 8px}
 .afok{margin-top:14px;background:var(--green-bg);border-radius:16px;padding:16px;color:var(--green)}
 .afok b{display:block;font:800 19px "Host Grotesk",sans-serif;margin-bottom:4px}
 .afok a{color:var(--green);font-weight:600}
@@ -512,6 +515,8 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
           <button type="button" data-t="hil" aria-pressed="false">Bij ons in Hillegom<small>1 uur, koffie staat klaar</small></button>
           <button type="button" data-t="nv" aria-pressed="false">In jullie showroom<small>1 uur, Michel komt naar Nieuw-Vennep</small></button>
         </div>
+        <p class="gnote" id="gnote" hidden>Kies een tijd. De afspraak staat dan direct in Michels agenda en je krijgt zelf een uitnodiging.</p>
+        <div class="gcal" id="gcal" hidden></div>
         <div class="days" id="days"></div>
         <div class="times" id="times"></div>
         <p class="sm" id="geen" hidden>Geen vrije tijd meer in deze periode. App Michel even, dan prikken we samen een moment.</p>
@@ -605,6 +610,8 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   var daysEl=document.getElementById('days'), timesEl=document.getElementById('times'), form=document.getElementById('afform'),
       gek=document.getElementById('gekozen'), ok=document.getElementById('afok'), err=document.getElementById('aferr'), geen=document.getElementById('geen');
   var type='bel', day=null, slot=null, MIN=6e4;
+  var GCAL={bel:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Ln0A0rEU2lAb-DraLshQGOPObq5Axjyc1EOghXaUpjO8gIRM9d8wGVNv-Iw9U-rtDbipvV4gQ?gv=true'};
+  var gcal=document.getElementById('gcal'), gnote=document.getElementById('gnote');
   var fD=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',day:'numeric',month:'short'});
   var fL=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'long',day:'numeric',month:'long'});
   var fT=new Intl.DateTimeFormat('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit'});
@@ -618,6 +625,8 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     return out;
   }
   function drawDays(){
+    var g=GCAL[type]; gcal.hidden=!g; gnote.hidden=!g; daysEl.hidden=!!g; timesEl.hidden=!!g;
+    if(g){ form.hidden=true; ok.hidden=true; geen.hidden=true; if(gcal.getAttribute('data-src')!==g){gcal.innerHTML='<iframe title="Belafspraak met Michel plannen" loading="lazy" src="'+g+'"></iframe>'; gcal.setAttribute('data-src',g)} return; }
     var S=slots(), keys=Object.keys(S).sort(); daysEl.innerHTML=''; timesEl.innerHTML=''; form.hidden=true; slot=null;
     geen.hidden=keys.length>0; if(!keys.length)return;
     if(keys.indexOf(day)<0)day=keys[0];
