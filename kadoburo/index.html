@@ -70,6 +70,18 @@ h1,h2,h3{font-family:"Host Grotesk",Geist,sans-serif;font-weight:800;letter-spac
 .knoppen{display:flex;flex-wrap:wrap;gap:10px}
 .phone{justify-self:center;width:min(100%,360px);background:var(--ink);border-radius:34px;padding:10px;box-shadow:0 30px 60px rgba(0,19,46,.32)}
 .phone video{width:100%;aspect-ratio:9/16;border-radius:26px;background:#000;object-fit:cover}
+.vwrap{position:relative;border-radius:26px;overflow:hidden}
+.vplay{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:linear-gradient(180deg,rgba(0,19,46,0) 45%,rgba(0,19,46,.78) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:#fff;font:inherit}
+.vplay .pb{width:96px;height:96px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(255,113,65,.6);animation:puls 2s infinite;transition:transform .2s}
+.vplay:hover .pb,.vplay:focus-visible .pb{transform:scale(1.08)}
+.vplay .pb svg{width:38px;height:38px;margin-left:6px}
+.vplay .vl{position:absolute;left:0;right:0;bottom:22px;text-align:center;font:800 22px/1.15 "Host Grotesk",sans-serif}
+.vplay .vl small{display:block;font:500 14px "Geist",sans-serif;opacity:.9;margin-top:4px}
+.vtag{position:absolute;top:56px;left:14px;z-index:2;background:rgba(0,19,46,.78);color:#fff;font:600 13px "Geist",sans-serif;border-radius:999px;padding:5px 11px;display:flex;align-items:center;gap:6px;pointer-events:none}
+.vtag i{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+@keyframes puls{0%{box-shadow:0 0 0 0 rgba(255,113,65,.55)}70%{box-shadow:0 0 0 22px rgba(255,113,65,0)}100%{box-shadow:0 0 0 0 rgba(255,113,65,0)}}
+@media (prefers-reduced-motion:reduce){.vplay .pb{animation:none}}
+.vwrap.speelt .vplay,.vwrap.speelt .vtag{display:none}
 .dur{margin-top:12px;text-align:center;font-size:14px;color:#fff;font-weight:500}
 @media (min-width:900px){.hero .wrap{grid-template-columns:1.2fr .8fr;padding-top:48px;padding-bottom:72px}.hcard{padding:40px 40px}}
 
@@ -287,8 +299,9 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="knoppen"><a class="btn p" href="#afspraak">Plan een afspraak</a><a class="btn o" href="#eerst">Lees de analyse</a></div>
   </div>
   <div>
-    <div class="phone"><video controls playsinline preload="metadata" poster="media/poster.jpg" src="media/ditisabc-voor-duurzamegeefmomenten.mp4"></video></div>
+    <div class="phone"><div class="vwrap" id="vwrap"><video playsinline preload="metadata" poster="media/poster.jpg" src="media/ditisabc-voor-duurzamegeefmomenten.mp4"></video><span class="vtag"><i></i>Video · 1:18</span><button class="vplay" type="button" aria-label="Speel de video af, 1 minuut 18"><span class="pb"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></span><span class="vl">Bekijk de video<small>Michel legt het uit in 1:18</small></span></button></div></div>
     <div class="dur">Met geluid kijken. Ondertitels staan in beeld.</div>
+    <script>(function(){var w=document.getElementById("vwrap"),v=w.querySelector("video");w.querySelector(".vplay").addEventListener("click",function(){w.classList.add("speelt");v.controls=true;v.play()});})();</script>
   </div>
 </div></div></div>
 
