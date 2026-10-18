@@ -1,9 +1,9 @@
 // Screenshot van een website (desktop of mobiel) voor een pitchpagina.
-// node capture.js <url> <out.png|jpg> [mobiel] [volledig]
+// node capture.js <url> <out.png|jpg> [mobiel|desktop] [volledig|scherm] [css-selector om naartoe te scrollen]
 // Gebruikt puppeteer-core uit ~/ditis-kiosk en de lokale Chrome.
 const puppeteer = require('/Users/michelgoulmy/ditis-kiosk/node_modules/puppeteer-core');
 (async () => {
-  const [url, out, mode, full] = process.argv.slice(2);
+  const [url, out, mode, full, scrollSel] = process.argv.slice(2);
   const mob = mode === 'mobiel';
   const b = await puppeteer.launch({
     executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -26,6 +26,7 @@ const puppeteer = require('/Users/michelgoulmy/ditis-kiosk/node_modules/puppetee
     }
     document.querySelectorAll('[id*=cookie],[class*=cookie],[id*=Cookiebot],[class*=cmplz],[id*=chat],[class*=chat-widget]').forEach(e => e.style.display = 'none');
   });
+  if (scrollSel) { await p.evaluate(sel => document.querySelector(sel).scrollIntoView(), scrollSel); await new Promise(r => setTimeout(r, 2500)); }
   await new Promise(r => setTimeout(r, 1200));
   const opt = { path: out, fullPage: full === 'volledig' };
   if (/\.jpe?g$/.test(out)) opt.quality = 82;

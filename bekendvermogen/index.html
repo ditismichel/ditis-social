@@ -284,6 +284,18 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 .over .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .over .stat b{font-size:26px}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
+.kort table{min-width:0}
+.vp{display:grid;gap:26px;align-items:start}
+@media (min-width:900px){.vp{grid-template-columns:1fr 300px}}
+.browser{border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px rgba(0,62,153,.12);overflow:hidden}
+.bbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#EEF3F8;border-bottom:1px solid var(--line)}
+.bbar i{width:11px;height:11px;border-radius:50%;background:#C9D6E5}
+.bbar span{margin-left:12px;font-size:13px;color:var(--muted);background:#fff;border-radius:8px;padding:3px 12px}
+.browser .scr{height:600px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.browser img,.phone2 img{width:100%;height:auto;display:block}
+.phone2{justify-self:center;width:300px;background:var(--ink);border-radius:42px;padding:11px;box-shadow:0 24px 50px rgba(0,19,46,.25)}
+.phone2 .scr{height:600px;overflow-y:auto;border-radius:32px;background:#fff;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.browser .scr{height:360px}.phone2{width:260px;order:-1}.phone2 .scr{height:520px}}
 .pw{margin:18px 0 0}
 .pw img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
 .pw figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
@@ -296,8 +308,10 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 
 <div class="top"><div class="wrap"><a href="https://www.ditisabc.nl"><img class="logoimg" src="media/abc-logo.png" alt="ditisABC" width="150" height="23"></a><span class="who">Voor Robin<br>Bekend Vermogen · Marum</span></div></div>
 <nav class="sub" aria-label="Op deze pagina"><div class="wrap"><b>Op deze pagina</b>
-<a href="#werk" style="--c:var(--blue)"><i></i>Waarom wij</a>
 <a href="#eerst" style="--c:var(--orange)"><i></i>Eerst dit</a>
+<a href="#voorproef" style="--c:var(--orange)"><i></i>Je nieuwe site</a>
+<a href="#werk" style="--c:var(--blue)"><i></i>Waarom wij</a>
+<a href="#werkwijze" style="--c:var(--green-base)"><i></i>Werkwijze</a>
 <a href="#verhaal" style="--c:var(--yellow)"><i></i>Jullie verhaal</a>
 <a href="#markt" style="--c:var(--green-base)"><i></i>De markt</a>
 <a href="#google" style="--c:var(--blue)"><i></i>Vindbaarheid</a>
@@ -311,12 +325,12 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <h1>Bekend Vermogen. Straks ook <em>bekend</em> in Google.</h1>
     <p class="lead">Je hebt de beste reviews van alle kantoren die ik bekeek. Toch vindt Google je alleen als iemand je naam al kent. Ik keek naar je site, je markt en je vindbaarheid. Hieronder het antwoord op wat je vroeg.</p>
     <div class="qa">
-      <div class="qa1"><b>Wat kunnen jullie voor ons betekenen?</b><span>Een WordPress-site met een pagina per dienst, jullie team en reviews op elke pagina, en onder de 2,5 seconden op mobiel. Gebouwd om gevonden te worden, in Google en in AI.</span></div>
+      <div class="qa1"><b>Wat kunnen jullie voor ons betekenen?</b><span>Een WordPress-site met een pagina per dienst, jullie team en reviews op elke pagina, en onder de 2,5 seconden op mobiel. Gebouwd om gevonden te worden, in Google en in AI. <a href="#voorproef">Bekijk de voorproef</a>.</span></div>
       <div class="qa1"><b>Wat is de investering?</b><span>Eén vaste prijs, gefactureerd in 2026. Die stemmen we samen af zodra we weten welke diensten en pagina's je wilt. Je krijgt hem zwart op wit, zonder verrassingen achteraf.</span></div>
       <div class="qa1"><b>Wat hebben jullie eerder gemaakt?</b><span>Onder meer Avinta, de partner van accountants en administratiekantoren voor Visma Net. <a href="#werk">Bekijk ons werk</a>.</span></div>
       <div class="qa1"><b>Hoe vindbaar zijn jullie zelf?</b><span>In Hillegom staan we in de top 3 van Google, en ChatGPT, Gemini, Copilot en Google AI noemen ons als je een webbureau in de buurt zoekt. Voor klanten als De Ruijtermeubel halen we de top 3 in heel Nederland. <a href="#zelf">Bekijk het bewijs</a>.</span></div>
     </div>
-    <div class="knoppen"><a class="btn p" href="#afspraak">Plan een moment</a><a class="btn o" href="#werk">Bekijk ons werk</a></div>
+    <div class="knoppen"><a class="btn p" href="#afspraak">Plan een moment</a><a class="btn o" href="#voorproef">Bekijk je nieuwe homepage</a></div>
   </div>
   <div>
     <div class="phone"><div class="vwrap" id="vwrap"><video playsinline preload="metadata" poster="media/poster.jpg" src="media/ditisabc-voor-bekendvermogen.mp4"></video><span class="vtag"><i></i>Video · 1:05</span><button class="vplay" type="button" aria-label="Speel de video af, 1 minuut 5"><span class="pb"><svg viewBox="84.4 -0.2 30.6 30.6" aria-hidden="true"><path class="halo" d="M113.134 7.98374H111.275C110.803 7.98374 110.418 7.59782 110.418 7.12346V5.25817C110.418 4.78381 110.034 4.39789 109.561 4.39789H107.702C107.229 4.39789 106.845 4.01197 106.845 3.53761V1.67232C106.845 1.19796 106.46 0.812042 105.988 0.812042H93.4007C92.928 0.812042 92.5435 1.19796 92.5435 1.67232V3.53761C92.5435 4.01197 92.1589 4.39789 91.6862 4.39789H89.8274C89.3547 4.39789 88.9701 4.78381 88.9701 5.25817V7.12346C88.9701 7.59782 88.5856 7.98374 88.1129 7.98374H86.2541C85.7814 7.98374 85.3968 8.36966 85.3968 8.84402V21.4749C85.3968 21.9493 85.7814 22.3352 86.2541 22.3352H88.1129C88.5856 22.3352 88.9701 22.7211 88.9701 23.1955V25.0607C88.9701 25.5351 89.3547 25.921 89.8274 25.921H91.6862C92.1589 25.921 92.5435 26.3069 92.5435 26.7813V28.6466C92.5435 29.121 92.928 29.5069 93.4007 29.5069H105.988C106.46 29.5069 106.845 29.121 106.845 28.6466V26.7813C106.845 26.3069 107.229 25.921 107.702 25.921H109.561C110.034 25.921 110.418 25.5351 110.418 25.0607V23.1955C110.418 22.7211 110.803 22.3352 111.275 22.3352H113.134C113.607 22.3352 113.992 21.9493 113.992 21.4749V8.84402C113.992 8.36966 113.607 7.98374 113.134 7.98374Z"/><path class="body" d="M113.134 7.98374H111.275C110.803 7.98374 110.418 7.59782 110.418 7.12346V5.25817C110.418 4.78381 110.034 4.39789 109.561 4.39789H107.702C107.229 4.39789 106.845 4.01197 106.845 3.53761V1.67232C106.845 1.19796 106.46 0.812042 105.988 0.812042H93.4007C92.928 0.812042 92.5435 1.19796 92.5435 1.67232V3.53761C92.5435 4.01197 92.1589 4.39789 91.6862 4.39789H89.8274C89.3547 4.39789 88.9701 4.78381 88.9701 5.25817V7.12346C88.9701 7.59782 88.5856 7.98374 88.1129 7.98374H86.2541C85.7814 7.98374 85.3968 8.36966 85.3968 8.84402V21.4749C85.3968 21.9493 85.7814 22.3352 86.2541 22.3352H88.1129C88.5856 22.3352 88.9701 22.7211 88.9701 23.1955V25.0607C88.9701 25.5351 89.3547 25.921 89.8274 25.921H91.6862C92.1589 25.921 92.5435 26.3069 92.5435 26.7813V28.6466C92.5435 29.121 92.928 29.5069 93.4007 29.5069H105.988C106.46 29.5069 106.845 29.121 106.845 28.6466V26.7813C106.845 26.3069 107.229 25.921 107.702 25.921H109.561C110.034 25.921 110.418 25.5351 110.418 25.0607V23.1955C110.418 22.7211 110.803 22.3352 111.275 22.3352H113.134C113.607 22.3352 113.992 21.9493 113.992 21.4749V8.84402C113.992 8.36966 113.607 7.98374 113.134 7.98374Z"/><g fill="#fff"><rect x="94.90" y="9.16" width="3.03" height="12.00"/><rect x="97.90" y="10.66" width="3.03" height="9.00"/><rect x="100.90" y="12.16" width="3.03" height="6.00"/><rect x="103.90" y="13.66" width="3.03" height="3.00"/></g></svg></span><span class="vl">Bekijk de video<small>Michel legt het uit in 1:05</small></span></button></div></div>
@@ -325,30 +339,11 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </div></div></div>
 
-<section id="werk">
-  <div class="wrap">
-    <span class="kick" style="--c:var(--blue)">dit is <i></i> ditisABC</span>
-    <h2>Waarom wij</h2>
-    <div class="list waarom">
-      <div class="li"><div class="L">A</div><div><h3>Eén vaste prijs, geen abonnement</h3><p>Je weet vooraf wat je investeert, en het valt in 2026. Daarna betaal je alleen voor wat je zelf wilt.</p></div></div>
-      <div class="li"><div class="L">B</div><div><h3>Jouw hosting, jouw sleutels</h3><p>WordPress, op de hosting waar je tevreden over bent, met volledige beheerdersrechten. We leren je hoe je zelf aanpast, en zijn je backup als je er niet uitkomt.</p></div></div>
-      <div class="li"><div class="L">C</div><div><h3>Een team dat de branche kent</h3><p>Sinds 2012, drie keer op rij FD Gazelle. We bouwden de site van Avinta, de partner van accountants en administratiekantoren voor Visma Net.</p></div></div>
-    </div>
-    <h3 style="font-size:26px;margin:40px 0 14px">Werk dat we eerder deden</h3>
-    <div class="refs">
-      <a class="ref" href="https://avinta.nl" target="_blank" rel="noopener"><img src="media/ref-avinta.jpg" alt="Homepage van avinta.nl" loading="lazy"><b>Avinta</b><span>Visma Net-partner voor accountants en administratiekantoren. Ontwerp en bouw in WordPress. Opgeleverd april 2026.</span></a>
-      <a class="ref" href="https://inbalans.online" target="_blank" rel="noopener"><img src="media/ref-inbalans.jpg" alt="Homepage van inbalans.online" loading="lazy"><b>InBalans</b><span>Relatietherapie, coaching en online trainingen. Nieuwe site in WordPress, met online trainingen en een webshop. Opgeleverd augustus 2026.</span></a>
-      <a class="ref" href="https://www.karinbloemenstichting.nl" target="_blank" rel="noopener"><img src="media/ref-karinbloemen.jpg" alt="Homepage van karinbloemenstichting.nl" loading="lazy"><b>Karin Bloemen Stichting</b><span>De stichting van Karin Bloemen. Nieuwe website in WordPress, met informatie, veelgestelde vragen en doneren. Opgeleverd mei 2026.</span></a>
-      <a class="ref" href="https://vanhethuis.com" target="_blank" rel="noopener"><img src="media/ref-vanhethuis.jpg" alt="Homepage van vanhethuis.com" loading="lazy"><b>Van het Huis</b><span>Zonnepanelen, thuisbatterijen en warmtepompen in Haarlem. Nieuwe website in WordPress, met een pagina per dienst, een kennisbank, een werkgebiedpagina en direct contact via WhatsApp. Precies de opbouw die we voor jou voorstellen. Opgeleverd april 2026.</span></a>
-    </div>
-  </div>
-</section>
-
 <section class="alt" id="eerst">
   <div class="wrap">
     <span class="kick" style="--c:var(--orange)">dit is <i></i> eerst dit</span>
-    <h2>Je homepage laadt een video van 109 MB</h2>
-    <p class="intro">Op je homepage staat een korte video. Het bestand komt rechtstreeks van de iPhone en staat ingesteld om meteen te laden, ook als niemand op afspelen drukt. Op mobiel duurde het bij onze meting <b>9,6 seconden</b> voordat je homepage stond. Google noemt alles boven de 2,5 seconden traag.</p>
+    <h2>Snelle winst: dit kun je morgen al verbeteren</h2>
+    <p class="intro">Je site staat er netjes en je reviews zijn sterker dan die van wie dan ook in je markt. Met een paar ingrepen haal je er veel meer uit. De grootste winst zit in de korte video op je homepage: het bestand komt rechtstreeks van de iPhone en laadt meteen, ook als niemand op afspelen drukt. Op mobiel duurde het bij onze meting <b>9,6 seconden</b> voordat je homepage stond; Google wil onder de 2,5 seconden.</p>
     <div class="bug">
       <div class="mail">
         <div class="top">Wat een bezoeker binnenhaalt</div>
@@ -363,20 +358,80 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         <div class="stat"><b>0</b><span>pagina's over een dienst</span></div>
       </div>
     </div>
-    <h3 style="font-size:26px;margin:40px 0 12px">Wat we verder zagen</h3>
+    <h3 style="font-size:26px;margin:40px 0 12px">En nog vijf kansen</h3>
     <div class="eg"><div class="list">
-      <div class="li"><div class="L t">A</div><div><h3>Zes pagina's, geen enkele dienstenpagina</h3><p>Wie zoekt op "boekhouder zzp" of "jortt boekhouder", vindt geen pagina die daarover gaat. Google kan je dan ook niet tonen.</p></div></div>
-      <div class="li"><div class="L t">B</div><div><h3>Overal dezelfde omschrijving in Google</h3><p>Alle zes pagina's hebben dezelfde tekst onder de titel in de zoekresultaten. En de pagina "Hulp bij Jortt" heet in Google "Over ons".</p></div></div>
-      <div class="li"><div class="L t">C</div><div><h3>Je belofte staat niet bovenaan</h3><p>De hoofdkop is "Administraties &amp; Belastingen". "Direct. Persoonlijk. Betrokken." staat eronder als kleine kop. Op de contactpagina staan twee hoofdkoppen.</p></div></div>
-      <div class="li"><div class="L t">D</div><div><h3>Toegankelijkheid</h3><p>Op de homepage hebben 55 afbeeldingen geen beschrijving en is het contrast op 30 plekken te laag. Voor schermlezers en voor Google is dat informatie die ontbreekt.</p></div></div>
-      <div class="li"><div class="L t">E</div><div><h3>Je mooiste verhaal staat er niet op</h3><p>Bekend vermogen tegenover vreemd vermogen. Op LinkedIn vertel je het, op je site niet.</p></div></div>
+      <div class="li"><div class="L t">A</div><div><h3>Geef elke dienst een eigen pagina</h3><p>Nu zijn er zes pagina's en geen enkele gaat over een dienst. Met een pagina voor "boekhouder zzp" of "jortt boekhouder" kan Google je laten zien aan wie daar zoekt.</p></div></div>
+      <div class="li"><div class="L t">B</div><div><h3>Een eigen omschrijving per pagina</h3><p>Alle zes pagina's tonen nu dezelfde tekst onder de titel in Google, en "Hulp bij Jortt" heet daar "Over ons". Een eigen titel en omschrijving per pagina is zo geregeld.</p></div></div>
+      <div class="li"><div class="L t">C</div><div><h3>Zet je belofte bovenaan</h3><p>Nu is "Administraties &amp; Belastingen" de hoofdkop en staat "Direct. Persoonlijk. Betrokken." eronder als kleine kop. Draai het om, dan weet een bezoeker meteen waarom hij voor jou kiest.</p></div></div>
+      <div class="li"><div class="L t">D</div><div><h3>Maak je site voor iedereen leesbaar</h3><p>Geef de 55 afbeeldingen op de homepage een beschrijving en verhoog het contrast op 30 plekken. Fijn voor wie een schermlezer gebruikt, en Google leest precies dezelfde informatie.</p></div></div>
+      <div class="li"><div class="L t">E</div><div><h3>Vertel je mooiste verhaal</h3><p>Bekend vermogen tegenover vreemd vermogen. Op LinkedIn vertel je het al; op je site verdient het de eerste plek.</p></div></div>
     </div>
-    <figure class="mob"><img src="media/mob.jpg" alt="Homepage van bekendvermogen.nl op een telefoon" loading="lazy" width="390" height="844"><figcaption>9,6 seconden voordat dit er staat. De oranje kop op de foto is lastig te lezen.</figcaption></figure>
+    <figure class="mob"><img src="media/mob.jpg" alt="Homepage van bekendvermogen.nl op een telefoon" loading="lazy" width="390" height="844"><figcaption>Nu 9,6 seconden voordat dit er staat. Met een lichtere video en een kop die goed leesbaar is ben je er.</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="verhaal">
+<section id="voorproef">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--orange)">dit is <i></i> je nieuwe site</span>
+    <h2>Zo kan je nieuwe homepage eruitzien</h2>
+    <p class="intro">Een eerste voorproef in je eigen huisstijl: teal en saffraan, je logo, je naamverhaal als hoofdkop, je team en je reviews. Scroll er gerust doorheen, op desktop en op mobiel. Teksten, beeld en indeling stemmen we samen af.</p>
+    <div class="vp">
+      <div class="browser"><div class="bbar"><i></i><i></i><i></i><span>bekendvermogen.nl</span></div><div class="scr" tabindex="0" aria-label="Voorproef desktop, scrollbaar"><img src="media/voorproef-desktop.jpg" alt="Voorproef van de nieuwe homepage van Bekend Vermogen op desktop: hoofdkop Geen vreemd vermogen. Bekend vermogen., diensten, naamverhaal, werkwijze, team, reviews en veelgestelde vragen" loading="lazy" width="1200" height="3353"></div></div>
+      <div class="phone2"><div class="scr" tabindex="0" aria-label="Voorproef mobiel, scrollbaar"><img src="media/voorproef-mobiel.jpg" alt="Dezelfde homepage op een telefoon" loading="lazy" width="600" height="10494"></div></div>
+    </div>
+
+    <h3 style="font-size:26px;margin:46px 0 8px" id="sitemap">Gebouwd om gevonden te worden: elke pagina wint een vraag</h3>
+    <p class="intro" style="margin-bottom:18px">Geen losse pagina's, maar een pagina per vraag die je klant stelt. In Google en aan ChatGPT.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Pagina</th><th>Zoekvraag in Google</th><th>Per maand</th><th>Vraag aan AI</th></tr></thead>
+      <tbody>
+        <tr><td><b>Home</b></td><td>boekhouder groningen</td><td>300</td><td>"Welk administratiekantoor in Groningen is persoonlijk?"</td></tr>
+        <tr><td><b>Administratie voor zzp'ers</b></td><td>boekhouder zzp</td><td>700</td><td>"Wat doet een boekhouder voor een zzp'er?"</td></tr>
+        <tr class="us"><td><b>Hulp bij Jortt</b></td><td>jortt boekhouder</td><td>300</td><td>"Welke boekhouder werkt met Jortt?"</td></tr>
+        <tr><td><b>Belastingaangifte en advies</b></td><td>belastingadviseur groningen</td><td>200</td><td>"Wie doet mijn aangifte inkomstenbelasting?"</td></tr>
+        <tr><td><b>Voor de bv</b></td><td>boekhouder bv</td><td>60</td><td>"Heb ik als bv een boekhouder nodig?"</td></tr>
+        <tr><td><b>Over ons en team</b></td><td>boekhouder marum</td><td>90</td><td>"Wat zijn de ervaringen met Bekend Vermogen?"</td></tr>
+        <tr><td><b>Kennisbank</b> <small>traject B</small></td><td>boekhouder nodig</td><td>150</td><td>"Wanneer heb ik een boekhouder nodig?"</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Zoekvolumes: Ahrefs, Nederland, oktober 2026, schattingen. Elke pagina krijgt een eigen titel, omschrijving, hoofdkop en veelgestelde vragen, plus gegevens over je kantoor en reviews die Google en AI kunnen lezen. De AI-vragen meten we met Promptwatch.</p>
+  </div>
+</section>
+
+<section class="alt" id="werk">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--blue)">dit is <i></i> ditisABC</span>
+    <h2>Waarom wij</h2>
+    <div class="list waarom">
+      <div class="li"><div class="L">A</div><div><h3>Eén vaste prijs, geen abonnement</h3><p>Je weet vooraf wat je investeert, en het valt in 2026. Daarna betaal je alleen voor wat je zelf wilt.</p></div></div>
+      <div class="li"><div class="L">B</div><div><h3>Jouw hosting, jouw sleutels</h3><p>WordPress, op de hosting waar je tevreden over bent, met volledige beheerdersrechten. We leren je hoe je zelf aanpast, en zijn je backup als je er niet uitkomt.</p></div></div>
+      <div class="li"><div class="L">C</div><div><h3>Een team dat de branche kent</h3><p>Sinds 2012, vier keer FD Gazelle. We bouwden de site van Avinta, de partner van accountants en administratiekantoren voor Visma Net.</p></div></div>
+    </div>
+    <h3 style="font-size:26px;margin:40px 0 14px">Werk dat we eerder deden</h3>
+    <div class="refs">
+      <a class="ref" href="https://avinta.nl" target="_blank" rel="noopener"><img src="media/ref-avinta.jpg" alt="Homepage van avinta.nl" loading="lazy"><b>Avinta</b><span>Visma Net-partner voor accountants en administratiekantoren. Ontwerp en bouw in WordPress. Opgeleverd april 2026.</span></a>
+      <a class="ref" href="https://inbalans.online" target="_blank" rel="noopener"><img src="media/ref-inbalans.jpg" alt="Homepage van inbalans.online" loading="lazy"><b>InBalans</b><span>Relatietherapie, coaching en online trainingen. Nieuwe site in WordPress, met online trainingen en een webshop. Opgeleverd augustus 2026.</span></a>
+      <a class="ref" href="https://www.karinbloemenstichting.nl" target="_blank" rel="noopener"><img src="media/ref-karinbloemen.jpg" alt="Homepage van karinbloemenstichting.nl" loading="lazy"><b>Karin Bloemen Stichting</b><span>De stichting van Karin Bloemen. Nieuwe website in WordPress, met informatie, veelgestelde vragen en doneren. Opgeleverd mei 2026.</span></a>
+      <a class="ref" href="https://vanhethuis.com" target="_blank" rel="noopener"><img src="media/ref-vanhethuis.jpg" alt="Homepage van vanhethuis.com" loading="lazy"><b>Van het Huis</b><span>Zonnepanelen, thuisbatterijen en warmtepompen in Haarlem. Nieuwe website in WordPress, met een pagina per dienst, een kennisbank, een werkgebiedpagina en direct contact via WhatsApp. Precies de opbouw die we voor jou voorstellen. Opgeleverd april 2026.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="werkwijze">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--green-base)">dit is <i></i> samenwerken</span>
+    <h2>Zo werken we samen, net als jij: in drie stappen</h2>
+    <p class="intro">Op je eigen site staat "Hoe starten we?" in drie stappen. Wij werken precies zo.</p>
+    <div class="list">
+      <div class="li"><div class="L">A</div><div><h3>Kennismaking en ontwerp</h3><p>We bespreken je verhaal, je diensten en je klanten. Je krijgt de sitemap en een ontwerp van je homepage en een dienstpagina, en die schaven we samen bij.</p></div></div>
+      <div class="li"><div class="L">B</div><div><h3>Bouw en teksten</h3><p>We bouwen in WordPress op je eigen hosting. Elke pagina krijgt teksten die passen bij de vraag van je klant, je reviews en de gegevens die Google en AI lezen.</p></div></div>
+      <div class="li"><div class="L">C</div><div><h3>Training en livegang</h3><p>We leren je hoe je zelf aanpast, dragen alle beheerdersrechten over en gaan live. Oplevering nog dit jaar is mogelijk. Daarna zijn we je backup.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="verhaal">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> jullie verhaal</span>
     <h2>Bekend vermogen. Geen vreemd vermogen.</h2>
@@ -387,20 +442,13 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
       <div class="stat"><b>100+</b><span>ondernemers, door heel Nederland</span></div>
       <div class="stat"><b>2023</b><span>gestart, nu een eigen kantoor in Marum</span></div>
     </div>
-    <p class="intro" style="margin-top:22px">"Klein kantoor, groot hart" en "Direct. Persoonlijk. Betrokken." laten we terugkomen in elke dienst: met het gezicht dat je aan de lijn krijgt en de reviews die bij die dienst horen.</p>
-    <div class="team">
-      <figure><img src="media/robin.jpg" alt="Robin" loading="lazy"><figcaption><b>Robin</b>Eigenaar</figcaption></figure>
-      <figure><img src="media/daisy.jpg" alt="Daisy" loading="lazy"><figcaption><b>Daisy</b>Team Bekend Vermogen</figcaption></figure>
-      <figure><img src="media/tjeerd.jpg" alt="Tjeerd" loading="lazy"><figcaption><b>Tjeerd</b>Team Bekend Vermogen</figcaption></figure>
-      <figure><img src="media/roos.jpg" alt="Roos" loading="lazy"><figcaption><b>Roos</b>Team Bekend Vermogen</figcaption></figure>
-    </div>
     <div class="ask">
       <p><b>Een vraag aan jou:</b> voor welke ondernemers wil je het vaakst gevonden worden? Zzp'ers, bv's, starters, een bepaalde branche? Daar bouwen we de dienstenpagina's omheen.</p>
     </div>
   </div>
 </section>
 
-<section class="alt" id="markt">
+<section id="markt">
   <div class="wrap">
     <span class="kick" style="--c:var(--green-base)">dit is <i></i> de markt</span>
     <h2>Iedereen kiest een haak. Jouw haak is Jortt.</h2>
@@ -427,7 +475,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section id="google">
+<section class="alt" id="google">
   <div class="wrap">
     <span class="kick" style="--c:var(--blue)">dit is <i></i> vindbaarheid</span>
     <h2>Google kent je alleen bij naam</h2>
@@ -472,7 +520,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="cols">
       <div>
         <h3 style="font-size:21px;margin-bottom:12px">ditisABC</h3>
-        <div class="tw kw"><table>
+        <div class="tw kw kort"><table>
           <thead><tr><th>Zoekwoord</th><th>Positie</th></tr></thead>
           <tbody>
             <tr class="us"><td><b>online marketing hillegom</b></td><td><b>3</b></td></tr>
@@ -484,7 +532,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
       </div>
       <div>
         <h3 style="font-size:21px;margin-bottom:12px">Klant De Ruijtermeubel</h3>
-        <div class="tw kw"><table>
+        <div class="tw kw kort"><table>
           <thead><tr><th>Zoekwoord</th><th>Positie</th></tr></thead>
           <tbody>
             <tr class="us"><td><b>senioren bankstel</b></td><td><b>2</b></td></tr>
@@ -515,7 +563,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="voorstel">
+<section id="voorstel">
   <div class="wrap">
     <span class="kick" style="--c:var(--orange)">dit is <i></i> ons voorstel</span>
     <h2>Eerst een site die werkt, dan gevonden worden</h2>
@@ -598,7 +646,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         <div class="stats">
           <div class="stat"><b>2012</b><span>ditisABC opgericht</span></div>
           <div class="stat"><b>12</b><span>collega's</span></div>
-          <div class="stat ok"><b>3×</b><span>FD Gazelle: 2023, 2024 en 2025</span></div>
+          <div class="stat ok"><b>4×</b><span>FD Gazelle: 2023 tot en met 2026</span></div>
           <div class="stat"><b>WordPress</b><span>onze basis voor websites</span></div>
         </div>
       </div>

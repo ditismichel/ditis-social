@@ -37,6 +37,18 @@ extra = """
 .over .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .over .stat b{font-size:26px}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
+.kort table{min-width:0}
+.vp{display:grid;gap:26px;align-items:start}
+@media (min-width:900px){.vp{grid-template-columns:1fr 300px}}
+.browser{border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px rgba(0,62,153,.12);overflow:hidden}
+.bbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#EEF3F8;border-bottom:1px solid var(--line)}
+.bbar i{width:11px;height:11px;border-radius:50%;background:#C9D6E5}
+.bbar span{margin-left:12px;font-size:13px;color:var(--muted);background:#fff;border-radius:8px;padding:3px 12px}
+.browser .scr{height:600px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.browser img,.phone2 img{width:100%;height:auto;display:block}
+.phone2{justify-self:center;width:300px;background:var(--ink);border-radius:42px;padding:11px;box-shadow:0 24px 50px rgba(0,19,46,.25)}
+.phone2 .scr{height:600px;overflow-y:auto;border-radius:32px;background:#fff;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.browser .scr{height:360px}.phone2{width:260px;order:-1}.phone2 .scr{height:520px}}
 .pw{margin:18px 0 0}
 .pw img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
 .pw figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
