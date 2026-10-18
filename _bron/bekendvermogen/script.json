@@ -1,0 +1,12 @@
+[
+  {"id": "hoi",      "beeld": "Hoi Robin.",                                  "spraak": "[warmly] Hoi Robin."},
+  {"id": "vraag",    "beeld": "\"Hoe vindbaar zijn jullie zelf?\"",          "spraak": "Je vroeg hoe vindbaar wij zelf zijn. Goede vraag. [pause]"},
+  {"id": "wij",      "beeld": "#3 op \"webdesign bureau\"",                  "spraak": "Op webdesign bureau staan we op drie in Google. In heel Nederland."},
+  {"id": "jij",      "beeld": "bekendvermogen.nl: 1 zoekwoord",             "spraak": "En Bekend Vermogen? Google vindt je nu alleen als iemand je naam al kent. Eén zoekwoord."},
+  {"id": "zoek",     "beeld": "300× boekhouder groningen · 300× jortt boekhouder", "spraak": "Terwijl er elke maand driehonderd mensen zoeken op boekhouder Groningen. En driehonderd op Jortt boekhouder. [pause]"},
+  {"id": "video",    "beeld": "109 MB · 9,6 sec",                           "spraak": "Op je homepage staat een video van honderdnegen megabyte, die meteen begint te laden. Op mobiel duurt het bijna tien seconden voor je site er staat."},
+  {"id": "reviews",  "beeld": "9,9 op Trustoo · 4,9 op Google",             "spraak": "[confident] En je hebt iets wat de rest niet heeft: een negen komma negen op Trustoo. Die reviews verdienen een site die net zo goed werkt als jullie."},
+  {"id": "voorstel", "beeld": "A. Nieuwe site · eigen hosting · zelf beheren", "spraak": "Ons voorstel: eerst een nieuwe WordPress-site. Op je eigen hosting, en jij houdt de sleutels. Nog dit jaar."},
+  {"id": "ai",       "beeld": "B. Gevonden door AI",                         "spraak": "Daarna zorgen we dat ook ChatGPT en Google je noemen."},
+  {"id": "slot",     "beeld": "Plan een moment",                             "spraak": "[warmly] Hieronder lees je alles. Plan gerust een moment, of stuur me een bericht."}
+]

@@ -1,0 +1,5 @@
+.DS_Store
+# Tussenbestanden van pitchvideo's: opnieuw te maken met de scripts in _bron/<slug>/tools
+_bron/*/out/
+_bron/*/audio/*.wav
+_bron/*/video/still-*.jpg
