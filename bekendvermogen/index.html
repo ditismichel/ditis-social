@@ -276,6 +276,14 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 .ref span{display:block;font-size:15px;color:#2A3B57;margin:0 6px 6px}
 .ref:hover b{text-decoration:underline}
 .bug .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.over{display:grid;gap:26px;align-items:start}
+@media (min-width:900px){.over{grid-template-columns:1fr 1fr}}
+.over figure{margin:0}
+.over img{width:100%;height:auto;border-radius:22px}
+.over figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.over .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.over .stat b{font-size:26px}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
 @media (min-width:640px){.seg{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:760px){.stats.drie{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .by img[src$=".svg"]{background:var(--surface);padding:10px}
@@ -542,6 +550,35 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="by" style="max-width:560px;margin-top:22px"><img src="media/abc-pixel.svg" alt=""><div><b>Analyse: ditisABC</b><span>Websites bekeken op 18 oktober 2026. SEO-cijfers zijn schattingen van Ahrefs, snelheid gemeten met Lighthouse op mobiel.</span></div></div>
   </div>
 </div></div></div>
+
+<section id="over">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--green-base)">dit is <i></i> over ons</span>
+    <h2>Hét webbureau uit de Bollenstreek</h2>
+    <div class="over">
+      <figure><img src="media/abc-team.jpg" alt="Het team van ditisABC in een dahliaveld in de Bollenstreek" loading="lazy" width="1400" height="933"><figcaption>Het team van ditisABC, 2026.</figcaption></figure>
+      <div>
+        <p class="intro" style="margin-bottom:16px">Ik begon in 2004 als ondernemer, net als jij met een eigen bedrijf vanaf nul. In 2012 werd dat ditisABC. Inmiddels werken we met elf mensen vanuit ons eigen kantoor in Hillegom, tussen de bollenvelden.</p>
+        <p class="intro" style="margin-bottom:20px">We bouwen websites, webshops en portals, en zorgen dat ze gevonden worden. Klein genoeg om je bij naam te kennen, groot genoeg om altijd iemand te hebben die je verder helpt.</p>
+        <div class="stats">
+          <div class="stat"><b>2012</b><span>ditisABC opgericht</span></div>
+          <div class="stat"><b>11</b><span>vaste collega's</span></div>
+          <div class="stat ok"><b>3×</b><span>FD Gazelle: 2023, 2024 en 2025</span></div>
+          <div class="stat"><b>WordPress</b><span>onze basis voor websites</span></div>
+        </div>
+      </div>
+    </div>
+    <h3 style="font-size:24px;margin:34px 0 12px">Wat we doen</h3>
+    <div class="pills">
+      <span class="kick" style="--c:var(--orange)">dit is <i></i> websites en webshops</span>
+      <span class="kick" style="--c:var(--blue)">dit is <i></i> hosting en support</span>
+      <span class="kick" style="--c:var(--yellow)">dit is <i></i> vindbaarheid in Google en AI</span>
+      <span class="kick" style="--c:var(--green-base)">dit is <i></i> toegankelijkheid</span>
+      <span class="kick" style="--c:var(--head)">dit is <i></i> maatwerk en automatisering</span>
+    </div>
+    <p class="note" style="font-size:15.5px;margin-top:22px">We werken onder meer voor miffy, gemeente Culemborg, Mayumana, De Ruijtermeubel en Müller Seeds. Meer over ons op <a href="https://www.ditisabc.nl" target="_blank" rel="noopener">ditisabc.nl</a>.</p>
+  </div>
+</section>
 
 <footer><div class="wrap"><span class="claim">Hét webbureau uit de Bollenstreek</span><span>Deze pagina is alleen voor Bekend Vermogen bedoeld en niet vindbaar via Google.</span></div></footer>
 
