@@ -37,6 +37,9 @@ extra = """
 .over .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .over .stat b{font-size:26px}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
+.pw{margin:18px 0 0}
+.pw img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff}
+.pw figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
 @media (min-width:640px){.seg{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:760px){.stats.drie{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .by img[src$=".svg"]{background:var(--surface);padding:10px}
