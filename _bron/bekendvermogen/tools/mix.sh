@@ -6,8 +6,10 @@ set -e
 B=/Users/michelgoulmy/Sites/ditis-social/_bron/bekendvermogen
 OUT=/Users/michelgoulmy/Sites/ditis-social/bekendvermogen/media
 DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $B/out/video_silent.mp4)
-FADE=$(python3 -c "print(round($DUR-3,2))")
-ffmpeg -y -loglevel error -i $B/audio/take1.mp3 -i $B/audio/music.mp3 -filter_complex "\
+MDUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $B/audio/music.mp3)
+FADE=$(python3 -c "print(round(min($DUR,$MDUR)-3,2))")
+STEM=${STEM:-take3.mp3}
+ffmpeg -y -loglevel error -i $B/audio/$STEM -i $B/audio/music.mp3 -filter_complex "\
 [0:a]loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000,apad=whole_dur=$DUR,asplit=2[v][vsc];\
 [1:a]loudnorm=I=-27:TP=-2:LRA=11,aresample=48000,atrim=0:$DUR,afade=t=out:st=$FADE:d=3[m];\
 [m][vsc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[md];\

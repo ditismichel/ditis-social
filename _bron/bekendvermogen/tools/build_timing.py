@@ -41,7 +41,7 @@ for i, w in enumerate(W):
         caps.append([round(cur[0]["s"], 2), round(cur[-1]["e"] + 0.15, 2), " ".join(x["t"] for x in cur)])
         cur = []
 # uitgesproken getallen in de ondertitel als cijfers tonen
-REPL = [("driehonderd", "300"), ("honderdnegen megabyte", "109 MB"), ("negen komma negen", "9,9"),
+REPL = [("top drie", "top 3"), ("driehonderd", "300"), ("honderdnegen megabyte", "109 MB"), ("negen komma negen", "9,9"),
         ("bijna tien seconden", "bijna 10 seconden"), ("op drie in", "op 3 in"), ("drie in Google", "3 in Google"), ("bijna tien", "bijna 10"), ("honderdnegen", "109")]
 for c in caps:
     for a, b in REPL:
