@@ -61,7 +61,13 @@ h2{font:800 96px/1.04 "Host Grotesk";color:var(--head);letter-spacing:-.015em}
 
 <div class="sc" id="s-hoi"><img class="face" src="img/robin.jpg" alt=""><h1>Hoi Robin.</h1><span class="pill" style="--c:var(--green-base)">dit is <i></i> jouw antwoord</span></div>
 
-<div class="sc" id="s-vraag"><div class="card"><div class="sub" style="font-size:36px;color:#4B5D7A;margin-bottom:22px">Robin Kuiper op LinkedIn</div><h2>"Ik ben benieuwd hoe vindbaar jullie zelf zijn."</h2></div></div>
+<div class="sc" id="s-bericht"><div class="card" style="text-align:left">
+  <div style="display:flex;gap:22px;align-items:center;margin-bottom:24px"><img src="img/robin.jpg" style="width:110px;height:110px;border-radius:50%;object-fit:cover"><div><div style="font:700 40px Geist;color:var(--ink)">Robin Kuiper</div><div class="sub" style="font-size:32px">Eigenaar Bekend Vermogen · LinkedIn</div></div></div>
+  <h2 style="font-size:78px;text-align:left">Gezocht: een mooie WordPress website!</h2>
+  <div id="eis" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:30px"><span class="pill" style="--c:var(--green-base)">dit is <i></i> SEO vanaf de basis</span><span class="pill" style="--c:var(--blue)">dit is <i></i> snel en mobiel</span><span class="pill" style="--c:var(--orange)">dit is <i></i> zelf beheren</span><span class="pill" style="--c:var(--yellow)">dit is <i></i> eigen hosting</span></div>
+</div></div>
+
+<div class="sc" id="s-vraag"><div class="card"><div class="sub" style="font-size:36px;color:#4B5D7A;margin-bottom:22px">Robin, in een reactie onder zijn eigen bericht</div><h2>"Ik ben benieuwd hoe vindbaar jullie zelf zijn."</h2></div></div>
 
 <div class="sc" id="s-wij"><div class="card serp">
   <div class="sub" style="font-size:34px;color:#4B5D7A">Google Search Console, afgelopen 30 dagen</div>
@@ -103,7 +109,7 @@ h2{font:800 96px/1.04 "Host Grotesk";color:var(--head);letter-spacing:-.015em}
 <div class="sc" id="s-ai"><div style="display:flex;gap:30px;align-items:center;align-self:flex-start"><div class="L" style="background:var(--blue)">B</div><h2 style="font-size:84px">Gevonden door AI</h2></div>
   <div class="sub" style="align-self:flex-start;font-size:36px;color:#4B5D7A">Zo kan het straks klinken:</div><div class="chat"><div class="b1" id="b1">Welke boekhouder in Groningen werkt met Jortt?</div><div class="b2" id="b2">Kijk eens bij <b>Bekend Vermogen</b> in Marum: Jortt Premium Kantoor, 9,9 op Trustoo.</div></div></div>
 
-<div class="sc" id="s-slot"><img class="face" src="img/michel.jpg" alt="" style="width:330px;height:330px;object-position:60% 30%"><h2>Plan een moment</h2><div class="url">ditis.website/bekendvermogen</div></div>
+<div class="sc" id="s-slot"><img class="face" src="img/michel.jpg" alt="" style="width:330px;height:330px;object-position:60% 30%"><h2>Laten we kennismaken</h2><div class="sub">Plan een afspraak op de pagina, of mail me</div><div class="url" id="mail" style="font-size:56px">michel@ditisabc.nl</div></div>
 
 <div id="cap"><span></span></div>
 <div class="foot">ditisABC · Hét webbureau uit de Bollenstreek</div>
@@ -111,7 +117,7 @@ h2{font:800 96px/1.04 "Host Grotesk";color:var(--head);letter-spacing:-.015em}
 <script src="timing.js"></script>
 <script>if(location.hash==='#poster'){document.write('<style>#cap{display:none!important}#s-hoi{justify-content:flex-start;top:170px;gap:26px}#s-hoi .face{width:300px;height:300px}#s-hoi h1{font-size:120px}</style>')}</script>
 <script>
-var IDS=['hoi','vraag','wij','wijai','jij','zoek','video','reviews','voorstel','ai','slot'];
+var IDS=['hoi','bericht','vraag','wij','wijai','jij','zoek','video','reviews','voorstel','ai','slot'];
 function clamp(x){return x<0?0:x>1?1:x}
 function ease(x){x=clamp(x);return 1-Math.pow(1-x,3)}
 function nl(x,d){return x.toFixed(d).replace('.',',')}
@@ -130,6 +136,7 @@ function render(t){
     if(id==='video'){ var f=ease((lt-0.3)/3.2); document.getElementById('n-mb').textContent=Math.round(109*f)+' MB'; document.getElementById('b-mb').style.width=(f*100)+'%'; document.getElementById('n-sec').textContent=nl(9.6*ease((lt-3.4)/3.2),1)+' s'; }
     if(id==='reviews'){ document.getElementById('n-rev').textContent=nl(9.9*ease((lt-0.2)/1.4),1); }
     if(id==='voorstel'){ var dq=ease((lt-0.2)/0.6), mq=ease((lt-1.4)/0.6); var dk=document.getElementById('vp-desk'), mb=document.getElementById('vp-mob'); dk.style.opacity=dq; dk.style.transform='translateY('+((1-dq)*60)+'px)'; mb.style.opacity=mq; mb.style.transform='translateX('+((1-mq)*120)+'px)'; [].forEach.call(document.querySelectorAll('#ul-a div'),function(d,k){var q=ease((lt-3.2-k*0.9)/0.4);d.style.opacity=q;d.style.transform='translateY('+((1-q)*20)+'px)'}); }
+    if(id==='bericht'){ [].forEach.call(document.querySelectorAll('#eis .pill'),function(d,k){var q=ease((lt-1.0-k*0.45)/0.4);d.style.opacity=q;d.style.transform='translateY('+((1-q)*20)+'px)'}); }
     if(id==='wijai'){ [].forEach.call(document.querySelectorAll('#ai4 .tile'),function(d,k){var q=ease((lt-0.8-k*0.35)/0.4);d.style.opacity=q;d.style.transform='scale('+(0.85+0.15*q)+')'}); }
     if(id==='ai'){ var q1=ease((lt-0.4)/0.4), q2=ease((lt-1.6)/0.5); var b1=document.getElementById('b1'), b2=document.getElementById('b2'); b1.style.opacity=q1; b1.style.transform='translateY('+((1-q1)*30)+'px)'; b2.style.opacity=q2; b2.style.transform='translateY('+((1-q2)*30)+'px)'; }
   });

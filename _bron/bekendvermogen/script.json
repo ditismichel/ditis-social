@@ -5,9 +5,14 @@
   "spraak": "[warmly] Hoi Robin."
  },
  {
+  "id": "bericht",
+  "beeld": "Gezocht: een mooie WordPress website!",
+  "spraak": "Je zoekt een WordPress-site die laat zien wie jullie zijn, en die goed gevonden wordt. Ik heb je bericht gelezen."
+ },
+ {
   "id": "vraag",
-  "beeld": "\"Hoe vindbaar zijn jullie zelf?\"",
-  "spraak": "Je vroeg hoe vindbaar wij zelf zijn. Goede vraag. [pause]"
+  "beeld": "\"Ik ben benieuwd hoe vindbaar jullie zelf zijn\"",
+  "spraak": "En ook je reactie eronder: iedereen heeft het over AI, maar hoe vindbaar zijn jullie zelf? Terechte vraag. Daar begin ik mee. [pause]"
  },
  {
   "id": "wij",
@@ -51,7 +56,7 @@
  },
  {
   "id": "slot",
-  "beeld": "Plan een moment",
-  "spraak": "[warmly] Hieronder lees je alles. Plan gerust een moment, of stuur me een bericht."
+  "beeld": "Laten we kennismaken · michel@ditisabc.nl",
+  "spraak": "[warmly] Alles staat hieronder uitgewerkt. Ik maak graag een keer kennis. Plan een afspraak, of mail me op michel apenstaartje ditis a b c punt n l."
  }
 ]

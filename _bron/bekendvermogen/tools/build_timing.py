@@ -40,8 +40,17 @@ for i, w in enumerate(W):
     if brk or i == len(W) - 1:
         caps.append([round(cur[0]["s"], 2), round(cur[-1]["e"] + 0.15, 2), " ".join(x["t"] for x in cur)])
         cur = []
+# mailadres niet knippen: plak ondertitels samen tot het adres compleet is
+i = 0
+while i < len(caps) - 1:
+    t = caps[i][2].lower()
+    if "apenstaartje" in t and not t.rstrip().endswith("l."):
+        caps[i] = [caps[i][0], caps[i + 1][1], caps[i][2] + " " + caps[i + 1][2]]
+        del caps[i + 1]
+        continue
+    i += 1
 # uitgesproken getallen in de ondertitel als cijfers tonen
-REPL = [("top drie", "top 3"), ("driehonderd", "300"), ("honderdnegen megabyte", "109 MB"), ("negen komma negen", "9,9"),
+REPL = [("michel apenstaartje ditis a b c punt n l.", "michel@ditisabc.nl"), ("michel apenstaartje ditis a b c punt n l", "michel@ditisabc.nl"), ("Michel apenstaartje ditis a b c punt n l.", "michel@ditisabc.nl"), ("top drie", "top 3"), ("driehonderd", "300"), ("honderdnegen megabyte", "109 MB"), ("negen komma negen", "9,9"),
         ("bijna tien seconden", "bijna 10 seconden"), ("op drie in", "op 3 in"), ("drie in Google", "3 in Google"), ("bijna tien", "bijna 10"), ("honderdnegen", "109")]
 for c in caps:
     for a, b in REPL:
