@@ -96,7 +96,7 @@ td.pos{font-weight:800;color:var(--head)}
 .phase>div:last-child{display:grid;gap:6px;min-width:0}
 .when{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
-.contact{background:var(--head);color:#fff;border-radius:24px;padding:26px;display:grid;gap:14px}
+.contact-old{background:var(--head);color:#fff;border-radius:24px;padding:26px;display:grid;gap:14px}
 .contact h2{color:#fff}
 .contact p{color:#E6F0FF}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
@@ -115,6 +115,58 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
   .top .who{font-size:13px}
   body{font-size:16px}
 }
+/* over ditisABC: badges en klanten */
+.badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.badge{background:var(--surface);border-radius:20px;padding:20px;display:grid;gap:10px;justify-items:center;align-content:center;text-align:center;min-width:0}
+.badge img{max-height:110px;width:auto;max-width:100%}
+.badge.gazelle img{max-height:44px}
+.badge img.gp{height:120px;max-height:none;width:auto}
+.badge small{font-size:14px;color:var(--muted)}
+.years{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.years span{font:700 14px "Host Grotesk",sans-serif;color:#1E5F5D;background:#E2F2F1;border-radius:999px;padding:4px 10px}
+.li-mark{display:flex;align-items:center;gap:10px}
+.li-mark img{width:44px;height:44px}
+.li-mark b{font:800 26px "Host Grotesk",sans-serif;color:var(--ink)}
+.gold{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5C3F05;background:linear-gradient(135deg,#F6D46B,#FCB72B);border-radius:999px;padding:6px 14px}
+.klanten{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){.klanten{grid-template-columns:repeat(3,1fr);gap:12px}}
+@media (max-width:599px){
+  .klant{grid-template-columns:110px 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center;padding:12px 14px}
+  .klant .lg{grid-row:1 / span 2;height:56px;margin:0}
+  .klant .lg img{max-height:48px;max-width:110px}
+}
+.klant{background:var(--surface);border-radius:18px;padding:16px;display:grid;gap:4px;text-decoration:none;color:var(--ink);border:1.5px solid transparent;transition:border-color .15s}
+.klant:hover{border-color:var(--blue3)}
+.klant .lg{height:72px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:8px}
+.klant .lg img{max-height:64px;max-width:160px;width:auto;height:auto;object-fit:contain}
+.klant .lg img.mono{filter:brightness(0)}
+.klant b{font:700 16px "Host Grotesk",sans-serif;color:var(--head)}
+.klant small{font-size:13.5px;color:var(--muted)}
+
+/* afspraak */
+.cgrid{display:grid;gap:18px}
+@media (min-width:880px){.cgrid{grid-template-columns:300px 1fr}}
+.ccard{align-self:start;background:var(--blue4);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.ccard img{width:100%;max-width:240px;border-radius:16px;display:block;margin:0 auto}
+.ccard .nm{font:800 22px "Host Grotesk",sans-serif;color:var(--head)}
+.ccard .rol{font-size:14.5px;color:#2A3B57;margin-top:-6px}
+.ccard .btns{flex-direction:column;align-items:stretch}
+.ccard .btn{justify-content:center;padding:11px 16px;font-size:15px}
+.ccard .btn.o{color:var(--head);border:1.5px solid var(--head);background:var(--surface)}
+.sm{font-size:14.5px;color:var(--muted)}
+.plan{background:var(--surface);border-radius:22px;padding:20px;min-width:0}
+.plan h3{font-size:22px;margin-bottom:4px}
+.seg{display:grid;gap:8px;margin:14px 0}
+@media (min-width:640px){.seg{grid-template-columns:repeat(3,1fr)}}
+.seg button{font:600 15px Geist,sans-serif;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}
+.seg button small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.seg button[aria-pressed="true"]{border-color:var(--head);box-shadow:inset 0 0 0 1.5px var(--head);background:var(--blue4)}
+.seg button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.alt{background:var(--blue4);border-radius:16px;padding:16px 18px;color:#2A3B57;margin-top:6px}
+.alt a{color:var(--head);font-weight:600}
+.gcal{margin-top:6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.gcal iframe{display:block;width:100%;height:640px;border:0}
+@media (max-width:640px){.gcal iframe{height:760px}}
 </style>
 </head>
 <body>
@@ -353,32 +405,108 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 </div></section>
 
 <section><div class="wrap">
-  <h2>Graag dinsdag besproken</h2>
+  <h2>Om samen te besluiten</h2>
   <ul class="abc">
     <li data-l="A"><span>Welke Duitse route jullie kiezen: thecamperrent.de of thecamperrent.com/de/.</span></li>
     <li data-l="B"><span>Wie de technische punten op de sites oppakt: jullie webbouwer of beheerder, of wij.</span></li>
     <li data-l="C"><span>Het advertentiebudget voor de boekingspiek, dat jullie rechtstreeks aan Google en Meta betalen.</span></li>
     <li data-l="D"><span>Toegang tot Search Console, Analytics, Google Ads, Meta en de bedrijfsprofielen, zodat we per 1 november meteen starten.</span></li>
   </ul>
-  <p>Na dinsdag werken we dit uit in een voorstel op maat.</p>
+  <p>Na ons gesprek werken we dit uit in een voorstel op maat.</p>
 </div></section>
 
-<section><div class="wrap">
-  <div class="contact">
-    <h2>Vragen vóór dinsdag?</h2>
-    <p>Voor het snelste antwoord bel of app je ons team op 023-3020409, of mail je naar marketing@ditisabc.nl. Mij direct bellen of mailen mag natuurlijk ook. Tot dinsdag!</p>
-    <div class="btns">
-      <a class="btn p" href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20een%20vraag%20over%20het%20plan%20voor%20De%20Klerk%20en%20The%20Camper%20Rent%3A%20">WhatsApp 023-3020409</a>
-      <a class="btn o" href="tel:+31233020409">Bel 023-3020409</a>
-      <a class="btn o" href="mailto:marketing@ditisabc.nl?subject=Plan%20De%20Klerk%20en%20The%20Camper%20Rent">marketing@ditisabc.nl</a>
+<section id="over"><div class="wrap">
+  <span class="kick" style="--c:var(--blue)">dit is <i></i> ditisABC</span>
+  <h2>Jullie buren in Hillegom</h2>
+  <p>Hét webbureau uit de Bollenstreek. Sinds 2012 bouwen we websites en webshops en zorgen we dat ze gevonden worden, in Google en in AI. Dat doen we vanuit ons eigen kantoor aan de Satellietbaan, op tien minuten van jullie showroom.</p>
+  <div class="badges">
+    <div class="badge gazelle">
+      <img src="media/badges/fd-gazellen-2026.svg" alt="FD Gazellen 2026" width="300" height="46" loading="lazy">
+      <div class="years"><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+      <small>Vier keer op rij een van de snelst groeiende bedrijven van Nederland</small>
     </div>
-    <p>Mijn eigen nummer en mail: 06-28530305 · michel@ditisabc.nl</p>
+    <div class="badge">
+      <img class="gp" src="media/badges/google-partner.png" alt="Google Partner" width="598" height="570" loading="lazy">
+    </div>
+    <div class="badge">
+      <div class="li-mark"><img src="media/badges/leadinfo.webp" alt="" width="48" height="48" loading="lazy"><b>Leadinfo</b></div>
+      <span class="gold">Gold Partner</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top:10px">Een greep uit onze klanten</h3>
+  <div class="klanten">
+    <a class="klant" href="https://miffytown.com" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/miffytown.svg" alt="Logo Miffytown" loading="lazy"></span><b>Miffytown</b><small>miffytown.com</small></a>
+    <a class="klant" href="https://deruijtermeubel.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/deruijtermeubel.svg" alt="Logo De Ruijtermeubel" loading="lazy"></span><b>De Ruijtermeubel</b><small>deruijtermeubel.nl</small></a>
+    <a class="klant" href="https://offgridpowerstation.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/offgridpowerstation.svg" alt="Logo Off Grid Power Station" loading="lazy"></span><b>Off Grid Power Station</b><small>offgridpowerstation.nl</small></a>
+    <a class="klant" href="https://glansz.nl" target="_blank" rel="noopener"><span class="lg"><img class="mono" src="media/klanten/glansz.png" alt="Logo Glansz" loading="lazy"></span><b>Glansz</b><small>glansz.nl</small></a>
+    <a class="klant" href="https://de-centrale.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/de-centrale.svg" alt="Logo De Centrale" loading="lazy"></span><b>De Centrale</b><small>de-centrale.nl</small></a>
+    <a class="klant" href="https://www.candyfestival.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/candyfestival.svg" alt="Logo Candy Festival" loading="lazy"></span><b>Candy Festival</b><small>candyfestival.nl</small></a>
+    <a class="klant" href="https://makelpuntculemborg.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/culemborg.webp" alt="Logo Gemeente Culemborg" loading="lazy"></span><b>Gemeente Culemborg</b><small>makelpuntculemborg.nl</small></a>
+    <a class="klant" href="https://karinbloemenstichting.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/karinbloemenstichting.svg" alt="Logo Karin Bloemen Stichting" loading="lazy"></span><b>Karin Bloemen Stichting</b><small>karinbloemenstichting.nl</small></a>
+    <a class="klant" href="https://thebastard.com" target="_blank" rel="noopener"><span class="lg"><img class="mono" src="media/klanten/thebastard.png" alt="Logo The Bastard" loading="lazy"></span><b>The Bastard</b><small>thebastard.com</small></a>
+  </div>
+</div></section>
+
+<section id="afspraak"><div class="wrap">
+  <h2>Plan direct een afspraak</h2>
+  <div class="cgrid">
+    <div class="ccard">
+      <img src="media/michel.webp" alt="Michel Goulmy aan de telefoon" width="600" height="534" loading="lazy">
+      <b class="nm">Michel Goulmy</b>
+      <span class="rol">Eigenaar van ditisABC</span>
+      <p class="sm">Voor het snelste antwoord bel of app je ons team, of mail je naar marketing. Mij direct bellen of mailen mag natuurlijk ook.</p>
+      <div class="btns">
+        <a class="btn p" href="tel:+31233020409">Bel 023-3020409</a>
+        <a class="btn o" href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20een%20vraag%20over%20het%20plan%20voor%20De%20Klerk%20en%20The%20Camper%20Rent%3A%20">WhatsApp 023-3020409</a>
+        <a class="btn o" href="mailto:marketing@ditisabc.nl?subject=Plan%20De%20Klerk%20en%20The%20Camper%20Rent">marketing@ditisabc.nl</a>
+      </div>
+      <p class="sm">Mijn eigen nummer en mail: 06-28530305 · michel@ditisabc.nl</p>
+      <p class="sm">ditisABC · Satellietbaan 41A, Hillegom</p>
+    </div>
+    <div class="plan">
+      <h3>Kies een moment</h3>
+      <p class="sm">Kies hoe je wilt afspreken en kies een tijd. De afspraak staat dan direct in mijn agenda en je krijgt zelf een uitnodiging.</p>
+      <div class="seg" id="seg">
+        <button type="button" data-t="bel" aria-pressed="true">Bellen<small>30 minuten, ik bel jullie</small></button>
+        <button type="button" data-t="hil" aria-pressed="false">Bij ons op kantoor<small>Satellietbaan, koffie staat klaar</small></button>
+        <button type="button" data-t="dk" aria-pressed="false">Bij jullie<small>Ik kom naar de Haarlemmerstraat</small></button>
+      </div>
+      <div class="gcal" id="gcal"></div>
+      <p class="alt" id="alt" hidden></p>
+      <p class="sm" style="margin-top:12px">Geen passend moment? <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20zullen%20we%20een%20moment%20prikken%20voor%20De%20Klerk%20en%20The%20Camper%20Rent%3F">App ons</a>, dan zoeken we samen iets.</p>
+    </div>
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap"><span class="claim">Hét webbureau uit de Bollenstreek</span><span>Deze pagina is alleen voor De Klerk Caravans en The Camper Rent bedoeld en niet vindbaar via Google.</span></div></footer>
 
+<script>
+/* Afspraak plannen via Google-afsprakenplanning */
+(function(){
+  var GCAL={
+    bel:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Ln0A0rEU2lAb-DraLshQGOPObq5Axjyc1EOghXaUpjO8gIRM9d8wGVNv-Iw9U-rtDbipvV4gQ?gv=true',
+    hil:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1SBemRfqibDKTQNsGAo5cvYV-tDQji17dhVJDSglqu1jQV7EgrvNympOwKCb8kIKSV5YFO14iO?gv=true',
+    dk:''
+  };
+  var ALT={
+    dk:'Ik kom graag bij jullie langs aan de Haarlemmerstraat. <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20kan%20Michel%20langskomen%20bij%20De%20Klerk%20aan%20de%20Haarlemmerstraat%3F">App ons</a> of bel <a href="tel:+31233020409">023-3020409</a>, dan prikken we een moment.'
+  };
+  var seg=document.getElementById('seg'), gcal=document.getElementById('gcal'), alt=document.getElementById('alt'); if(!seg)return;
+  function show(t){
+    var g=GCAL[t];
+    gcal.hidden=!g; alt.hidden=!!g;
+    if(g){ if(gcal.getAttribute('data-src')!==g){ gcal.innerHTML='<iframe title="Afspraak met Michel plannen" src="'+g+'"></iframe>'; gcal.setAttribute('data-src',g); } }
+    else alt.innerHTML=ALT[t]||'';
+  }
+  seg.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    [].forEach.call(seg.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false')}); show(b.getAttribute('data-t'));
+  });
+  show('bel');
+})();
+</script>
 <script>
 /* Bezoekmelding: stuurt Michel een mail bij openen en klikken. Geen cookies.
    Eigen apparaat uitsluiten: open de pagina eenmalig met ?ik=1 (weer aan met ?ik=0). */
