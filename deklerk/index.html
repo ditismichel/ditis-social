@@ -156,6 +156,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 .sm{font-size:14.5px;color:var(--muted)}
 .plan{background:var(--surface);border-radius:22px;padding:20px;min-width:0}
 .plan h3{font-size:22px;margin-bottom:4px}
+.plan{align-self:start}
+.plan summary{cursor:pointer;list-style:none;display:grid;gap:2px;padding-right:34px;position:relative}
+.plan summary::-webkit-details-marker{display:none}
+.plan summary:after{content:"+";position:absolute;right:4px;top:0;font:800 26px/1 "Host Grotesk",sans-serif;color:var(--head)}
+.plan[open] summary:after{content:"–"}
+.plan summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:8px}
+.sumtitle{font:800 20px "Host Grotesk",sans-serif;color:var(--head)}
+.plan .seg{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .seg{display:grid;gap:8px;margin:14px 0}
 @media (min-width:640px){.seg{grid-template-columns:repeat(3,1fr)}}
 .seg button{font:600 15px Geist,sans-serif;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}
@@ -447,7 +455,8 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 </div></section>
 
 <section id="afspraak"><div class="wrap">
-  <h2>Plan direct een afspraak</h2>
+  <h2>Even schakelen?</h2>
+  <p>Heb je tussendoor een vraag, of wil je iets doorspreken? Bel, app of mail ons, of prik zelf een moment in mijn agenda.</p>
   <div class="cgrid">
     <div class="ccard">
       <img src="media/michel.webp" alt="Michel Goulmy aan de telefoon" width="600" height="534" loading="lazy">
@@ -463,18 +472,16 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
       <p class="sm">Liever een directe lijn met Anouk, jullie vaste aanspreekpunt? Dat kan natuurlijk ook.</p>
       <p class="sm">ditisABC · Satellietbaan 41A, Hillegom</p>
     </div>
-    <div class="plan">
-      <h3>Kies een moment</h3>
-      <p class="sm">Kies hoe je wilt afspreken en kies een tijd. De afspraak staat dan direct in mijn agenda en je krijgt zelf een uitnodiging.</p>
+    <details class="plan" id="plan">
+      <summary><span class="sumtitle">Zelf een moment kiezen</span><span class="sm">Bellen of bij ons op kantoor, direct in mijn agenda</span></summary>
       <div class="seg" id="seg">
         <button type="button" data-t="bel" aria-pressed="true">Bellen<small>30 minuten, ik bel jullie</small></button>
         <button type="button" data-t="hil" aria-pressed="false">Bij ons op kantoor<small>Satellietbaan, koffie staat klaar</small></button>
-        <button type="button" data-t="dk" aria-pressed="false">Bij jullie<small>Ik kom naar de Haarlemmerstraat</small></button>
       </div>
       <div class="gcal" id="gcal"></div>
       <p class="alt" id="alt" hidden></p>
       <p class="sm" style="margin-top:12px">Geen passend moment? <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20zullen%20we%20een%20moment%20prikken%20voor%20De%20Klerk%20en%20The%20Camper%20Rent%3F">App ons</a>, dan zoeken we samen iets.</p>
-    </div>
+    </details>
   </div>
 </div></section>
 </main>
@@ -503,7 +510,8 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
     var b=e.target.closest('button'); if(!b)return;
     [].forEach.call(seg.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false')}); show(b.getAttribute('data-t'));
   });
-  show('bel');
+  var plan=document.getElementById('plan');
+  if(plan){ plan.addEventListener('toggle',function(){ if(plan.open && !gcal.getAttribute('data-src')) show('bel'); }); } else show('bel');
 })();
 </script>
 <script>
