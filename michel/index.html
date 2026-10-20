@@ -69,10 +69,20 @@ h3{font-size:19px}
 .me figcaption b{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 .intro .txt{display:grid;gap:14px}
 
-.badge{background:var(--surface);border-radius:20px;padding:18px 20px;display:grid;gap:10px;justify-items:start;max-width:520px}
-.badge img{max-height:40px;width:auto;max-width:100%}
-.badge small{font-size:14.5px;color:var(--muted)}
-.years{display:flex;gap:6px;flex-wrap:wrap}
+.badges{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.badge{grid-column:span 2;background:var(--surface);border-radius:20px;padding:20px;display:grid;gap:10px;justify-items:center;align-content:center;text-align:center;min-width:0;min-height:170px}
+.badge:nth-child(n+4){grid-column:span 3}
+.badge img{max-height:110px;width:auto;max-width:100%}
+.badge.gazelle img{max-height:40px}
+.badge img.gp{height:110px;max-height:none;width:auto}
+.badge small{font-size:14px;color:var(--muted)}
+.years{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.li-mark{display:flex;align-items:center;gap:10px}
+.li-mark img{width:44px;height:44px}
+.li-mark b{font:800 26px "Host Grotesk",sans-serif;color:var(--ink)}
+.gold{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5C3F05;background:linear-gradient(135deg,#F6D46B,#FCB72B);border-radius:999px;padding:6px 14px}
+.tag{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--green);background:var(--green-bg);border-radius:999px;padding:6px 14px}
+@media (max-width:760px){.badges{grid-template-columns:1fr 1fr;gap:10px}.badge,.badge:nth-child(n+4){grid-column:span 1;min-height:140px;padding:16px 12px}.badge.gazelle{grid-column:1 / -1}.badge img.gp{height:90px}.li-mark b{font-size:20px}.li-mark img{width:34px;height:34px}}
 .years span{font:700 14px "Host Grotesk",sans-serif;color:#1E5F5D;background:#E2F2F1;border-radius:999px;padding:4px 10px}
 
 .btns{display:flex;flex-wrap:wrap;gap:10px}
@@ -141,11 +151,6 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
       <h2>Hoi, ik ben Michel</h2>
       <p>Ik ben al ruim twintig jaar ondernemer in de online wereld. In 2004 begon ik als zelfstandig webbouwer. In 2009 startte ik de webshop SchrijfOp.nl en bouwde die met succes op. Daar leerde ik van dichtbij wat ondernemers online nodig hebben om te groeien. Met die ervaring richtte ik in 2012 ditisABC op.</p>
       <p>Inmiddels werken we met twaalf mensen vanuit ons eigen pand aan de Satellietbaan in Hillegom. Romy en Anouk komen ons team versterken. Je houdt je vertrouwde aanspreekpunt, en daarachter staat nu een heel team.</p>
-      <div class="badge">
-        <img src="media/fd-gazellen-2026.svg" alt="FD Gazellen 2026" width="300" height="46" loading="lazy">
-        <div class="years"><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
-        <small>Het Financieele Dagblad rekende ons vier keer op rij tot de snelst groeiende bedrijven van Nederland.</small>
-      </div>
     </div>
   </div>
 </div></section>
@@ -161,6 +166,32 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
     </div>
     <figcaption>Het team van ditisABC, vanaf 1 november met Romy en Anouk erbij</figcaption>
   </figure>
+</div></section>
+
+<section id="partners"><div class="wrap">
+  <h2>Erkenning en partners</h2>
+  <div class="badges">
+    <div class="badge gazelle">
+      <img src="media/badges/fd-gazellen-2026.svg" alt="FD Gazellen 2026" width="300" height="46" loading="lazy">
+      <div class="years"><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+      <small>Vier keer op rij een van de snelst groeiende bedrijven van Nederland</small>
+    </div>
+    <div class="badge">
+      <img class="gp" src="media/badges/google-partner.png" alt="Google Partner" width="598" height="570" loading="lazy">
+    </div>
+    <div class="badge">
+      <div class="li-mark"><img src="media/badges/leadinfo.webp" alt="" width="48" height="48" loading="lazy"><b>Leadinfo</b></div>
+      <span class="gold">Gold Partner</span>
+    </div>
+    <div class="badge">
+      <div class="li-mark"><img src="media/badges/shopify.svg" alt="" width="44" height="44" loading="lazy"><b>Shopify</b></div>
+      <span class="tag">Partner</span>
+    </div>
+    <div class="badge">
+      <div class="li-mark"><img src="media/badges/wordpress.svg" alt="" width="44" height="44" loading="lazy"><b>WordPress</b></div>
+      <small>Websites en webshops</small>
+    </div>
+  </div>
 </div></section>
 
 <section id="afspraak"><div class="wrap">
