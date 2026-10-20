@@ -84,11 +84,23 @@ h3{font-size:19px}
 .scan .good h3{color:var(--green)}
 .scan .fix h3{color:var(--orange-ink)}
 
-/* AI-vragen */
-.qs{display:grid;gap:10px}
-.q{font:600 18px/1.35 "Host Grotesk",sans-serif;color:var(--head);padding:14px 18px;border-left:4px solid var(--yellow);background:var(--surface);border-radius:0 16px 16px 0}
-.engines{display:flex;flex-wrap:wrap;gap:6px}
+/* AI-meting */
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.score>div{background:var(--surface);border-radius:20px;padding:22px;display:grid;gap:6px;min-width:0}
+.score .num{font:800 40px/1 "Host Grotesk",sans-serif;font-variant-numeric:tabular-nums}
+.score .hi .num{color:var(--green)}
+.score .lo .num{color:var(--orange-ink)}
+.score .lbl{font-size:15px;color:var(--muted)}
+.examples{display:grid;gap:14px}
+.example{background:var(--surface);border-radius:20px;padding:22px;display:grid;gap:14px}
+.q{font:600 19px/1.35 "Host Grotesk",sans-serif;color:var(--head);padding-left:14px;border-left:4px solid var(--yellow)}
+.engines{display:grid;gap:8px}
+.engine{display:grid;grid-template-columns:160px 1fr;gap:12px;align-items:start}
+.engine .name{font-weight:600;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
 .chip{font-size:14px;padding:3px 11px;border-radius:999px;background:var(--blue4)}
+.takeaway{font-weight:600}
+@media (max-width:560px){.engine{grid-template-columns:1fr;gap:4px}}
 
 /* fasen */
 .phases{display:grid;gap:14px}
@@ -269,17 +281,38 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 </div></section>
 
 <section><div class="wrap">
-  <h2>Wat zegt AI over Het Merkhuis?</h2>
-  <p>Dat meten we met vragen zoals jullie klanten die stellen, elk meerdere keren gesteld aan ChatGPT, Gemini, Copilot en Google AI. We kijken welke bureaus genoemd worden en welke pagina's AI als bron gebruikt. Voor Het Merkhuis zetten we deze vragen klaar:</p>
-  <div class="qs">
-    <div class="q">"Welk marketingbureau in Alphen aan den Rijn helpt B2B-bedrijven met merkstrategie?"</div>
-    <div class="q">"Hoe bepaal ik de positionering van mijn B2B-bedrijf, en welk bureau kan daarbij helpen?"</div>
-    <div class="q">"Ik zoek een marketeer on demand voor mijn bedrijf in het Groene Hart. Wie raad je aan?"</div>
-    <div class="q">"Wie kan een merkmanifest of kernwaarden voor mijn bedrijf opstellen?"</div>
-    <div class="q">"Waar volg ik als zzp'er een training over ChatGPT voor marketing?"</div>
+  <h2>Wat AI nu over Het Merkhuis zegt</h2>
+  <p>Vraag je AI naar Het Merkhuis zelf, dan volgt een goed antwoord, en Gemini legt De Positioneringspuzzel zelfs netjes uit. Bij vragen zonder jullie naam, waar nieuwe klanten beginnen, noemt AI jullie nog niet.</p>
+  <div class="score">
+    <div class="hi"><span class="num">3 van 5</span><span class="lbl">antwoorden <strong>met</strong> jullie naam in de vraag noemen Het Merkhuis duidelijk</span></div>
+    <div class="lo"><span class="num">0 van 23</span><span class="lbl">antwoorden <strong>zonder</strong> jullie naam noemen Het Merkhuis; wel ruim vijftig andere bureaus</span></div>
   </div>
-  <div class="engines"><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Google AI Overviews</span></div>
-  <p>De uitkomst bespreken we graag samen. Dezelfde meting kunnen we ook voor klanten van Het Merkhuis doen.</p>
+  <p class="note">Eerste meting 20 en 21 oktober 2026: tien vragen, twee met en acht zonder jullie naam, elk twee tot drie keer gesteld aan Gemini, Google AI Overviews en Copilot. Samen 28 antwoorden.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Twee voorbeelden</h2>
+  <div class="examples">
+    <div class="example">
+      <div class="q">"Wij zijn een middelgrote organisatie en willen onze klantbelofte scherper krijgen. Welk bureau kan ons hierbij helpen?"</div>
+      <div class="engines">
+        <div class="engine"><span class="name">Gemini</span><div class="chips"><span class="chip">TAB</span><span class="chip">Fitzroy</span><span class="chip">Kega</span><span class="chip">Flowresulting</span><span class="chip">STBY</span></div></div>
+        <div class="engine"><span class="name">Copilot</span><div class="chips"><span class="chip">Buro Dirigo</span><span class="chip">Sterk Merk</span><span class="chip">Het Branding Bureau</span><span class="chip">BOOM Strategie</span><span class="chip">Whello</span></div></div>
+        <div class="engine"><span class="name">Google AI Overview</span><div class="chips"><span class="chip">Boom Strategie</span><span class="chip">CP Positioneringsadvies</span><span class="chip">Buro Improof</span><span class="chip">BURO210</span><span class="chip">De Positie</span></div></div>
+      </div>
+      <p class="takeaway">Klantbelofte en positionering zijn precies jullie vak, met De Positioneringspuzzel als eigen methode. AI weet het alleen nog niet.</p>
+    </div>
+    <div class="example">
+      <div class="q">"Ik zoek een bureau dat merkstrategie combineert met co-creatie met directie en team."</div>
+      <div class="engines">
+        <div class="engine"><span class="name">Gemini</span><div class="chips"><span class="chip">Stuurmen</span><span class="chip">Frappant</span><span class="chip">Better Brands</span><span class="chip">Tasmanic</span><span class="chip">Raadhuis</span></div></div>
+        <div class="engine"><span class="name">Copilot</span><div class="chips"><span class="chip">Creating Brands</span><span class="chip">Het Merkbureau</span><span class="chip">Rob de Bruijn</span><span class="chip">Merkstrijders</span></div></div>
+        <div class="engine"><span class="name">Google AI Overview</span><div class="chips"><span class="chip">Frappant</span><span class="chip">Stuurmen</span><span class="chip">IVC</span><span class="chip">DsignBranding</span><span class="chip">Potentify</span></div></div>
+      </div>
+      <p class="takeaway">Co-creatie met directie en team is de kern van jullie aanpak. Copilot noemt wel Het Merkbureau, een ander bureau met bijna dezelfde naam.</p>
+    </div>
+  </div>
+  <p>Het goede nieuws: AI kent jullie al zodra iemand naar de naam vraagt. De stap naar de brede vragen zit vooral in pagina's die één vraag direct beantwoorden, een pagina per product, en bedrijfsgegevens die overal hetzelfde verhaal vertellen. Dezelfde meting doen we graag ook voor klanten van Het Merkhuis.</p>
 </div></section>
 
 <section><div class="wrap">
