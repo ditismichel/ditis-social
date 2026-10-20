@@ -39,6 +39,20 @@ p{max-width:70ch}
 .hfoto,.teamfoto{margin:0;display:grid;gap:8px}
 .hfoto img,.teamfoto img{width:100%;height:auto;border-radius:22px}
 .hfoto figcaption,.teamfoto figcaption{font-size:14px;color:var(--muted)}
+.tbox{position:relative}
+.teamfoto figcaption{padding-right:330px;min-height:52px}
+.polas{position:absolute;right:14px;bottom:-56px;display:flex;gap:4px}
+.pola{width:150px;background:#fff;padding:8px 8px 0;border-radius:4px;box-shadow:0 10px 24px rgba(0,19,46,.22),0 2px 6px rgba(0,19,46,.12);display:grid}
+.pola img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.pola span{font:700 16px/1 "Host Grotesk",sans-serif;color:var(--head);text-align:center;padding:10px 0 12px}
+.p1{transform:rotate(-5deg)}
+.p2{transform:rotate(4deg) translateY(-6px)}
+@media (max-width:640px){
+  .polas{right:4px;bottom:-62px;gap:2px}
+  .pola{width:74px;padding:4px 4px 0}
+  .pola span{font-size:11px;padding:5px 0 6px}
+  .teamfoto figcaption{padding-right:164px;min-height:56px}
+}
 .hero h1{font-size:clamp(38px,7vw,60px)}
 .hero p{font-size:18px;color:var(--muted)}
 
@@ -137,7 +151,16 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 </div></section>
 
 <section><div class="wrap">
-  <figure class="teamfoto"><img src="media/team.jpg" alt="Het team van ditisABC en foome rond een blauwe taart met de tekst lvl 14 unlocked" width="1600" height="747" loading="lazy"><figcaption>Het team van ditisABC en foome, samen 14 jaar ditisABC vieren</figcaption></figure>
+  <figure class="teamfoto">
+    <div class="tbox">
+      <img src="media/team.jpg" alt="Het team van ditisABC rond een blauwe taart met de tekst lvl 14 unlocked" width="1600" height="747" loading="lazy">
+      <div class="polas">
+        <div class="pola p1"><img src="media/romy.jpg" alt="Romy" width="480" height="480" loading="lazy"><span>Romy</span></div>
+        <div class="pola p2"><img src="media/anouk.jpg" alt="Anouk" width="480" height="480" loading="lazy"><span>Anouk</span></div>
+      </div>
+    </div>
+    <figcaption>Het team van ditisABC, vanaf 1 november met Romy en Anouk erbij</figcaption>
+  </figure>
 </div></section>
 
 <section id="afspraak"><div class="wrap">
