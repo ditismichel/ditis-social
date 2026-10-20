@@ -189,6 +189,17 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 .soc .btn svg{width:18px;height:18px;flex:none}
 .soc .btn.o{color:var(--head);border:1.5px solid var(--head);background:var(--surface)}
 @media (max-width:560px){.soc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.soc .btn{justify-content:center;padding:12px 8px}.soc .btn.p{grid-column:1 / -1}.soc .btn.o{flex-direction:column;gap:6px;font-size:14px;border-radius:16px}.soc .btn.o svg{width:22px;height:22px}}
+/* nieuwsbrief */
+.nb{background:var(--blue4);border-radius:22px;padding:22px;display:grid;gap:16px;align-items:end}
+@media (min-width:820px){.nb{grid-template-columns:1fr 1.2fr}}
+.nb h2{margin-bottom:4px}
+.nb .sm{font-size:15px;color:#2A3B57}
+.nbform{display:grid;gap:10px;grid-template-columns:1fr 1fr auto;align-items:end;position:relative}
+.fld{display:grid;gap:4px;font-size:13px;font-weight:600;color:#2A3B57}
+.fld input{font:16px Geist,sans-serif;padding:11px 14px;border:1.5px solid var(--blue3);border-radius:12px;background:#fff;color:var(--ink);min-width:0}
+.fld input:focus{outline:3px solid var(--blue);outline-offset:1px;border-color:var(--head)}
+.nbform .btn{border:0;cursor:pointer;justify-content:center;padding:13px 22px}
+@media (max-width:640px){.nbform{grid-template-columns:1fr}}
 @media (max-width:640px){.gcal iframe{height:760px}}
 </style>
 </head>
@@ -500,6 +511,20 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
       <p class="alt" id="alt" hidden></p>
       <p class="sm" style="margin-top:12px">Geen passend moment? <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20zullen%20we%20een%20moment%20prikken%20voor%20De%20Klerk%20en%20The%20Camper%20Rent%3F">App ons</a>, dan zoeken we samen iets.</p>
     </details>
+  </div>
+</div></section>
+<section id="nieuwsbrief"><div class="wrap">
+  <div class="nb">
+    <div>
+      <h2>Blijf op de hoogte</h2>
+      <p class="sm">Meld je aan voor onze nieuwsbrief met handige tips, nieuws van ditisABC en uitnodigingen voor workshops. Afmelden kan altijd.</p>
+    </div>
+    <form class="nbform" action="https://ditisABC.us6.list-manage.com/subscribe/post?u=91819c18625f7559a4ad05b34&amp;id=5dcd2d2fc8" method="post" target="_blank" novalidate>
+      <label class="fld"><span>Voornaam</span><input type="text" name="FNAME" autocomplete="given-name"></label>
+      <label class="fld"><span>E-mailadres</span><input type="email" name="EMAIL" autocomplete="email" required></label>
+      <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_91819c18625f7559a4ad05b34_5dcd2d2fc8" tabindex="-1" value=""></div>
+      <button class="btn p" type="submit">Aanmelden</button>
+    </form>
   </div>
 </div></section>
 <section id="volg"><div class="wrap">
