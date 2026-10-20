@@ -127,6 +127,15 @@ h3{font-size:19px}
 .addr{align-items:flex-start;border-top:1px solid var(--blue3);padding-top:12px;font-weight:500;line-height:1.4}
 .addr svg{margin-top:2px}
 
+.nb{background:var(--green-bg);border-radius:22px;padding:22px;display:grid;gap:16px;align-items:end}
+@media (min-width:820px){.nb{grid-template-columns:1fr 1.2fr}}
+.nb .sm{color:#1F3A18}
+.nbform{display:grid;gap:10px;grid-template-columns:1fr 1fr auto;align-items:end;position:relative}
+.fld{display:grid;gap:4px;font-size:13px;font-weight:600;color:#1F3A18}
+.fld input{font:16px Geist,sans-serif;padding:11px 14px;border:1.5px solid #B9D7AE;border-radius:12px;background:#fff;color:var(--ink);min-width:0}
+.fld input:focus{outline:3px solid var(--blue);outline-offset:1px;border-color:var(--green)}
+.nbform .btn{border:0;cursor:pointer;justify-content:center;padding:13px 22px}
+@media (max-width:640px){.nbform{grid-template-columns:1fr}}
 .follow{background:var(--surface);border-radius:22px;padding:22px;display:grid;gap:16px}
 .follow h2{margin-bottom:4px}
 .soc{display:flex;flex-wrap:wrap;gap:10px}
@@ -239,6 +248,21 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
       </div>
       <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=ditisABC%2C%20Satellietbaan%2041A%2C%202181%20MG%20Hillegom" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg><span>ditisABC<br>Satellietbaan 41A, 2181 MG Hillegom</span></a>
     </div>
+  </div>
+</div></section>
+
+<section id="nieuwsbrief"><div class="wrap">
+  <div class="nb">
+    <div>
+      <h2>Blijf op de hoogte</h2>
+      <p class="sm">Meld je aan voor onze nieuwsbrief met handige tips, nieuws van ditisABC en uitnodigingen voor workshops. Afmelden kan altijd.</p>
+    </div>
+    <form class="nbform" action="https://ditisABC.us6.list-manage.com/subscribe/post?u=91819c18625f7559a4ad05b34&amp;id=5dcd2d2fc8" method="post" target="_blank" novalidate>
+      <label class="fld"><span>Voornaam</span><input type="text" name="FNAME" autocomplete="given-name"></label>
+      <label class="fld"><span>E-mailadres</span><input type="email" name="EMAIL" autocomplete="email" required></label>
+      <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_91819c18625f7559a4ad05b34_5dcd2d2fc8" tabindex="-1" value=""></div>
+      <button class="btn p" type="submit">Aanmelden</button>
+    </form>
   </div>
 </div></section>
 
