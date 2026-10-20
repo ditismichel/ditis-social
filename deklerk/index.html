@@ -115,6 +115,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
   .top .who{font-size:13px}
   body{font-size:16px}
 }
+/* zo werken we samen */
+.samen{display:grid;gap:20px;align-items:center}
+@media (min-width:640px){.samen{grid-template-columns:200px 1fr}}
+.anouk{margin:0;background:var(--surface);border-radius:20px;padding:10px;display:grid;gap:8px;max-width:240px}
+.anouk img{border-radius:14px;aspect-ratio:1/1;object-fit:cover;width:100%;height:auto}
+.anouk figcaption{display:grid;gap:2px;padding:0 6px 6px;font-size:14px;color:var(--muted)}
+.anouk figcaption b{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
+
 /* over ditisABC: badges en klanten */
 .badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .badge{background:var(--surface);border-radius:20px;padding:20px;display:grid;gap:10px;justify-items:center;align-content:center;text-align:center;min-width:0}
@@ -413,11 +421,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 
 <section><div class="wrap">
   <h2>Zo werken we samen</h2>
+  <div class="samen">
+  <figure class="anouk"><img src="media/anouk.jpg" alt="Anouk, vast aanspreekpunt voor De Klerk Caravans en The Camper Rent" width="600" height="600" loading="lazy"><figcaption><b>Anouk</b>Jullie vaste aanspreekpunt</figcaption></figure>
   <ul class="abc">
     <li data-l="A"><span><strong>Anouk blijft jullie vaste aanspreekpunt.</strong></span></li>
     <li data-l="B"><span><strong>Een team van twaalf achter Anouk.</strong> Zo zetten we ieders specialisme in voor een beter resultaat voor jullie.</span></li>
     <li data-l="C"><span><strong>Eén nummer en één mailadres.</strong> Vanaf 1 november bereik je ons via 023-3020409 (ook WhatsApp) en marketing@ditisabc.nl. Zo ziet het hele team je vraag en komt het antwoord sneller; we geloven dat dit de communicatie beter maakt. Werkt dat voor jullie toch niet en wil je liever een directe lijn met Anouk, dan kan dat natuurlijk ook.</span></li>
   </ul>
+  </div>
   <p>In november werken Anouk en ik een concreet plan en voorstel uit, inclusief de AI-toepassingen, en dat bespreken we samen in een vervolggesprek.</p>
 </div></section>
 
