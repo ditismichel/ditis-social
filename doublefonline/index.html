@@ -596,9 +596,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         <div class="seg" id="seg">
           <button type="button" data-t="bel" aria-pressed="true">Bellen<small>30 minuten, ik bel jou</small></button>
           <button type="button" data-t="online" aria-pressed="false">Videobellen<small>Google Meet, link volgt na boeking</small></button>
-          <button type="button" data-t="hil" aria-pressed="false">Bij ons in Hillegom<small>Op kantoor, koffie staat klaar</small></button>
-          <button type="button" data-t="bv" aria-pressed="false">In Barneveld<small>Ik kom naar jullie toe</small></button>
-        </div>
+          <button type="button" data-t="hil" aria-pressed="false">Bij ons in Hillegom<small>Op kantoor, koffie staat klaar</small></button>        </div>
         <div class="gcal" id="gcal"></div>
         <p class="altmsg" id="alt" hidden></p>
         <p class="sm" style="margin-top:12px">Geen passend moment? <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20zullen%20we%20een%20moment%20prikken%20over%20Google%20Ads%20voor%20DoubleFOnline%3F">App ons</a>, dan zoeken we samen iets.</p>
@@ -736,12 +734,9 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   var GCAL={
     bel:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Ln0A0rEU2lAb-DraLshQGOPObq5Axjyc1EOghXaUpjO8gIRM9d8wGVNv-Iw9U-rtDbipvV4gQ?gv=true',
     online:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3kCwQu5guAznIvgRQJaT1yA1rbI9qDF5mJ12jIjXdgQI2gvjTc45zYt0bLrz7EyO2HH_GoX8qJ?gv=true',
-    hil:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1SBemRfqibDKTQNsGAo5cvYV-tDQji17dhVJDSglqu1jQV7EgrvNympOwKCb8kIKSV5YFO14iO?gv=true',
-    bv:''
+    hil:'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1SBemRfqibDKTQNsGAo5cvYV-tDQji17dhVJDSglqu1jQV7EgrvNympOwKCb8kIKSV5YFO14iO?gv=true'
   };
-  var ALT={
-    bv:'Ik kom graag naar jullie toe in Barneveld. <a href="https://wa.me/31233020409?text=Hoi%20ditisABC%2C%20kan%20Michel%20langskomen%20bij%20DoubleFOnline%20in%20Barneveld%3F">App ons</a> of bel <a href="tel:+31233020409">023-3020409</a>, dan prikken we een moment.'
-  };
+  var ALT={};
   var seg=document.getElementById('seg'), gcal=document.getElementById('gcal'), alt=document.getElementById('alt'); if(!seg)return;
   function show(t){
     var g=GCAL[t];
