@@ -1,0 +1,13 @@
+[
+ {"id": "hoi", "beeld": "Hoi Esan.", "spraak": "[warmly] Hoi Esan, Michel hier van ditis A B C."},
+ {"id": "oproep", "beeld": "Gezocht: Google Ads-specialist met focus op AI", "spraak": "Je zoekt een partij die jullie Google Ads slimmer maakt, met AI en automatisering."},
+ {"id": "antwoord", "beeld": "Kort antwoord: ja. Het begint bij je productfeed.", "spraak": "Kort antwoord: dat kan. En het begint bij je productfeed."},
+ {"id": "nina", "beeld": "Nina, van buitenaf bekeken", "spraak": "Nina, onze Google Ads-specialist, heeft DoubleFOnline.nl punt n l van buitenaf bekeken. Drie dingen vielen op. [pause]"},
+ {"id": "a", "beeld": "A. Producten niet meegestuurd", "spraak": "Eerst: bij een bestelling hoort Google wel het bedrag, maar niet wélke producten er verkocht zijn. Dan kun je niet sturen op winst."},
+ {"id": "b", "beeld": "B. Productnaam pas na 65 tekens", "spraak": "Dan: in elke paginatitel staat de productnaam pas na vijfenzestig tekens. Google laat er maar zo'n zestig zien."},
+ {"id": "c", "beeld": "C. sitemap.xml: 0 bytes", "spraak": "En de sitemap is leeg. Ruim tienduizend producten, en Google moet ze zelf zoeken. [pause]"},
+ {"id": "voorstel", "beeld": "Labels in de feed, product deelt zichzelf in", "spraak": "[confident] Wat we voorstellen: labels in de feed, zodat elk nieuw product zichzelf in de juiste campagne indeelt. Op de pagina zie je het met zestien van jullie eigen producten."},
+ {"id": "bf", "beeld": "Black Friday 27 november", "spraak": "Black Friday is op zevenentwintig november."},
+ {"id": "nummer", "beeld": "Stuur je Google Ads-klantnummer", "spraak": "Stuur ons je Google Ads-klantnummer. Dan sturen we als Google Partner een koppelverzoek en kijkt Nina mee. Daarna maken we samen het plan."},
+ {"id": "slot", "beeld": "Tot snel!", "spraak": "[warmly] Tot snel!"}
+]
