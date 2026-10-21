@@ -138,18 +138,18 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 .gold{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5C3F05;background:linear-gradient(135deg,#F6D46B,#FCB72B);border-radius:999px;padding:6px 14px}
 .klanten{display:grid;grid-template-columns:1fr;gap:10px}
 @media (min-width:600px){.klanten{grid-template-columns:repeat(3,1fr);gap:12px}}
+.klant{background:var(--surface);border-radius:18px;padding:16px;display:grid;gap:4px;text-decoration:none;color:var(--ink);border:1.5px solid transparent;transition:border-color .15s}
+.klant:hover{border-color:var(--blue3)}
+.klant .lg{height:72px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:8px;min-width:0}
+.klant .lg img{max-height:64px;max-width:160px;width:auto;height:auto;object-fit:contain}
+.klant .lg img.mono{filter:brightness(0)}
+.klant b{font:700 16px "Host Grotesk",sans-serif;color:var(--head)}
+.klant small{font-size:13.5px;color:var(--muted)}
 @media (max-width:599px){
   .klant{grid-template-columns:110px 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center;padding:12px 14px}
   .klant .lg{grid-row:1 / span 2;height:56px;margin:0}
   .klant .lg img{max-height:48px;max-width:110px}
 }
-.klant{background:var(--surface);border-radius:18px;padding:16px;display:grid;gap:4px;text-decoration:none;color:var(--ink);border:1.5px solid transparent;transition:border-color .15s}
-.klant:hover{border-color:var(--blue3)}
-.klant .lg{height:72px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:8px}
-.klant .lg img{max-height:64px;max-width:160px;width:auto;height:auto;object-fit:contain}
-.klant .lg img.mono{filter:brightness(0)}
-.klant b{font:700 16px "Host Grotesk",sans-serif;color:var(--head)}
-.klant small{font-size:13.5px;color:var(--muted)}
 
 /* afspraak */
 .cgrid{display:grid;gap:18px}
@@ -443,7 +443,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
   <figure class="anouk"><img src="media/anouk.jpg" alt="Anouk, vast aanspreekpunt voor De Klerk Caravans en The Camper Rent" width="600" height="600" loading="lazy"><figcaption><b>Anouk</b>Jullie vaste aanspreekpunt</figcaption></figure>
   <ul class="abc">
     <li data-l="A"><span><strong>Anouk blijft jullie vaste aanspreekpunt.</strong></span></li>
-    <li data-l="B"><span><strong>Een team van twaalf achter Anouk.</strong> Zo zetten we ieders specialisme in voor een beter resultaat voor jullie.</span></li>
+    <li data-l="B"><span><strong>Een team van veertien achter jullie.</strong> Achter Anouk staat het hele team. Zo zetten we ieders specialisme in voor een beter resultaat voor jullie.</span></li>
     <li data-l="C"><span><strong>Eén nummer en één mailadres.</strong> Vanaf 1 november bereik je ons via 023-3020409 (ook WhatsApp) en marketing@ditisabc.nl. Zo ziet het hele team je vraag en komt het antwoord sneller; we geloven dat dit de communicatie beter maakt. Werkt dat voor jullie toch niet en wil je liever een directe lijn met Anouk, dan kan dat natuurlijk ook.</span></li>
   </ul>
   </div>
