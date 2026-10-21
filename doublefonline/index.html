@@ -216,6 +216,22 @@ td small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .camp{grid-column:1/-1;font-size:13px;font-weight:600;color:var(--yellow-ink);background:var(--yellow-bg);border-radius:10px;padding:5px 9px}
 .leeg{grid-column:1/-1;color:var(--muted);font-size:15px;padding:20px 0}
 
+/* zo werken we */
+.samen{display:grid;gap:22px;align-items:start}
+@media (min-width:960px){.samen{grid-template-columns:1.05fr .95fr}}
+.samen>*{min-width:0}
+.teamfoto{margin:0;display:grid;gap:8px}
+.teamfoto img{width:100%;height:auto;border-radius:22px}
+.teamfoto figcaption{font-size:14px;color:var(--muted)}
+.feiten{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+@media (min-width:640px){.feiten{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.feit{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.feit b{display:block;font:800 26px/1.05 "Host Grotesk",sans-serif;color:var(--head)}
+.feit span{font-size:13.5px;color:#2A3B57}
+.belofte{background:var(--green);color:#fff;border-radius:22px;padding:20px 22px;margin-bottom:12px}
+.belofte b{display:block;font:800 clamp(24px,3.2vw,30px)/1.1 "Host Grotesk",sans-serif;margin-bottom:6px}
+.belofte span{color:#E5F0E1;font-size:16px}
+
 /* cta + afspraak */
 .cta{padding:16px 0 56px}
 .cta .panel{margin:0 10px}
@@ -298,6 +314,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <a href="#markt" style="--c:var(--green-base)"><i></i>De markt</a>
 <a href="#google" style="--c:var(--blue)"><i></i>Vindbaarheid</a>
 <a href="#voorstel" style="--c:var(--orange)"><i></i>Ons voorstel</a>
+<a href="#samen" style="--c:var(--green-base)"><i></i>Zo werken we</a>
 </div></nav>
 
 <main>
@@ -521,6 +538,35 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
           <li>Rond Black Friday en december wisselen de kortingslabels vanzelf mee met jullie acties.</li>
           <li>Elke maand een rapport in gewone taal, en Nina als vast aanspreekpunt.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="samen">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--green-base)">dit is <i></i> zo werken we</span>
+    <h2>Het verlengde van jullie marketingteam</h2>
+    <p class="intro">Geen losse freelancer, maar een team van specialisten uit Hillegom. Nina is jullie vaste aanspreekpunt voor Google Ads. Achter haar staat het hele team, voor feeds, webshops, SEO, content en techniek.</p>
+    <div class="samen">
+      <figure class="teamfoto">
+        <img src="media/team.jpg" alt="Het team van ditisABC rond een blauwe taart met de tekst lvl 14 unlocked" width="1600" height="747" loading="lazy">
+        <figcaption>Het team van ditisABC: vanaf 1 november met veertien mensen.</figcaption>
+        <div class="feiten">
+          <div class="feit"><b>2012</b><span>sinds dit jaar websites en marketing</span></div>
+          <div class="feit"><b>14</b><span>mensen in ons team</span></div>
+          <div class="feit"><b>4x</b><span>FD Gazelle, 2023 tot en met 2026</span></div>
+          <div class="feit"><b>Google</b><span>Partner</span></div>
+        </div>
+      </figure>
+      <div>
+        <div class="belofte"><b>Geen contracten. Elke dag presteren.</b><span>Je zit nergens aan vast. We moeten elke dag laten zien wat we waard zijn, en zo willen we het ook.</span></div>
+        <div class="list">
+          <div class="li"><div class="L">A</div><div><h3>Onderdeel van jullie team</h3><p>We draaien mee in jullie planning en acties, met korte lijnen naar Barneveld. Een nieuwe actie of een merk dat binnenkomt? We horen het meteen.</p></div></div>
+          <div class="li"><div class="L">B</div><div><h3>Specialisten onder één dak</h3><p>Google Ads, Shopping en feeds, SEO, content en techniek. Wie er nodig is, schuift aan. Jullie hoeven niet zelf vijf partijen aan te sturen.</p></div></div>
+          <div class="li"><div class="L">C</div><div><h3>Alles open en van jullie</h3><p>Het account blijft van jullie. Je ziet elke wijziging, krijgt elke maand een rapport in gewone taal, en de koppeling verbreek je met één klik.</p></div></div>
+          <div class="li"><div class="L">D</div><div><h3>Snel bereikbaar</h3><p>Eén appje of belletje naar <span style="white-space:nowrap">023-3020409</span> en het team ziet je vraag. Mij direct bellen of appen mag natuurlijk ook.</p></div></div>
+        </div>
       </div>
     </div>
   </div>
