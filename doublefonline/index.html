@@ -282,6 +282,22 @@ td small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
 .tag{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--green);background:var(--green-bg);border-radius:999px;padding:6px 14px}
 @media (max-width:760px){.badges{grid-template-columns:1fr 1fr;gap:10px}.badge,.badge:nth-child(n+4){grid-column:span 1;min-height:140px;padding:16px 12px}.badge.gazelle{grid-column:1 / -1}.badge img.gp{height:90px}.li-mark b{font-size:20px}.li-mark img{width:34px;height:34px}}
 
+/* klanten */
+.klanten{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){.klanten{grid-template-columns:repeat(3,1fr);gap:12px}}
+.klant{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;display:grid;gap:4px;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.klant:hover{border-color:var(--blue3)}
+.klant .lg{height:72px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:8px;min-width:0}
+.klant .lg img{max-height:64px;max-width:160px;width:auto;height:auto;object-fit:contain}
+.klant .lg img.mono{filter:brightness(0)}
+.klant b{font:700 16px "Host Grotesk",sans-serif;color:var(--head)}
+.klant small{font-size:13.5px;color:var(--muted)}
+@media (max-width:599px){
+  .klant{grid-template-columns:110px 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center;padding:12px 14px}
+  .klant .lg{grid-row:1 / span 2;height:56px;margin:0}
+  .klant .lg img{max-height:48px;max-width:110px}
+}
+
 /* nieuwsbrief + volg ons */
 .nb{background:var(--blue4);border-radius:22px;padding:22px;display:grid;gap:16px;align-items:end}
 @media (min-width:820px){.nb{grid-template-columns:1fr 1.2fr}}
@@ -630,6 +646,19 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
       <div class="li-mark"><img src="media/badges/wordpress.svg" alt="" width="44" height="44" loading="lazy"><b>WordPress</b></div>
       <small>Websites en webshops</small>
     </div>
+  </div>
+
+  <h3 style="font-size:26px;margin:36px 0 12px">Een greep uit onze klanten</h3>
+  <div class="klanten">
+    <a class="klant" href="https://miffytown.com" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/miffytown.svg" alt="Logo Miffytown" loading="lazy"></span><b>Miffytown</b><small>miffytown.com</small></a>
+    <a class="klant" href="https://deruijtermeubel.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/deruijtermeubel.svg" alt="Logo De Ruijtermeubel" loading="lazy"></span><b>De Ruijtermeubel</b><small>deruijtermeubel.nl</small></a>
+    <a class="klant" href="https://offgridpowerstation.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/offgridpowerstation.svg" alt="Logo Off Grid Power Station" loading="lazy"></span><b>Off Grid Power Station</b><small>offgridpowerstation.nl</small></a>
+    <a class="klant" href="https://www.candyfestival.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/candyfestival.svg" alt="Logo Candy Festival" loading="lazy"></span><b>Candy Festival</b><small>candyfestival.nl</small></a>
+    <a class="klant" href="https://glansz.nl" target="_blank" rel="noopener"><span class="lg"><img class="mono" src="media/klanten/glansz.png" alt="Logo Glansz" loading="lazy"></span><b>Glansz</b><small>glansz.nl</small></a>
+    <a class="klant" href="https://thebastard.com" target="_blank" rel="noopener"><span class="lg"><img class="mono" src="media/klanten/thebastard.png" alt="Logo The Bastard" loading="lazy"></span><b>The Bastard</b><small>thebastard.com</small></a>
+    <a class="klant" href="https://de-centrale.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/de-centrale.svg" alt="Logo De Centrale" loading="lazy"></span><b>De Centrale</b><small>de-centrale.nl</small></a>
+    <a class="klant" href="https://makelpuntculemborg.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/culemborg.webp" alt="Logo Gemeente Culemborg" loading="lazy"></span><b>Gemeente Culemborg</b><small>makelpuntculemborg.nl</small></a>
+    <a class="klant" href="https://karinbloemenstichting.nl" target="_blank" rel="noopener"><span class="lg"><img src="media/klanten/karinbloemenstichting.svg" alt="Logo Karin Bloemen Stichting" loading="lazy"></span><b>Karin Bloemen Stichting</b><small>karinbloemenstichting.nl</small></a>
   </div>
 </div></section>
 
