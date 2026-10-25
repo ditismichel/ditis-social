@@ -45,6 +45,19 @@ h1,h2,h3{font-family:"Host Grotesk",Geist,sans-serif;font-weight:800;letter-spac
 .gold{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5C3F05;background:linear-gradient(135deg,#F6D46B,#FCB72B);border-radius:999px;padding:6px 14px}
 .ptag{font:700 14px "Host Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--green);background:var(--green-bg);border-radius:999px;padding:6px 14px}
 @media (max-width:760px){.badges{grid-template-columns:1fr 1fr;gap:10px}.badge,.badge:nth-child(n+4){grid-column:span 1;min-height:140px;padding:16px 12px}.badge.gazelle{grid-column:1 / -1}.badge img.gp{height:90px}.li-mark b{font-size:20px}.li-mark img{width:34px;height:34px}}
+.stats{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));margin:8px 0 6px}
+@media (min-width:760px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.stat b{display:block;font:800 34px/1.05 "Host Grotesk",sans-serif;color:var(--green)}
+.stat span{font-size:14.5px;color:#2A3B57}
+.vragen{display:grid;gap:10px;margin:6px 0 10px}
+@media (min-width:760px){.vragen{grid-template-columns:1fr 1fr}}
+.vr{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:13px 16px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.vr q{font:600 16px/1.35 "Host Grotesk",sans-serif;color:var(--head);quotes:"\201C" "\201D"}
+.vr .uit{flex:none;font:700 13px "Host Grotesk",sans-serif;border-radius:999px;padding:4px 10px;background:var(--yellow-bg);color:var(--yellow-ink);white-space:nowrap}
+.bewijs{margin-top:26px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:22px 24px}
+.bewijs h3{font-size:24px;margin-bottom:8px}
+.bewijs .vraag{font:600 17px/1.4 "Host Grotesk",sans-serif;color:var(--head);margin:6px 0 14px}
 #volg{padding:8px 0 40px}
 .follow{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:16px}
 .follow h2{margin:0 0 4px}
@@ -194,6 +207,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <a href="#eerst" style="--c:var(--orange)"><i></i>Eerst dit</a>
 <a href="#goed" style="--c:var(--green-base)"><i></i>Wat goed staat</a>
 <a href="#verder" style="--c:var(--yellow)"><i></i>Verder kijken</a>
+<a href="#ai" style="--c:var(--yellow)"><i></i>AI-vindbaarheid</a>
 <a href="#afspraak" style="--c:var(--blue)"><i></i>Even bijpraten</a>
 </div></nav>
 
@@ -317,6 +331,41 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
         <a class="btn o" href="mailto:michel@ditisabc.nl?subject=Voorstel%20SEO-scan%20bestekenpannen.nl">Of per mail</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--yellow)">dit is <i></i> AI-vindbaarheid</span>
+    <h2>Klanten vragen het steeds vaker aan ChatGPT</h2>
+    <p class="intro">Wie een Wedgwood-servies of een pan van Demeyere zoekt, stelt die vraag steeds vaker aan ChatGPT, Gemini of Google AI Overview. Het antwoord is dan geen lijst met links, maar een handvol namen. Daar hoort bestekenpannen.nl tussen te staan. De technische punten hierboven helpen daar ook bij: AI-modellen lezen dezelfde productgegevens als Google.</p>
+
+    <h3 style="font-size:24px;margin:8px 0 12px">Wat we voor bestekenpannen.nl meten</h3>
+    <p style="color:#2A3B57;max-width:64ch;margin-bottom:12px">Sinds 25 oktober leggen we elke dag deze vragen voor aan ChatGPT, Gemini, Copilot en Google AI Overview, en kijken we of jullie genoemd worden.</p>
+    <div class="vragen" id="vragen">
+      <div class="vr"><q>Ik ga trouwen en wil een mooi servies cadeau geven, waar vind ik Wedgwood of Rosenthal?</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Ik zoek een goede pan van Demeyere, welke webshop verkoopt die in Nederland?</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Waar kan ik een compleet servies van Villeroy en Boch kopen in Nederland?</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Wat is een goede plek om Iittala servies online te kopen met persoonlijk advies?</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Betrouwbare webshop voor bestek en pannen van topmerken</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Ik zoek een alternatief voor de Bijenkorf voor servies en pannen, liever een specialist</q><span class="uit">meting loopt</span></div>
+    </div>
+    <p class="note">De eerste uitslagen volgen binnen een paar dagen; dan zie je hier per vraag of jullie genoemd worden.</p>
+
+    <div class="bewijs">
+      <h3>Zo staan we er zelf voor</h3>
+      <p style="color:#2A3B57">We meten onze eigen vindbaarheid op precies dezelfde manier. Op de vraag</p>
+      <p class="vraag">"Ik zoek een webbureau in de buurt van Hillegom voor een nieuwe website en betere vindbaarheid in Google"</p>
+      <p style="color:#2A3B57;margin-bottom:12px">noemen alle vier de grote AI-diensten ditisABC:</p>
+      <div class="stats">
+        <div class="stat"><b>92%</b><span>Microsoft Copilot</span></div>
+        <div class="stat"><b>91%</b><span>Google AI Overview</span></div>
+        <div class="stat"><b>90%</b><span>ChatGPT</span></div>
+        <div class="stat"><b>88%</b><span>Gemini</span></div>
+      </div>
+      <p class="note">Zichtbaarheidsscore in Promptwatch, 18 tot en met 25 oktober 2026. Een AI-antwoord verschilt per keer, daarom stellen we elke vraag dagelijks opnieuw en meten we het gemiddelde.</p>
+    </div>
+    <p class="note" style="font-size:15.5px;margin-top:16px;max-width:66ch"><b>Dit is een vervolgstap</b> na de technische scan: we laten zien bij welke vragen jullie al genoemd worden, waar concurrenten de plek innemen, en wat ervoor nodig is om erbij te komen.</p>
   </div>
 </section>
 
