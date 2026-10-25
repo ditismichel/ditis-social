@@ -55,6 +55,13 @@ h1,h2,h3{font-family:"Host Grotesk",Geist,sans-serif;font-weight:800;letter-spac
 .vr{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:13px 16px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
 .vr q{font:600 16px/1.35 "Host Grotesk",sans-serif;color:var(--head);quotes:"\201C" "\201D"}
 .vr .uit{flex:none;font:700 13px "Host Grotesk",sans-serif;border-radius:999px;padding:4px 10px;background:var(--yellow-bg);color:var(--yellow-ink);white-space:nowrap}
+.vr .uit.nee{background:var(--orange-bg);color:var(--orange-ink)}
+.vr .uit.ja{background:var(--green-bg);color:var(--green)}
+.wel{margin:14px 0 4px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;gap:10px}
+.wel b{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
+.wel p{color:#2A3B57;max-width:70ch}
+.namen{display:flex;flex-wrap:wrap;gap:8px}
+.namen span{font:600 14.5px "Host Grotesk",sans-serif;background:var(--blue4);color:var(--head);border-radius:999px;padding:6px 12px}
 .bewijs{margin-top:26px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:22px 24px}
 .bewijs h3{font-size:24px;margin-bottom:8px}
 .bewijs .vraag{font:600 17px/1.4 "Host Grotesk",sans-serif;color:var(--head);margin:6px 0 14px}
@@ -341,16 +348,22 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <p class="intro">Wie een Wedgwood-servies of een pan van Demeyere zoekt, stelt die vraag steeds vaker aan ChatGPT, Gemini of Google AI Overview. Het antwoord is dan geen lijst met links, maar een handvol namen. Daar hoort bestekenpannen.nl tussen te staan. De technische punten hierboven helpen daar ook bij: AI-modellen lezen dezelfde productgegevens als Google.</p>
 
     <h3 style="font-size:24px;margin:8px 0 12px">Wat we voor bestekenpannen.nl meten</h3>
-    <p style="color:#2A3B57;max-width:64ch;margin-bottom:12px">Sinds 25 oktober leggen we elke dag deze vragen voor aan ChatGPT, Gemini, Copilot en Google AI Overview, en kijken we of jullie genoemd worden.</p>
+    <p style="color:#2A3B57;max-width:64ch;margin-bottom:12px">Sinds 25 oktober leggen we deze vragen elke dag voor aan de grote AI-diensten, en kijken we of jullie genoemd worden.</p>
     <div class="vragen" id="vragen">
-      <div class="vr"><q>Ik ga trouwen en wil een mooi servies cadeau geven, waar vind ik Wedgwood of Rosenthal?</q><span class="uit">meting loopt</span></div>
-      <div class="vr"><q>Ik zoek een goede pan van Demeyere, welke webshop verkoopt die in Nederland?</q><span class="uit">meting loopt</span></div>
-      <div class="vr"><q>Waar kan ik een compleet servies van Villeroy en Boch kopen in Nederland?</q><span class="uit">meting loopt</span></div>
-      <div class="vr"><q>Wat is een goede plek om Iittala servies online te kopen met persoonlijk advies?</q><span class="uit">meting loopt</span></div>
-      <div class="vr"><q>Betrouwbare webshop voor bestek en pannen van topmerken</q><span class="uit">meting loopt</span></div>
-      <div class="vr"><q>Ik zoek een alternatief voor de Bijenkorf voor servies en pannen, liever een specialist</q><span class="uit">meting loopt</span></div>
+      <div class="vr"><q>Ik ga trouwen en wil een mooi servies cadeau geven, waar vind ik Wedgwood of Rosenthal?</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Ik zoek een goede pan van Demeyere, welke webshop verkoopt die in Nederland?</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Waar kan ik een compleet servies van Villeroy en Boch kopen in Nederland?</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Wat is een goede plek om Iittala servies online te kopen met persoonlijk advies?</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Betrouwbare webshop voor bestek en pannen van topmerken</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Ik zoek een alternatief voor de Bijenkorf voor servies en pannen, liever een specialist</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Welke online winkel heeft een breed aanbod aan glaswerk en bestek van bekende merken?</q><span class="uit ja">genoemd, 40%</span></div>
     </div>
-    <p class="note">De eerste uitslagen volgen binnen een paar dagen; dan zie je hier per vraag of jullie genoemd worden.</p>
+    <div class="wel">
+      <b>Wie er wél genoemd worden</b>
+      <div class="namen"><span>Cookinglife</span><span>Servies.nl</span><span>Anna Servies</span><span>Kookwinkel Oldenhof</span><span>De Bijenkorf</span></div>
+      <p>Bij zes van de zeven vragen staat bestekenpannen.nl nergens in het antwoord, terwijl jullie precies deze merken verkopen, met 150 jaar vakkennis en een 9,8 uit 3.695 klantbeoordelingen. Dat verhaal kent AI nog niet.</p>
+    </div>
+    <p class="note">Eerste meting, 25 oktober 2026, in ChatGPT, Gemini en Google AI Overview. Een AI-antwoord verschilt per keer; het beeld wordt scherper naarmate we langer meten.</p>
 
     <div class="bewijs">
       <h3>Zo staan we er zelf voor</h3>
