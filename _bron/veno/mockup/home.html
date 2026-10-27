@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VENO, voorproef nieuwe homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#36ae93;--dark:#28615b;--deep:#173d39;--orange:#e07b39;--sand:#f6f4ee;--line:#e4e1d8;--ink:#1d2b29;--muted:#5d6b68}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.5}
+img{display:block;max-width:100%}
+.w{max-width:1280px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;color:var(--deep)}
+.bar{background:var(--deep);color:#d9ece7;font-size:13px}
+.bar .w{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:9px;padding-bottom:9px}
+.bar .usp{display:flex;gap:22px}
+.bar .usp span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:8px;transform:translateY(-1px)}
+.loc{display:flex;gap:10px;align-items:center}
+.loc b{background:rgba(255,255,255,.1);border-radius:999px;padding:4px 12px;font-weight:600;color:#fff}
+.loc a{color:#fff;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px}
+header{border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+header .logo{width:96px}
+nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav a{color:var(--ink);text-decoration:none}
+.search{flex:1;display:flex;align-items:center;gap:10px;background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:11px 16px;color:var(--muted);font-size:15px}
+.search i{width:16px;height:16px;border:2.5px solid var(--dark);border-radius:50%;display:block;position:relative;flex:none}
+.cart{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--dark)}
+.cart span{background:var(--green);color:#fff;border-radius:999px;padding:2px 9px;font-size:13px}
+.hero{position:relative;height:520px;background:url(img/overzicht.jpg) center 60%/cover;display:flex;align-items:flex-end}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,61,57,.88) 0%,rgba(23,61,57,.55) 45%,rgba(23,61,57,0) 75%)}
+.hero .w{position:relative;z-index:1;width:100%;padding-bottom:64px}
+.hero h1{color:#fff;font-size:64px;max-width:640px}
+.hero p{color:#e6f3ef;font-size:19px;max-width:520px;margin:16px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:999px;padding:14px 24px;font-weight:700;text-decoration:none;font-size:15px}
+.btn.o{background:var(--orange);color:#1b0d03}
+.btn.l{background:#fff;color:var(--deep)}
+.usps{background:var(--sand);border-bottom:1px solid var(--line)}
+.usps .w{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:22px;padding-bottom:22px}
+.usps div{display:flex;gap:12px;align-items:center;font-size:14.5px;color:var(--muted)}
+.usps b{display:block;color:var(--deep);font-size:16px}
+.usps i{width:40px;height:40px;border-radius:12px;background:var(--green);flex:none;display:grid;place-items:center;color:#fff;font:700 18px Oswald,sans-serif;font-style:normal}
+section{padding:64px 0}
+.kop{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+.kop h2{font-size:40px}
+.kop a{color:var(--dark);font-weight:700;text-decoration:none}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.cat img{aspect-ratio:4/3;object-fit:contain;width:100%;background:#fff;padding:10px}
+.cat div{padding:14px 16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.cat b{font:600 18px Oswald,sans-serif;text-transform:uppercase;color:var(--deep)}
+.cat span{font-size:13px;color:var(--muted)}
+.dealer{background:var(--deep);color:#e6f3ef}
+.dealer .w{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.dealer h2{color:#fff;font-size:44px;margin-bottom:14px}
+.dealer p{font-size:17px;margin-bottom:20px;max-width:480px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600;color:#fff}
+.chips span em{font-style:normal;color:var(--green);margin-left:6px}
+.finder{background:#fff;border-radius:20px;padding:22px;color:var(--ink)}
+.finder label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.sel{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;margin:6px 0 14px;font-weight:600;display:flex;justify-content:space-between}
+.dl{display:grid;gap:10px}
+.dl div{border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;gap:10px;font-size:14.5px}
+.dl b{display:block;color:var(--deep)}
+.dl span{color:var(--muted)}
+.dl em{font-style:normal;color:var(--dark);font-weight:700;white-space:nowrap}
+.portal .w{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.portal h2{font-size:44px;margin-bottom:14px}
+.portal p{color:var(--muted);font-size:17px;margin-bottom:18px}
+.portal ul{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+.portal li{display:flex;gap:10px;align-items:center;font-weight:600}
+.portal li:before{content:"";width:20px;height:20px;border-radius:50%;background:var(--green);flex:none;box-shadow:inset 0 0 0 6px #e3f4ef}
+.app{border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 30px 60px rgba(23,61,57,.14)}
+.app .t{background:var(--sand);padding:12px 18px;display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:var(--deep);border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:56px 1fr auto auto;gap:14px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.row img{width:56px;height:42px;object-fit:contain}
+.row b{display:block;color:var(--deep)}
+.row small{color:var(--muted)}
+.row .q{border:1.5px solid var(--line);border-radius:10px;padding:5px 12px;font-weight:700}
+.row .p{font-weight:700;color:var(--dark)}
+.app .f{padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.app .f .btn{padding:11px 20px}
+.tp{background:var(--sand)}
+.tp .w{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.tp img{border-radius:20px;background:#fff}
+.tp h2{font-size:40px;margin-bottom:12px}
+.tp p{color:var(--muted);font-size:17px;margin-bottom:18px}
+footer{background:var(--deep);color:#cfe3de;padding:44px 0;font-size:14px}
+footer .w{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+footer b{color:#fff;display:block;margin-bottom:8px;font:600 16px Oswald,sans-serif;text-transform:uppercase}
+@media (max-width:760px){
+ .w{padding:0 16px}
+ .bar .usp span:nth-child(n+2){display:none}
+ .bar .w{font-size:12px}
+ .loc a{display:none}
+ header .w{flex-wrap:wrap;gap:12px}
+ nav{display:none}
+ header .logo{width:76px}
+ .cart{margin-left:auto}
+ .search{order:3;flex-basis:100%}
+ .hero{height:460px}
+ .hero h1{font-size:40px}
+ .hero p{font-size:16px}
+ .hero:after{background:linear-gradient(0deg,rgba(23,61,57,.92) 15%,rgba(23,61,57,.2) 85%)}
+ .hero .w{padding-bottom:30px}
+ .usps .w{grid-template-columns:1fr 1fr;gap:14px}
+ .kop h2,.dealer h2,.portal h2,.tp h2{font-size:30px}
+ .cats{grid-template-columns:1fr 1fr;gap:10px}
+ .cat b{font-size:15px}
+ .cat span{display:none}
+ .dealer .w,.portal .w,.tp .w{grid-template-columns:1fr;gap:24px}
+ .row{grid-template-columns:44px 1fr auto;gap:10px}
+ .row .q{display:none}
+ footer .w{grid-template-columns:1fr 1fr}
+ section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<div class="bar"><div class="w">
+  <div class="usp"><span>Eigen fabriek in De Goorn sinds 1990</span><span>40 dealers in 21 landen</span><span>Alle prijzen excl. btw</span></div>
+  <div class="loc"><b>Nederland · EUR · Nederlands</b><a>Dealer login</a></div>
+</div></div>
+<header><div class="w">
+  <img class="logo" src="img/logo.png" alt="VENO">
+  <nav><a>Assortiment</a><a>Projecten</a><a>Dealers</a><a>Over VENO</a><a>Contact</a></nav>
+  <div class="search"><i></i>Zoek op product, vakterm of artikelnummer</div>
+  <div class="cart">Winkelwagen <span>2</span></div>
+</div></header>
+
+<div class="hero"><div class="w">
+  <h1>Stalinrichting voor schapen en geiten</h1>
+  <p>Gemaakt in onze eigen fabriek. En al het VENO-hekwerk past altijd op wat je al hebt.</p>
+  <div class="btns"><a class="btn o">Bekijk het assortiment</a><a class="btn l">Vind een dealer</a></div>
+</div></div>
+
+<div class="usps"><div class="w">
+  <div><i>&#10003;</i><span><b>Eigen productie</b>Maatwerk uit De Goorn</span></div>
+  <div><i>&#10003;</i><span><b>Past altijd</b>Zelfde maatvoering, elk jaar</span></div>
+  <div><i>&#10003;</i><span><b>Advies en montage</b>Van ontwerp tot stal</span></div>
+  <div><i>&#10003;</i><span><b>Dealer in de buurt</b>In 21 landen</span></div>
+</div></div>
+
+<section><div class="w">
+  <div class="kop"><h2>Ons assortiment</h2><a>Alle 606 producten</a></div>
+  <div class="cats">
+    <div class="cat"><img src="img/voerhekken.webp" alt=""><div><b>Voerhekken</b></div></div>
+    <div class="cat"><img src="img/hekken.webp" alt=""><div><b>Hekken en poorten</b></div></div>
+    <div class="cat"><img src="img/behandel.jpg" alt=""><div><b>Behandelsystemen</b></div></div>
+    <div class="cat"><img src="img/kraamhokken.webp" alt=""><div><b>Lamstalinrichting</b></div></div>
+    <div class="cat"><img src="img/voergoten.webp" alt=""><div><b>Voergoten en hooiruiven</b></div></div>
+    <div class="cat"><img src="img/weegbalken.webp" alt=""><div><b>Wegen</b></div></div>
+    <div class="cat"><img src="img/drinkbakken.webp" alt=""><div><b>Drinkbakken</b></div></div>
+    <div class="cat"><img src="img/trailer.webp" alt=""><div><b>Schapentrailer</b></div></div>
+  </div>
+</div></section>
+
+<section class="dealer"><div class="w">
+  <div>
+    <h2>Een VENO-dealer bij jou in de buurt</h2>
+    <p>Advies, montage en snel geleverd. Kies je land en zie direct welke dealer het dichtst bij je zit.</p>
+    <div class="chips"><span>Noorwegen<em>9</em></span><span>Nederland<em>6</em></span><span>Duitsland<em>3</em></span><span>België<em>3</em></span><span>Roemenië<em>2</em></span><span>Frankrijk<em>1</em></span><span>Zweden<em>1</em></span><span>Denemarken<em>1</em></span><span>Oostenrijk<em>1</em></span><span>Zwitserland<em>1</em></span><span>+ 11 landen</span></div>
+  </div>
+  <div class="finder">
+    <label>Jouw land</label>
+    <div class="sel">Noorwegen <span>&#9662;</span></div>
+    <div class="dl">
+      <div><span><b>Bryne Landbruksservice</b>Bryne</span><em>Route</em></div>
+      <div><span><b>Grendaservice</b>Voss</span><em>Route</em></div>
+      <div><span><b>Fron Traktor Service</b>Vinstra</span><em>Route</em></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="portal"><div class="w">
+  <div>
+    <h2>Voor dealers: bestellen in een paar klikken</h2>
+    <p>Log in en zie je eigen prijzen in je eigen valuta, gekoppeld aan ons ERP.</p>
+    <ul><li>Eigen dealerprijzen en voorraad</li><li>Nabestellen uit je orderhistorie</li><li>Facturen en verzendstatus op één plek</li></ul>
+    <a class="btn o">Inloggen als dealer</a>
+  </div>
+  <div class="app">
+    <div class="t"><span>Snel nabestellen</span><span>Bryne Landbruksservice · NOK</span></div>
+    <div class="row"><img src="img/voerhekken.webp" alt=""><span><b>Diagonaal voerhek 2,46 m</b><small>VG-246ZV · op voorraad</small></span><span class="q">12</span><span class="p">kr 18 840</span></div>
+    <div class="row"><img src="img/feeders.webp" alt=""><span><b>Kraftforautomat 70 kg</b><small>op voorraad</small></span><span class="q">4</span><span class="p">kr 9 960</span></div>
+    <div class="row"><img src="img/hekken.webp" alt=""><span><b>Lettgrind sau 1,83 m</b><small>levering week 47</small></span><span class="q">20</span><span class="p">kr 14 200</span></div>
+    <div class="f"><span style="font-size:14px;color:var(--muted)">Vorige order: 3 oktober</span><a class="btn o">Bestelling plaatsen</a></div>
+  </div>
+</div></section>
+
+<section class="tp"><div class="w">
+  <img src="img/tepari.webp" alt="">
+  <div>
+    <h2>Importeur van Te Pari voor het Europese vasteland</h2>
+    <p>Wegen, sorteren en behandelen met de systemen van Te Pari, geleverd en ondersteund door VENO.</p>
+    <a class="btn o">Bekijk Te Pari</a>
+  </div>
+</div></section>
+
+<footer><div class="w">
+  <div><b>VENO</b>Schoffel 16, 1648 GG De Goorn<br>+31 229 544100<br>veno@venostal.com</div>
+  <div><b>Assortiment</b>Voerhekken<br>Hekken en poorten<br>Behandelsystemen<br>Wegen</div>
+  <div><b>VENO</b>Over ons<br>Projecten<br>Vacatures<br>Beurzen</div>
+  <div><b>Dealers</b>Vind een dealer<br>Dealer worden<br>Dealer login</div>
+</div></footer>
+</body>
+</html>

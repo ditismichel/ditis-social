@@ -1,0 +1,37 @@
+/* Veno: ditis.shop, accent oranje */
+.btn.p{background:var(--orange);color:var(--ink)}
+.qa1 b:before{background:var(--orange)}
+.blok li:before{background:var(--orange)}
+tr.us td{background:var(--orange-bg)}
+.bar.us .n{color:var(--orange-ink)}
+.bar.us .b{background:var(--orange)}
+.hi img{object-fit:contain;padding:6px}
+/* telefoon met scrollbare voorproef */
+.phone .scr{width:100%;aspect-ratio:9/16;border-radius:26px;background:#fff;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.phone .scr img{width:100%;height:auto;display:block}
+.pcap{margin-top:12px;text-align:center;font-size:14px;color:#fff;font-weight:500}
+.pcap b{display:block;font:800 18px "Host Grotesk",sans-serif}
+/* voorproef */
+.proef{display:grid;gap:26px;align-items:start}
+@media (min-width:980px){.proef{grid-template-columns:1fr 320px}}
+.proef>*{min-width:0}
+.browser{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px rgba(0,62,153,.12)}
+.browser .bt{display:flex;align-items:center;gap:7px;padding:10px 14px;background:var(--blue4);border-bottom:1px solid var(--line)}
+.browser .bt i{width:11px;height:11px;border-radius:50%;background:#C9D6EA;display:block}
+.browser .bt span{margin-left:10px;background:#fff;border-radius:999px;padding:4px 14px;font-size:13px;color:var(--muted)}
+.browser .scr{height:620px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.browser .scr img{width:100%;height:auto;display:block}
+.proef .phone{justify-self:center;width:min(100%,320px)}
+.feat{display:grid;gap:10px;margin-top:22px}
+@media (min-width:760px){.feat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* cijfers voor/na */
+.vn{display:grid;gap:10px}
+.vn div{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.vn span{color:#2A3B57;font-size:15.5px}
+.vn s{color:var(--muted);text-decoration:none;font-variant-numeric:tabular-nums}
+.vn b{font:800 22px "Host Grotesk",sans-serif;color:var(--head);font-variant-numeric:tabular-nums}
+.routes{display:grid;gap:16px}
+@media (min-width:980px){.routes{grid-template-columns:1fr 1fr}.routes .blok.c{grid-column:1 / -1}}
+.blok .tijd{display:inline-block;justify-self:start;width:max-content;max-width:100%;font:600 13px Geist,sans-serif;color:var(--orange-ink);background:var(--orange-bg);border-radius:999px;padding:4px 11px;margin-left:68px}
+@media (max-width:560px){.blok .tijd{margin-left:0}}
+.kwt td:nth-child(2),.kwt th:nth-child(2){text-align:left}

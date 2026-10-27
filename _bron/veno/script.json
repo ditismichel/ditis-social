@@ -1,0 +1,10 @@
+[
+ {"id": "hoi", "beeld": "Hoi Bob,", "spraak": "[warmly] Hoi Bob,"},
+ {"id": "vraag", "beeld": "6 talen · valuta per land · vakjargon", "spraak": "Je vroeg me om een scan van venostal punt com. Zes talen, valuta per land, en heel veel vakjargon."},
+ {"id": "goed", "beeld": "Op 1 in vijf talen", "spraak": "[confident] Eerst het goede nieuws: dat vakjargon werkt. In vijf talen staan jullie in Google op één, van kraftforautomat in Noorwegen tot Fressgitter in Oostenrijk."},
+ {"id": "traag", "beeld": "2,7 s · dealers 9,5 s", "spraak": "Dan de traagheid. Omdat de site per land de valuta kiest, wordt elke pagina bij elk bezoek opnieuw gebouwd. Dat kost twee tot drie seconden, en op de dealerpagina zelfs negen."},
+ {"id": "taal", "beeld": "566 naar 378 zoekwoorden", "spraak": "Daarnaast weet Google niet welke taal bij welk land hoort. Sinds februari worden jullie op een derde minder zoekwoorden gevonden."},
+ {"id": "routes", "beeld": "Route A / Route B", "spraak": "[pause] Er zijn twee routes. Route A: we maken de huidige site binnen een paar weken snel. Route B: we gaan direct voor de nieuwe webshop in 2027, gekoppeld aan jullie nieuwe ERP, met een eigen omgeving voor dealers."},
+ {"id": "proef", "beeld": "Voorproef", "spraak": "Op deze pagina zie je al een voorproef."},
+ {"id": "slot", "beeld": "Ik bel je even", "spraak": "[warmly] Ik bel je graag even om te horen waar jouw aandacht naar uitgaat. Tot snel!"}
+]
