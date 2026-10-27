@@ -35,3 +35,13 @@ tr.us td{background:var(--orange-bg)}
 .blok .tijd{display:inline-block;justify-self:start;width:max-content;max-width:100%;font:600 13px Geist,sans-serif;color:var(--orange-ink);background:var(--orange-bg);border-radius:999px;padding:4px 11px;margin-left:68px}
 @media (max-width:560px){.blok .tijd{margin-left:0}}
 .kwt td:nth-child(2),.kwt th:nth-child(2){text-align:left}
+/* referenties */
+.refs{display:grid;gap:16px}
+@media (min-width:860px){.refs{grid-template-columns:1fr 1fr}}
+.ref{display:grid;background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.ref:hover{border-color:var(--blue3)}
+.ref img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.ref span{padding:18px 20px;display:grid;gap:6px;font-size:15.5px;color:#2A3B57}
+.ref b{font:800 21px "Host Grotesk",sans-serif;color:var(--head)}
+.ref small{font-size:13.5px;color:var(--muted)}
+section:not(.alt) .blok{background:var(--surface)}

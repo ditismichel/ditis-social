@@ -356,6 +356,16 @@ tr.us td{background:var(--orange-bg)}
 .blok .tijd{display:inline-block;justify-self:start;width:max-content;max-width:100%;font:600 13px Geist,sans-serif;color:var(--orange-ink);background:var(--orange-bg);border-radius:999px;padding:4px 11px;margin-left:68px}
 @media (max-width:560px){.blok .tijd{margin-left:0}}
 .kwt td:nth-child(2),.kwt th:nth-child(2){text-align:left}
+/* referenties */
+.refs{display:grid;gap:16px}
+@media (min-width:860px){.refs{grid-template-columns:1fr 1fr}}
+.ref{display:grid;background:var(--bg);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .15s}
+.ref:hover{border-color:var(--blue3)}
+.ref img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.ref span{padding:18px 20px;display:grid;gap:6px;font-size:15.5px;color:#2A3B57}
+.ref b{font:800 21px "Host Grotesk",sans-serif;color:var(--head)}
+.ref small{font-size:13.5px;color:var(--muted)}
+section:not(.alt) .blok{background:var(--surface)}
 
 </style>
 </head>
@@ -367,6 +377,7 @@ tr.us td{background:var(--orange-bg)}
 <a href="#verhaal" style="--c:var(--yellow)"><i></i>Wat al sterk is</a>
 <a href="#google" style="--c:var(--blue)"><i></i>Vindbaarheid</a>
 <a href="#proef" style="--c:var(--green-base)"><i></i>Voorproef</a>
+<a href="#ervaring" style="--c:var(--blue)"><i></i>Ervaring</a>
 <a href="#voorstel" style="--c:var(--orange)"><i></i>Twee routes</a>
 <a href="#samen" style="--c:var(--green-base)"><i></i>Zo werken we</a>
 </div></nav>
@@ -506,7 +517,19 @@ tr.us td{background:var(--orange-bg)}
   </div>
 </section>
 
-<section class="alt" id="voorstel">
+<section class="alt" id="ervaring">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--blue)">dit is <i></i> ervaring</span>
+    <h2>Machines, vakjargon en meerdere talen: dat kennen we</h2>
+    <p class="intro">Ook in de agrarische techniek bouwen we sites voor internationale verkoop. Twee voorbeelden uit de pluimveeverwerking, met machines die de hele wereld over gaan en vaktermen van slachten tot ontbenen.</p>
+    <div class="refs">
+      <a class="ref" href="https://use-poultry-tech.com" target="_blank" rel="noopener"><img src="media/ref-use.jpg" alt="Homepage van USE Poultry Tech" width="1000" height="625"><span><b>USE Poultry Tech</b>Gebruikte machines, productielijnen en complete fabrieken voor de pluimveeverwerking, verkocht in Europa, Azië, Afrika, Amerika en het Midden-Oosten. Gebouwd door ditisABC, in zes talen, met hreflang per taal.<small>use-poultry-tech.com</small></span></a>
+      <a class="ref" href="https://dutch-poultry-tech.com" target="_blank" rel="noopener"><img src="media/ref-dpt.jpg" alt="Homepage van Dutch Poultry Tech" width="1000" height="625"><span><b>Dutch Poultry Tech</b>Nieuwe verwerkingslijnen en machines per procesfase, van slachten en plukken tot wegen en verpakken. Gebouwd door ditisABC, in het Engels en Spaans.<small>dutch-poultry-tech.com</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section id="voorstel">
   <div class="wrap">
     <span class="kick" style="--c:var(--orange)">dit is <i></i> ons voorstel</span>
     <h2>Nu sneller, of meteen nieuw. Of allebei.</h2>
@@ -546,7 +569,7 @@ tr.us td{background:var(--orange-bg)}
   </div>
 </section>
 
-<section id="samen">
+<section class="alt" id="samen">
   <div class="wrap">
     <span class="kick" style="--c:var(--green-base)">dit is <i></i> zo werken we</span>
     <h2>Het verlengde van jullie team</h2>
