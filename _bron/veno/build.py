@@ -49,7 +49,7 @@ html = f"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Een snellere webshop voor VENO | ditisABC</title>
-<meta name="description" content="Wat ditisABC zag op venostal.com, en twee routes: nu snel, of direct naar een nieuwe webshop in 2027.">
+<meta name="description" content="Wat ditisABC zag op venostal.com, en waarom een nieuwe webshop de beste volgende stap is.">
 <meta property="og:title" content="Een snellere webshop voor VENO | ditisABC">
 <meta property="og:description" content="De scan van venostal.com: waar de traagheid vandaan komt, wat al sterk is, en een voorproef van de nieuwe webshop.">
 <meta property="og:image" content="https://www.ditis.shop/veno/media/og.jpg">
