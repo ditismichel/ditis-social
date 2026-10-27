@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jovetra · schets homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#192472;--navy2:#181E5F;--blue:#1F4FA2;--red:#EE2C30;--lav:#98A0D5;--sky:#EEF1FA;--ink:#141A3A;--muted:#525A7A;--line:#DDE2F0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.6}
+img{display:block;max-width:100%}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:800;line-height:1.12;letter-spacing:-.01em;color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 22px;font-weight:700;font-size:15px;text-decoration:none}
+.btn.r{background:var(--red);color:#fff}
+.btn.n{background:var(--navy);color:#fff}
+.btn.o{border:2px solid #fff;color:#fff}
+.btn.l{border:2px solid var(--navy);color:var(--navy)}
+
+/* top */
+.bar{background:var(--navy2);color:#fff;font-size:13px}
+.bar .w{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px}
+.bar span:first-child:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px}
+header{border-bottom:1px solid var(--line);background:#fff}
+header .w{display:flex;align-items:center;gap:28px;padding-top:14px;padding-bottom:14px}
+header img{height:52px;width:auto}
+nav{display:flex;gap:22px;font-weight:600;font-size:14.5px;margin-left:auto}
+nav a{color:var(--ink);text-decoration:none}
+.tel{font-weight:800;color:var(--navy);font-size:15px;white-space:nowrap;border:2px solid var(--navy);border-radius:999px;padding:9px 16px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;background:var(--sky);margin-left:auto;position:relative}
+.burger:before{content:"";position:absolute;left:12px;right:12px;height:3px;border-radius:2px;background:var(--navy);top:15px;box-shadow:0 7px 0 var(--navy)}
+
+/* hero */
+.hero{position:relative;background:var(--navy) url(../beeld/impressie.webp) center/cover;color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,24,80,.94) 0%,rgba(17,24,80,.8) 50%,rgba(17,24,80,.3) 100%)}
+.hero .w{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;padding-top:72px;padding-bottom:72px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.hero h1{color:#fff;font-size:50px;margin:18px 0 18px}
+.hero p{font-size:18px;max-width:48ch;color:#E3E6F5}
+.hero .k{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.planning{background:#fff;color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 30px 60px rgba(0,0,0,.25);display:grid;gap:14px}
+.planning h3{font-size:20px}
+.planning .rij{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:12px;font-size:14.5px}
+.planning .rij b{color:var(--navy)}
+.planning .rij span{color:var(--muted);text-align:right}
+.planning .big{font-size:24px;font-weight:800;color:var(--navy)}
+.planning small{color:var(--muted);font-size:13px}
+
+/* cijfers */
+.feiten{background:var(--sky);border-bottom:1px solid var(--line)}
+.feiten .w{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:26px;padding-bottom:26px}
+.feiten b{display:block;font-size:26px;font-weight:800;color:var(--navy);line-height:1.1}
+.feiten span{font-size:14px;color:var(--muted)}
+
+section{padding:76px 0}
+.kick{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+h2{font-size:38px;margin-bottom:14px}
+.lead{font-size:17px;color:var(--muted);max-width:62ch;margin-bottom:32px}
+
+/* producten */
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.p{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.p .im{aspect-ratio:4/3;background-size:cover;background-position:center;filter:brightness(1.35) saturate(1.1)}
+.p .b{padding:18px;display:grid;gap:8px;flex:1;align-content:start}
+.p h3{font-size:19px}
+.p p{font-size:14px;color:var(--muted)}
+.spec{display:flex;flex-wrap:wrap;gap:6px}
+.spec span{background:var(--sky);color:var(--navy);border-radius:8px;padding:4px 8px;font-size:12.5px;font-weight:700}
+.p a{margin-top:6px;font-weight:700;color:var(--navy);text-decoration:none;font-size:14px}
+.p a:after{content:" →";color:var(--red)}
+
+/* werkwijze */
+.how{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.st{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.st:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;margin-bottom:12px}
+.st h3{font-size:17px;margin-bottom:6px}
+.st p{font-size:14px;color:var(--muted)}
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.ex{background:var(--navy);color:#fff;border-radius:18px;padding:24px}
+.ex h3{color:#fff;font-size:20px;margin-bottom:8px}
+.ex p{color:#D6DAF0;font-size:15px}
+
+/* keuzehulp */
+.kh{background:var(--sky)}
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.kc{background:#fff;border-radius:18px;padding:24px;border:1px solid var(--line)}
+.kc h3{font-size:22px;margin-bottom:10px}
+.kc ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.kc li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:10px;transform:translateY(-2px)}
+.tw{overflow-x:auto;margin-top:22px;border-radius:16px}
+table{min-width:560px;width:100%;border-collapse:collapse;background:#fff;font-size:14.5px}
+th,td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:left}
+th{background:var(--navy);color:#fff;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+
+/* sectoren en projecten */
+.sect{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:34px}
+.sc{border-left:4px solid var(--red);padding:4px 0 4px 14px}
+.sc b{display:block;color:var(--navy);font-size:17px}
+.sc span{font-size:14px;color:var(--muted)}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pj{border-radius:18px;overflow:hidden;position:relative;aspect-ratio:4/3;background-size:cover;background-position:center}
+.pj:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(10,14,50,.85))}
+.pj div{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;z-index:1}
+.pj b{display:block;font-size:17px}
+.pj span{font-size:13px;opacity:.9}
+.pj em{position:absolute;top:14px;left:14px;z-index:1;background:#fff;color:var(--navy);font-style:normal;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.q{border-bottom:1px solid var(--line);padding:16px 0}
+.q b{display:flex;justify-content:space-between;gap:12px;font-size:17px;color:var(--navy)}
+.q b:after{content:"+";color:var(--red);font-weight:800}
+.q p{font-size:15px;color:var(--muted);margin-top:6px}
+
+/* contact */
+.ct{background:var(--navy);color:#fff}
+.ct .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.ct h2{color:#fff}
+.ct p{color:#D6DAF0}
+.jack{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.08);border-radius:18px;padding:16px;margin-top:20px}
+.jack i{width:64px;height:64px;border-radius:50%;background:var(--lav);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:22px;color:var(--navy);flex:none}
+.nap{background:#fff;color:var(--ink);border-radius:18px;padding:22px;display:grid;gap:10px;font-size:15px}
+.nap b{color:var(--navy)}
+footer{background:var(--navy2);color:#B9BEDF;font-size:13px;padding:22px 0}
+footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:760px){
+ .w{padding:0 18px}
+ nav,.tel,.bar span:last-child{display:none}
+ .burger{display:block}
+ header img{height:42px}
+ .hero .w{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px;gap:26px}
+ .hero h1{font-size:33px}
+ .hero p{font-size:16px}
+ .feiten .w{grid-template-columns:1fr 1fr}
+ section{padding:50px 0}
+ h2{font-size:28px}
+ .prods,.kgrid,.proj,.faq,.ct .w,.how,.extra{grid-template-columns:1fr}
+ .sect{grid-template-columns:1fr 1fr}
+ table{font-size:13px}th,td{padding:10px}
+}
+</style>
+</head>
+<body>
+<div class="bar"><div class="w"><span><b>Spoed?</b> Ook buiten kantoortijd bereikbaar, 24/7</span><span>Valkenburg (ZH) · door heel Nederland</span></div></div>
+<header><div class="w">
+  <img src="../beeld/Logo-Jovetra.svg" alt="Jovetra">
+  <nav><a href="#">Materieel</a><a href="#">Werkwijze</a><a href="#">Projecten</a><a href="#">Kennisbank</a><a href="#">Over Jovetra</a><a href="#">Contact</a></nav>
+  <span class="tel">071 532 08 77</span>
+  <span class="burger"></span>
+</div></header>
+
+<div class="hero"><div class="w">
+  <div>
+    <span class="pill"><i></i>Jongeneel Verhuur en Transport, sinds 1993</span>
+    <h1>Rijplaten, schotten en bouwhekken. Gebracht, gelegd en weer opgehaald.</h1>
+    <p>Wij verhuren en vervoeren materieel voor bouw, infra en evenementen. Met eigen chauffeurs en één vast aanspreekpunt, van de eerste plaat tot de laatste rit.</p>
+    <div class="k"><a class="btn r" href="#">Bekijk ons materieel</a><a class="btn o" href="#">Zo werken wij</a></div>
+  </div>
+  <div class="planning">
+    <h3>Direct de planning aan de lijn</h3>
+    <div class="big">071 532 08 77</div>
+    <div class="rij"><b>Kantoor</b><span>ma t/m vr, 06:30 tot 17:30</span></div>
+    <div class="rij"><b>Spoed</b><span>24/7 bereikbaar</span></div>
+    <div class="rij"><b>Mail</b><span>info@jovetra.nl</span></div>
+    <small>U spreekt altijd met hetzelfde aanspreekpunt.</small>
+  </div>
+</div></div>
+
+<div class="feiten"><div class="w">
+  <div><b>Sinds 1993</b><span>verhuur en transport</span></div>
+  <div><b>Meestal binnen 24 uur</b><span>geleverd op locatie</span></div>
+  <div><b>Eigen chauffeurs</b><span>brengen, leggen, ophalen</span></div>
+  <div><b>Heel Nederland</b><span>vanuit Valkenburg (ZH)</span></div>
+</div></div>
+
+<section><div class="w">
+  <p class="kick">Ons materieel</p>
+  <h2>Voor elke ondergrond het juiste materieel</h2>
+  <p class="lead">Staal voor zwaar verkeer, kunststof voor kwetsbare grond, Azobé onder de kraan en bouwhekken die een bouwplaats in minder meters afschermen.</p>
+  <div class="prods">
+    <div class="p"><div class="im" style="background-image:url(../beeld/stalen-rijplaten.webp)"></div><div class="b"><h3>Stalen rijplaten</h3><p>Groot en klein, voor bouwterrein en platenbaan. Gemaakt voor zwaar materieel en lange projecten.</p><div class="spec"><span>6 x 1,70 m</span><span>5 x 1,5 m</span></div><a href="#">Maten en toepassing</a></div></div>
+    <div class="p"><div class="im" style="background-image:url(../beeld/kunststof-rijplaten.webp)"></div><div class="b"><h3>Kunststof rijplaten</h3><p>Licht en goed hanteerbaar. Voor tijdelijke toegang over gazon, park of evenemententerrein.</p><div class="spec"><span>4 m</span><span>nieuw: 3 x 1 m</span></div><a href="#">Maten en toepassing</a></div></div>
+    <div class="p"><div class="im" style="background-image:url(../beeld/draglineschotten.webp)"></div><div class="b"><h3>Draglineschotten</h3><p>Azobé-hardhout. Een stabiele werkvloer onder kranen en graafmachines, ook op slappe grond.</p><div class="spec"><span>Azobé</span><span>kraan en dragline</span></div><a href="#">Maten en toepassing</a></div></div>
+    <div class="p"><div class="im" style="background-image:url(../beeld/bouwhekken-1200.jpg)"></div><div class="b"><h3>Bouwhekken</h3><p>Robuust en drie meter breed, een afwijkende maat. Minder hekken per meter afscherming.</p><div class="spec"><span>3 m breed</span></div><a href="#">Maten en toepassing</a></div></div>
+  </div>
+</div></section>
+
+<section class="kh"><div class="w">
+  <p class="kick">Werkwijze</p>
+  <h2>Wij regelen het hele traject</h2>
+  <p class="lead">U hoeft niet aanwezig te zijn bij de levering. Een goed bereikbare en duidelijk aangegeven locatie is genoeg.</p>
+  <div class="how">
+    <div class="st"><h3>Reserveren</h3><p>Ruim vooraf of met spoed. Wij plannen mee met uw project.</p></div>
+    <div class="st"><h3>Brengen</h3><p>Met eigen chauffeurs en specialistische vrachtwagens.</p></div>
+    <div class="st"><h3>Uitleggen</h3><p>Wij leggen de platen en schotten uit op de plek waar ze moeten liggen.</p></div>
+    <div class="st"><h3>Verleggen</h3><p>Schuift het werk op, dan schuiven de platen mee.</p></div>
+    <div class="st"><h3>Ophalen</h3><p>Terug naar Valkenburg of naar een opslag in uw regio.</p></div>
+  </div>
+  <div class="extra">
+    <div class="ex"><h3>Schoonmaken op eigen terrein</h3><p>Alle platen en schotten die terugkomen, maken wij grondig schoon. Hoe schoner u ze aanlevert, hoe minder schoonmaakwerk.</p></div>
+    <div class="ex"><h3>Walsen en persen</h3><p>Al ruim 25 jaar richten wij kromme rijplaten weer recht, tot 16 mm dik, 2 meter breed en 6 meter lang. Ook platen van derden.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <p class="kick">Keuzehulp</p>
+  <h2>Staal of kunststof?</h2>
+  <div class="kgrid">
+    <div class="kc"><h3>Staal past bij...</h3><ul><li>zwaar materieel en vrachtverkeer</li><li>projecten van weken of maanden</li><li>een platenbaan over langere afstand</li></ul></div>
+    <div class="kc"><h3>Kunststof past bij...</h3><ul><li>kwetsbare ondergrond, zoals gazon of park</li><li>evenementen en korte klussen</li><li>platen die met de hand verlegd worden</li></ul></div>
+  </div>
+  <div class="tw"><table><thead><tr><th>Materieel</th><th>Formaat</th><th>Geschikt voor</th></tr></thead>
+  <tbody><tr><td><b>Stalen rijplaat, groot</b></td><td>6 x 1,70 m</td><td>Zwaar materieel, platenbaan</td></tr>
+  <tr><td><b>Stalen rijplaat, klein</b></td><td>5 x 1,5 m</td><td>Bouwterrein, inrit</td></tr>
+  <tr><td><b>Kunststof rijplaat</b></td><td>4 m en 3 x 1 m</td><td>Kwetsbare ondergrond, evenement</td></tr>
+  <tr><td><b>Draglineschot</b></td><td>Azobé-hardhout</td><td>Kraan, graafmachine</td></tr></tbody></table></div>
+</div></section>
+
+<section class="kh"><div class="w">
+  <p class="kick">Projecten</p>
+  <h2>Gelegd door onze chauffeurs</h2>
+  <div class="sect">
+    <div class="sc"><b>Infra</b><span>Windparken, hoogspanning, leidingwerk</span></div>
+    <div class="sc"><b>Bouw</b><span>Bouwplaatsen, inritten, platenbanen</span></div>
+    <div class="sc"><b>Loonbedrijven en agrarisch</b><span>Loonwerk en de agrarische sector</span></div>
+    <div class="sc"><b>Evenementen</b><span>Toegang en afscherming zonder schade</span></div>
+  </div>
+  <div class="proj">
+    <div class="pj" style="background-image:url(../beeld/blob-1.webp)"><em>Infra</em><div><b>Platenbaan voor een kabeltracé</b><span>Uitgelegd, verlegd en opgehaald</span></div></div>
+    <div class="pj" style="background-image:url(../beeld/draglineschotten.webp)"><em>Bouw</em><div><b>Schotten onder de kraan</b><span>Azobé-draglineschotten</span></div></div>
+    <div class="pj" style="background-image:url(../beeld/kunststof-rijplaten.webp)"><em>Evenement</em><div><b>Kunststof platen op het gazon</b><span>Toegang zonder schade</span></div></div>
+  </div>
+</div></section>
+
+<section><div class="w faq">
+  <div><p class="kick">Veelgestelde vragen</p><h2>Kort antwoord</h2><p class="lead">De vragen die we het vaakst krijgen. Staat uw vraag er niet tussen? De planning helpt u verder.</p></div>
+  <div>
+    <div class="q"><b>Hoe snel kunnen de rijplaten er zijn?</b><p>Meestal binnen 24 uur, afhankelijk van locatie en beschikbaarheid. Voor noodgevallen zijn wij 24/7 bereikbaar.</p></div>
+    <div class="q"><b>Leggen jullie de platen ook uit?</b><p>Ja. Wij brengen, leggen uit, verleggen tijdens het project en halen alles weer op.</p></div>
+    <div class="q"><b>Hoe lang kan ik rijplaten huren?</b><p>Er geldt geen vaste huurperiode. Kort of lang, het hangt af van uw project.</p></div>
+    <div class="q"><b>Wat kost rijplaten huren?</b><p>Dat hangt af van type, aantal, huurperiode en locatie. Transport rekenen we apart, naar afstand en inzet.</p></div>
+  </div>
+</div></section>
+
+<section class="ct"><div class="w">
+  <div>
+    <p class="kick" style="color:var(--lav)">Contact</p>
+    <h2>Eén aanspreekpunt, van aanvraag tot afvoer</h2>
+    <p>Of het nu om tien platen gaat of om een heel tracé: u spreekt steeds met dezelfde persoon.</p>
+    <div class="jack"><i>JB</i><div><b>Jack Bijker</b><br><span style="color:#D6DAF0;font-size:14px">Uw vaste aanspreekpunt bij Jovetra</span></div></div>
+  </div>
+  <div class="nap">
+    <div><b>Jovetra B.V.</b><br>Voorschoterweg 52A<br>2235 SH Valkenburg (ZH)</div>
+    <div><b>Telefoon</b> 071 532 08 77<br><b>E-mail</b> info@jovetra.nl</div>
+    <div><b>Open</b> ma t/m vr 06:30 tot 17:30<br><b>Spoed</b> 24/7 bereikbaar</div>
+    <a class="btn n" href="#" style="justify-content:center">Stuur uw aanvraag</a>
+  </div>
+</div></section>
+<footer><div class="w"><span>Jovetra B.V. · KvK 28060949 · Voorschoterweg 52A, Valkenburg</span><span>Rijplaten · Draglineschotten · Bouwhekken · Walsen en persen</span></div></footer>
+</body>
+</html>

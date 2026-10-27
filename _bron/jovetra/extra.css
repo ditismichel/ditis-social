@@ -1,0 +1,50 @@
+
+/* jovetra: ditis.website, accent oranje */
+.btn.p{background:var(--orange);color:var(--ink)}
+.hi img.jlogo{width:auto;height:44px;border-radius:8px;border:0;background:#fff;padding:2px}
+.qa1 b:before{background:var(--orange)}
+.blok li:before{background:var(--orange)}
+.L.o{background:var(--orange);color:var(--ink)}
+/* voorproef */
+.vp{display:grid;gap:26px;align-items:start}
+@media (min-width:900px){.vp{grid-template-columns:1fr 300px}}
+.vp>*{min-width:0}
+.browser{border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:0 24px 50px rgba(0,62,153,.12);overflow:hidden}
+.bbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#EEF3F8;border-bottom:1px solid var(--line)}
+.bbar i{width:11px;height:11px;border-radius:50%;background:#C9D6E5}
+.bbar span{margin-left:12px;font-size:13px;color:var(--muted);background:#fff;border-radius:8px;padding:3px 12px}
+.browser .scr{height:600px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.browser img,.phone2 img{width:100%;height:auto;display:block}
+.phone2{justify-self:center;width:300px;max-width:100%;background:var(--ink);border-radius:42px;padding:11px;box-shadow:0 24px 50px rgba(0,19,46,.25)}
+.phone2 .scr{height:600px;overflow-y:auto;border-radius:32px;background:#fff;-webkit-overflow-scrolling:touch}
+.hero .phone2 .scr{height:560px}
+.pcap{margin-top:12px;text-align:center;font-size:14px;color:#fff;font-weight:500}
+/* portfolio */
+.refs{display:grid;gap:16px}
+@media (min-width:760px){.refs{grid-template-columns:repeat(3,1fr)}}
+.ref{display:block;text-decoration:none;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:12px}
+.ref img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line)}
+.ref b{display:block;font:800 21px "Host Grotesk",sans-serif;color:var(--head);margin:12px 6px 2px}
+.ref span{display:block;font-size:15px;color:#2A3B57;margin:0 6px 6px}
+.ref:hover b{text-decoration:underline}
+/* ai-tabel */
+.ai td.c{text-align:center;white-space:nowrap}
+.ai th.c{text-align:center}
+.ja{display:inline-block;background:var(--green-bg);color:var(--green);font-weight:700;font-size:13px;border-radius:999px;padding:3px 10px}
+.bron{display:inline-block;background:var(--blue4);color:var(--head);font-weight:600;font-size:13px;border-radius:999px;padding:3px 10px}
+.nee{color:#9AA8BF;font-weight:700}
+.stat.ok b{color:var(--green)}
+.stat.bad b{color:var(--orange-ink)}
+.anouk{display:flex;gap:14px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:12px 16px;margin-bottom:12px}
+.anouk img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.anouk b{display:block;font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
+.anouk span{font-size:14.5px;color:#2A3B57}
+
+/* schetslabel */
+.schets{position:relative}
+.slabel{position:absolute;z-index:3;top:14px;right:-6px;background:var(--orange);color:var(--ink);font:800 14px "Host Grotesk",sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px 0 0 999px;box-shadow:0 6px 14px rgba(0,19,46,.2);pointer-events:none}
+.browser.schets{overflow:visible}
+.browser.schets .bbar{border-radius:18px 18px 0 0}
+.browser.schets .scr{border-radius:0 0 18px 18px}
+.phone2.schets .slabel{top:34px;right:-8px}
+.schets .scr img{filter:saturate(.75)}
