@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bouwt jovetra/index.html uit body.html + extra.css, met stijl, partnerblok en scripts van doublefonline.
+"""Bouwt <SLUG>/index.html uit body.html + extra.css, met stijl, partnerblok en scripts van doublefonline.
 
 Aanroep (vanuit de repo-root): python3 -I _bron/jovetra/build.py
 """
@@ -7,6 +7,8 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Unieke slug: niet te raden voor andere Foome-klanten
+SLUG = "jovetra-8hhtzv"
 src = open(os.path.join(ROOT, "doublefonline/index.html")).read()
 here = os.path.join(ROOT, "_bron/jovetra")
 body = open(os.path.join(here, "body.html")).read()
@@ -23,8 +25,8 @@ head = f"""<!doctype html>
 <meta name="description" content="Wat ditisABC zag op jovetra.nl: snelheid, Google en AI, en hoe een nieuwe site eruit kan zien.">
 <meta property="og:title" content="Een snelle site voor Jovetra | ditisABC">
 <meta property="og:description" content="Ons antwoord op de vraag van Ruud: hoe wordt Jovetra gevonden in Google en AI?">
-<meta property="og:image" content="https://www.ditis.website/jovetra/media/og.jpg">
-<meta property="og:url" content="https://www.ditis.website/jovetra/">
+<meta property="og:image" content="https://www.ditis.website/{SLUG}/media/og.jpg">
+<meta property="og:url" content="https://www.ditis.website/{SLUG}/">
 <style>{css}{extra}</style>
 </head>
 """
@@ -44,5 +46,5 @@ track = track.replace("PAGE='doublefonline'", "PAGE='jovetra'")
 out = head + body.replace("@@PARTNERS@@", partners).replace("@@GCAL@@", gcal).replace("@@TRACK@@", track)
 assert "@@" not in out
 assert "—" not in out, "em-dash gevonden"
-open(os.path.join(ROOT, "jovetra/index.html"), "w").write(out)
+open(os.path.join(ROOT, SLUG, "index.html"), "w").write(out)
 print("ok", len(out))
