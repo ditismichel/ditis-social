@@ -50,3 +50,6 @@
 .schets .scr img{filter:saturate(.75)}
 
 .L.g{background:var(--green);color:#fff}
+
+.ext{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.ext:hover{color:var(--orange)}
