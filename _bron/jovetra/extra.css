@@ -48,3 +48,5 @@
 .browser.schets .scr{border-radius:0 0 18px 18px}
 .phone2.schets .slabel{top:34px;right:-8px}
 .schets .scr img{filter:saturate(.75)}
+
+.L.g{background:var(--green);color:#fff}
