@@ -378,6 +378,11 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 /* abi */
 @media (min-width:760px){.refs{grid-template-columns:repeat(2,1fr)}}
 .L.t{background:var(--blue);color:#fff}
+
+/* partnerblok: zes badges, twee rijen van drie */
+@media (min-width:761px){.badge:nth-child(n+4){grid-column:span 2}}
+.badge.bakker img{max-height:56px}
+@media (max-width:760px){.badge.bakker{grid-column:1 / -1}.badge.bakker img{max-height:44px}}
 </style>
 </head>
 <body>
@@ -625,6 +630,10 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="badge">
       <div class="li-mark"><img src="media/badges/wordpress.svg" alt="" width="44" height="44" loading="lazy"><b>WordPress</b></div>
       <small>Websites en webshops</small>
+    </div>
+    <div class="badge bakker">
+      <img src="media/badges/bakker-studios.svg" alt="Bakker Studios" width="659" height="182" loading="lazy">
+      <small>Video en fotografie</small>
     </div>
   </div>
 

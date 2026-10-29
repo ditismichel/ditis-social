@@ -37,6 +37,15 @@ kl = re.findall(r'    <a class="klant".*?</a>\n', partners, re.S)
 order = ["offgridpowerstation", "culemborg", "de-centrale", "deruijtermeubel", "candyfestival", "miffytown", "glansz", "thebastard", "karinbloemenstichting"]
 kl_sorted = sorted(kl, key=lambda k: next(i for i, o in enumerate(order) if o in k))
 partners = partners.replace("".join(kl), "".join(kl_sorted))
+# partner voor ABI: Bakker Studios (video en fotografie)
+bakker = """    <div class="badge bakker">
+      <img src="media/badges/bakker-studios.svg" alt="Bakker Studios" width="659" height="182" loading="lazy">
+      <small>Video en fotografie</small>
+    </div>
+"""
+wp = re.search(r'<b>WordPress</b>.*?</small>\n    </div>\n', partners, re.S)
+partners = partners[:wp.end()] + bakker + partners[wp.end():]
+assert "bakker-studios.svg" in partners
 
 gcal = re.search(r"(/\* Afspraak plannen.*?\}\)\(\);)", src, re.S).group(1)
 gcal = gcal.replace("show('bel')", "show('hil')")
