@@ -45,3 +45,15 @@
 .fmt b{display:block;font:800 19px "Host Grotesk",sans-serif;color:var(--head);margin-bottom:6px}
 .fmt span{font-size:15px;color:#2A3B57}
 .fmt em{display:block;font-style:normal;font-size:13px;color:var(--green);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+
+/* teamkaart: het team bij naam en foto */
+.teamkaart{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin-bottom:12px}
+.alt .teamkaart{background:var(--bg)}
+.teamkaart>b{display:block;font:800 20px "Host Grotesk",sans-serif;color:#0B3D91;margin-bottom:6px}
+.teamkaart>span{display:block;color:#2A3B57;font-size:16px}
+.mensen{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:6px 0 14px}
+.mens{text-align:center}
+.mens img{display:block;width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 6px}
+.mens b{display:block;font-size:15px;color:var(--ink)}
+.mens i{display:block;font-style:normal;font-size:13px;color:var(--muted);line-height:1.3}
+@media(max-width:400px){.mensen{grid-template-columns:repeat(2,1fr)}}
