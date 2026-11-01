@@ -364,6 +364,22 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 @media (min-width:860px){.duo{grid-template-columns:1.1fr .9fr}}
 .duo img{width:100%;border-radius:20px;border:1px solid var(--line)}
 .duo img{height:auto;object-fit:cover}
+/* wie doet wat */
+.legenda{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 8px}
+.rgroep{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:26px 0 10px}
+.rollen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rk{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.rk h4{font-size:18px;margin:8px 0 4px;letter-spacing:-.005em}
+.rk p{color:#2A3B57;font-size:15px}
+.wie{display:inline-block;font-size:12.5px;font-weight:600;line-height:1;padding:6px 11px;border-radius:99px;white-space:nowrap}
+.wie.abc{background:var(--blue4);color:#0B3D91}
+.wie.opt{background:#E3F0DE;color:#2F5A24}
+.wie.bouw{background:var(--orange-bg);color:var(--orange-ink)}
+.wie.samen{background:var(--yellow-bg);color:var(--yellow-ink)}
+.wie.open{background:var(--surface);color:var(--muted);box-shadow:inset 0 0 0 1px var(--muted)}
+.rollen.vier{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.rollen,.rollen.vier{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.rollen,.rollen.vier{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -373,6 +389,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <a href="#werk" style="--c:var(--yellow)"><i></i>Wat we deden</a>
 <a href="#google" style="--c:var(--blue)"><i></i>Google</a>
 <a href="#site" style="--c:var(--orange)"><i></i>Nieuwe site</a>
+<a href="#rollen" style="--c:var(--blue)"><i></i>Wie doet wat</a>
 <a href="#werving" style="--c:var(--green-base)"><i></i>Werving</a>
 <a href="#voorstel" style="--c:var(--yellow)"><i></i>Ons voorstel</a>
 <a href="#aanpak" style="--c:var(--yellow)"><i></i>Aanpak</a>
@@ -474,7 +491,52 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="werving">
+<section class="alt" id="rollen">
+  <div class="wrap">
+    <span class="kick" style="--c:var(--blue)">dit is <i></i> wie doet wat</span>
+    <h2>Alles van online op één rij</h2>
+    <p class="intro">Hosting, website, onderhoud, vindbaarheid, social: online bestaat uit veel onderdelen. Met een nieuwe site erbij is het goed om scherp te hebben wie wat oppakt, ook voor de bouwer. Dit is ons voorstel; in het kennismakingsgesprek maken we het samen af.</p>
+    <div class="legenda"><span class="wie abc">ditisABC</span><span class="wie opt">Optinet</span><span class="wie bouw">Bouwer nieuwe site</span><span class="wie samen">Samen</span><span class="wie open">Af te stemmen</span></div>
+
+    <h3 class="rgroep">De basis</h3>
+    <div class="rollen vier">
+      <div class="rk"><span class="wie opt">Optinet</span><h4>Domein en DNS</h4><p>De domeinnaam, DNS en het beveiligingscertificaat. Op naam van Optinet; aanpassingen bij de livegang doen we in overleg.</p></div>
+      <div class="rk"><span class="wie opt">Optinet</span><h4>E-mail</h4><p>Mailboxen en verzendinstellingen blijven waar ze nu zijn. Wij zorgen dat formulieren en de nieuwsbrief goed aankomen.</p></div>
+      <div class="rk"><span class="wie open">Af te stemmen</span><h4>Hosting</h4><p>Server, back-ups en beveiliging. Nu bij TransIP. Voor de nieuwe site kiezen we samen: bij de bouwer of bij ditisABC.</p></div>
+      <div class="rk"><span class="wie opt">Optinet</span><h4>Accounts en toegang</h4><p>Google, LinkedIn en de hosting staan op naam van Optinet. Wij krijgen toegang, jullie houden de sleutels.</p></div>
+    </div>
+
+    <h3 class="rgroep">De website</h3>
+    <div class="rollen">
+      <div class="rk"><span class="wie bouw">Bouwer nieuwe site</span><h4>Website bouwen</h4><p>Ontwerp, techniek en livegang. Wij leveren de structuur per zoekvraag, de teksten en de lijst met pagina's die mee moeten.</p></div>
+      <div class="rk"><span class="wie open">Af te stemmen</span><h4>Technisch onderhoud</h4><p>Updates van WordPress en plugins, licenties zoals de cookiebanner, snelheid en beveiliging. Nu bij ons; na de livegang bij de partij die host.</p></div>
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>Inhoudelijk beheer</h4><p>Pagina's bijwerken, foto's, nieuwe collega's, vacatures plaatsen en weghalen. Een mail of appje is genoeg.</p></div>
+    </div>
+
+    <h3 class="rgroep">Gevonden worden</h3>
+    <div class="rollen">
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>SEO</h4><p>Structuur per zoekvraag, teksten, technische vindbaarheid en Search Console. Ook tijdens en na de verhuizing naar de nieuwe site.</p></div>
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>GEO, gevonden in AI</h4><p>Genoemd worden in ChatGPT, Perplexity en de AI-antwoorden van Google, met een eigen meting per maand.</p></div>
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>SEA</h4><p>Google Ads op beheer en "as a service" waar het past, gemeten op aanvragen. Het advertentiebudget gaat rechtstreeks naar Google.</p></div>
+    </div>
+
+    <h3 class="rgroep">Content en werving</h3>
+    <div class="rollen">
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>Social</h4><p>LinkedIn: de contentkalender, drie bijdragen per week, de nieuwsbrief en het bijhouden van reacties.</p></div>
+      <div class="rk"><span class="wie samen">Samen</span><h4>Content</h4><p>Blogs, cases, interviews, foto en video. Wij schrijven en maken; jullie leveren de kennis, de projecten en de mensen.</p></div>
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>Werving en employer branding</h4><p>Vacatureteksten met salarisindicatie, portretten van technici en campagnes die op sollicitaties sturen.</p></div>
+    </div>
+
+    <h3 class="rgroep">Sturen</h3>
+    <div class="rollen">
+      <div class="rk"><span class="wie abc">ditisABC</span><h4>Meten en rapporteren</h4><p>Analytics, Tag Manager en Search Console ingericht, en elke maand een rapport met wat het opleverde.</p></div>
+      <div class="rk"><span class="wie samen">Samen</span><h4>Plannen en afstemmen</h4><p>Elke twee weken overleg: wat er speelt bij Optinet, wat we maken en wat er live gaat.</p></div>
+      <div class="rk"><span class="wie opt">Optinet</span><h4>Input en akkoord</h4><p>Prijzen, responstijden, cases en foto's van projecten, en een akkoord op wat er live gaat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="werving">
   <div class="wrap">
     <span class="kick" style="--c:var(--green-base)">dit is <i></i> werving</span>
     <h2>Technici vind je met verhalen van technici</h2>
@@ -493,7 +555,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section id="voorstel">
+<section class="alt" id="voorstel">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> ons voorstel</span>
     <h2>Eerst beheer op de kaart, dan zorg en hospitality</h2>
@@ -536,7 +598,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="aanpak">
+<section id="aanpak">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> hoe we het aanpakken</span>
     <h2>Maand voor maand, met een vast ritme</h2>
@@ -558,7 +620,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section id="ditisabc">
+<section class="alt" id="ditisabc">
   <div class="wrap">
     <span class="kick" style="--c:var(--blue)">dit is <i></i> ditisABC</span>
     <h2>Waarom wij</h2>
