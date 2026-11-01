@@ -59,3 +59,7 @@
 .rollen.vier{grid-template-columns:repeat(4,1fr)}
 @media(max-width:900px){.rollen,.rollen.vier{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.rollen,.rollen.vier{grid-template-columns:1fr}}
+/* teamblok */
+.anouk{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin-bottom:12px}
+.anouk b{display:block;font-size:20px;color:var(--blue-ink,#0B3D91);margin-bottom:6px}
+.anouk span{display:block;color:#2A3B57;font-size:16px}
