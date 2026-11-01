@@ -364,22 +364,6 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 @media (min-width:860px){.duo{grid-template-columns:1.1fr .9fr}}
 .duo img{width:100%;border-radius:20px;border:1px solid var(--line)}
 .duo img{height:auto;object-fit:cover}
-/* wie doet wat */
-.legenda{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 8px}
-.rgroep{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:26px 0 10px}
-.rollen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.rk{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
-.rk h4{font-size:18px;margin:8px 0 4px;letter-spacing:-.005em}
-.rk p{color:#2A3B57;font-size:15px}
-.wie{display:inline-block;font-size:12.5px;font-weight:600;line-height:1;padding:6px 11px;border-radius:99px;white-space:nowrap}
-.wie.abc{background:var(--blue4);color:#0B3D91}
-.wie.opt{background:#E3F0DE;color:#2F5A24}
-.wie.bouw{background:var(--orange-bg);color:var(--orange-ink)}
-.wie.samen{background:var(--yellow-bg);color:var(--yellow-ink)}
-.wie.open{background:var(--surface);color:var(--muted);box-shadow:inset 0 0 0 1px var(--muted)}
-.rollen.vier{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.rollen,.rollen.vier{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.rollen,.rollen.vier{grid-template-columns:1fr}}
 /* teamblok */
 .anouk{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin-bottom:12px}
 .anouk b{display:block;font-size:20px;color:var(--blue-ink,#0B3D91);margin-bottom:6px}
@@ -391,8 +375,6 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 .anouk .mens b{font-size:15px;margin:0;color:var(--ink)}
 .mens i{display:block;font-style:normal;font-size:13px;color:var(--muted);line-height:1.3}
 @media(max-width:400px){.mensen{grid-template-columns:repeat(3,1fr)}}
-.rnoot{color:var(--muted);font-size:15px;margin:-4px 0 12px}
-.rk.open{background:transparent;border:1.5px dashed #9AA9C2}
 </style>
 </head>
 <body>
@@ -402,7 +384,6 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <a href="#werk" style="--c:var(--yellow)"><i></i>Wat we deden</a>
 <a href="#google" style="--c:var(--blue)"><i></i>Google</a>
 <a href="#site" style="--c:var(--orange)"><i></i>Nieuwe site</a>
-<a href="#rollen" style="--c:var(--blue)"><i></i>Wie doet wat</a>
 <a href="#werving" style="--c:var(--green-base)"><i></i>Werving</a>
 <a href="#voorstel" style="--c:var(--yellow)"><i></i>Ons voorstel</a>
 <a href="#aanpak" style="--c:var(--yellow)"><i></i>Aanpak</a>
@@ -502,47 +483,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="rollen">
-  <div class="wrap">
-    <span class="kick" style="--c:var(--blue)">dit is <i></i> wie doet wat</span>
-    <h2>Alles van online op één rij</h2>
-    <p class="intro">Wat doen wij, wat doen anderen, en wat ligt er nog open? Zo zien jullie in één oogopslag wat er in de marketingmix nog ontbreekt.</p>
-    <div class="legenda"><span class="wie abc">Doen wij</span><span class="wie opt">Doen anderen</span><span class="wie open">Nog open</span></div>
-
-    <h3 class="rgroep">Dit doen wij</h3>
-    <div class="rollen vier">
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Social</h4><p>LinkedIn: de contentkalender, de bijdragen, de nieuwsbrief en het bijhouden van reacties.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Content</h4><p>Blogs, interviews, foto en video. Jullie leveren de kennis en de mensen, wij maken het.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>SEO</h4><p>Structuur per zoekvraag, teksten, Search Console en de technische vindbaarheid.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Werving</h4><p>De vacaturepagina's, vacaturegegevens voor Google for Jobs en portretten van collega's.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Inhoudelijk beheer site</h4><p>Pagina's, foto's, nieuwe collega's en vacatures. Een mail of appje is genoeg.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Technisch onderhoud</h4><p>Updates van WordPress en plugins, licenties zoals de cookiebanner, snelheid en beveiliging van de huidige site.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Meten en rapporteren</h4><p>Analytics, Tag Manager, Search Console en elke maand een rapport met wat het opleverde.</p></div>
-      <div class="rk"><span class="wie abc">ditisABC</span><h4>Plannen en afstemmen</h4><p>Elke twee weken overleg met jullie: wat er speelt, wat we maken en wat er live gaat.</p></div>
-    </div>
-
-    <h3 class="rgroep">Dit doen anderen</h3>
-    <div class="rollen vier">
-      <div class="rk"><span class="wie opt">Optinet</span><h4>Domein, DNS en e-mail</h4><p>De domeinnaam en de mailboxen. Wij zorgen dat formulieren en nieuwsbrieven goed aankomen.</p></div>
-      <div class="rk"><span class="wie opt">Optinet</span><h4>Accounts, input en akkoord</h4><p>Google, LinkedIn en de hosting op naam van Optinet, plus prijzen, cases en akkoord op wat live gaat.</p></div>
-      <div class="rk"><span class="wie opt">TransIP</span><h4>Hosting huidige site</h4><p>De server van de huidige site. Voor de nieuwe site kiezen we samen waar die komt.</p></div>
-      <div class="rk"><span class="wie opt">Nieuwe bouwer</span><h4>Nieuwe website</h4><p>Ontwerp, techniek en livegang. Wij leveren de lijst met wat mee moet en kijken mee.</p></div>
-    </div>
-
-    <h3 class="rgroep">Nog open in de mix</h3>
-    <p class="rnoot">Voor zover wij zien, pakt nog niemand dit op. Allemaal onderdelen die wij kunnen oppakken.</p>
-    <div class="rollen">
-      <div class="rk open"><span class="wie open">Open</span><h4>Linkbuilding</h4><p>Verwijzingen van vakbladen, partners en brancheorganisaties. Dat geeft Google vertrouwen, juist op beheer en "as a service".</p></div>
-      <div class="rk open"><span class="wie open">Open</span><h4>Google Ads</h4><p>Direct zichtbaar op beheer en uitbesteden, gemeten op aanvragen. Het advertentiebudget gaat rechtstreeks naar Google.</p></div>
-      <div class="rk open"><span class="wie open">Open</span><h4>Gevonden in AI</h4><p>Genoemd worden in ChatGPT, Perplexity en de AI-antwoorden van Google. Nu nog niet gemeten.</p></div>
-      <div class="rk open"><span class="wie open">Open</span><h4>Google Bedrijfsprofiel en reviews</h4><p>Reviews van klanten in zorg en hospitality: vertrouwen voor nieuwe klanten en beter zichtbaar in Google.</p></div>
-      <div class="rk open"><span class="wie open">Open</span><h4>LinkedIn-advertenties</h4><p>Gericht op IT-managers en facilitair managers in zorg en hospitality, met de beste posts als basis.</p></div>
-      <div class="rk open"><span class="wie open">Open</span><h4>Hosting en onderhoud nieuwe site</h4><p>Wie de nieuwe site host en bijhoudt, ligt nog niet vast. Dat stemmen we samen af.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="werving">
+<section class="alt" id="werving">
   <div class="wrap">
     <span class="kick" style="--c:var(--green-base)">dit is <i></i> werving</span>
     <h2>Technici vind je met verhalen van technici</h2>
@@ -561,7 +502,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="voorstel">
+<section id="voorstel">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> ons voorstel</span>
     <h2>Eerst beheer op de kaart, dan zorg en hospitality</h2>
@@ -604,7 +545,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section id="aanpak">
+<section class="alt" id="aanpak">
   <div class="wrap">
     <span class="kick" style="--c:var(--yellow)">dit is <i></i> hoe we het aanpakken</span>
     <h2>Maand voor maand, met een vast ritme</h2>
@@ -626,7 +567,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
   </div>
 </section>
 
-<section class="alt" id="ditisabc">
+<section id="ditisabc">
   <div class="wrap">
     <span class="kick" style="--c:var(--blue)">dit is <i></i> ditisABC</span>
     <h2>Waarom wij</h2>
