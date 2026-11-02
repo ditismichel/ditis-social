@@ -22,7 +22,7 @@ head = f"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Optinet en ditisABC: zo gaan we verder | ditisABC</title>
-<meta name="description" content="Wat we voor Optinet deden, waar jullie staan in Google, en hoe ditisABC het Q4-plan voortzet vanaf 1 november.">
+<meta name="description" content="Wat we voor Optinet deden, waar jullie staan in Google, en hoe ditisABC het Q4-plan voortzet.">
 <meta property="og:title" content="Optinet en ditisABC: zo gaan we verder | ditisABC">
 <meta property="og:description" content="De vraag bestaat al. Wat we deden, waar jullie staan en hoe we verdergaan.">
 <meta property="og:image" content="https://ditis.marketing/{SLUG}/media/og.jpg">

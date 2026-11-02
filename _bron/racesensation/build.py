@@ -22,7 +22,7 @@ head = f"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Race Sensation en ditisABC: zo gaan we verder | ditisABC</title>
-<meta name="description" content="Wat we voor Race Sensation deden, waar de site nu staat in Google en AI, en hoe ditisABC verdergaat vanaf 1 november.">
+<meta name="description" content="Wat we voor Race Sensation deden, waar de site nu staat in Google en AI, en hoe ditisABC verdergaat.">
 <meta property="og:title" content="Race Sensation en ditisABC: zo gaan we verder | ditisABC">
 <meta property="og:description" content="Meer racedagen via je eigen site. Wat we deden, waar je staat en wat we voorstellen.">
 <meta property="og:image" content="https://ditis.marketing/{SLUG}/media/og.jpg">

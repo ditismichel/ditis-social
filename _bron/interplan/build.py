@@ -22,7 +22,7 @@ head = f"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>Interplan en ditisABC: zo gaan we verder | ditisABC</title>
-<meta name="description" content="Wat er loopt op LinkedIn voor Interplan Bouwsupport en Interplan Projecten, en hoe ditisABC verdergaat vanaf 1 november.">
+<meta name="description" content="Wat er loopt op LinkedIn voor Interplan Bouwsupport en Interplan Projecten, en hoe ditisABC verdergaat.">
 <meta property="og:title" content="Interplan en ditisABC: zo gaan we verder | ditisABC">
 <meta property="og:description" content="Jullie mensen zijn jullie beste posts. Wat er loopt, wat werkt en wat we voorstellen.">
 <meta property="og:image" content="https://www.ditis.social/{SLUG}/media/og.jpg">
