@@ -237,7 +237,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <div class="sc"><b>40</b><span>willekeurige pagina's bekeken</span></div>
     <div class="sc goed"><b>824 <small>/ 824</small></b><span>afbeeldingen met een alt-tekst</span></div>
     <div class="sc let"><b>29 <small>/ 40</small></b><span>pagina's zonder meta description</span></div>
-    <div class="sc let"><b>0,42</b><span>verspringing productpagina op mobiel, Google wil 0,1 of lager</span></div>
+    <div class="sc let"><b>0,42</b><span>verspringing op een productpagina op mobiel, Google wil 0,1 of lager</span></div>
     <p class="note">Gemeten op 20 oktober 2026.</p>
   </aside>
 </div></div></div>
@@ -245,21 +245,21 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
 <section class="alt" id="eerst">
   <div class="wrap">
     <span class="kick" style="--c:var(--orange)">dit is <i></i> eerst dit</span>
-    <h2>Op mobiel verspringt de productpagina tijdens het laden</h2>
-    <p class="intro">Terwijl een productpagina laadt, schuiven de productnaam, de prijs en de knop In winkelmand een flink stuk omlaag. Google meet dat als Cumulative Layout Shift, een van de drie Core Web Vitals waarmee het de gebruikservaring beoordeelt. Wie net op de knop wil tikken, tikt ernaast.</p>
+    <h2>Op mobiel verspringt een deel van de productpagina's tijdens het laden</h2>
+    <p class="intro">Op een deel van de productpagina's schuiven de productnaam, de prijs en de knop In winkelmand tijdens het laden een flink stuk omlaag. Google meet dat als Cumulative Layout Shift, een van de drie Core Web Vitals waarmee het de gebruikservaring beoordeelt. Wie net op de knop wil tikken, tikt ernaast.</p>
     <div class="bug">
       <div class="meet">
         <div class="kop">Verspringing op mobiel (Cumulative Layout Shift)</div>
         <div class="r"><span>Norm van Google</span><b class="goed">0,1 of lager</b></div>
         <div class="r"><span>Rosenthal TAC dinerbord 28 cm</span><b class="fout">0,42</b></div>
-        <div class="r"><span>Iittala Teema schaaltje 15 cm</span><b class="fout">0,38</b></div>
+        <div class="r"><span>Iittala Teema schaaltje 15 cm</span><b class="goed">0,03</b></div>
         <div class="r"><span>Homepage</span><b class="goed">0,03</b></div>
       </div>
       <div class="uitleg">
         <h3>Waar het zit</h3>
         <p>Het blok met naam, prijs en bestelknop schuift omlaag zodra de productfoto geladen is. De foto's hebben geen vaste breedte en hoogte in de code, dus de browser weet vooraf niet hoeveel ruimte hij moet vrijhouden.</p>
         <p><b>Oplossing:</b> vaste afmetingen voor de productfoto. Dan staat de pagina meteen stil.</p>
-        <p class="note">Zelf na te gaan op pagespeed.web.dev met een productpagina, tabblad Mobiel.</p>
+        <p class="note">Gemeten op 10 november 2026. De uitkomst verschilt per productpagina en per meting. Zelf na te gaan op pagespeed.web.dev met een productpagina, tabblad Mobiel.</p>
       </div>
     </div>
 
@@ -269,7 +269,7 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
       <div class="li"><div class="L t">B</div><div><h3>Productlinks in categorieën lopen via een omweg</h3><p>Een categorie linkt bijvoorbeeld naar <code>/serviezen/arabia/arabia-moomin/beker-love</code>, en dat adres stuurt met een 301 door naar <code>/arabia/beker-love</code>. Google volgt dat, maar zet bij duizenden producten steeds een extra stap. Direct naar het eindadres linken maakt het Google makkelijker.</p></div></div>
       <div class="li"><div class="L t">C</div><div><h3>Verzendgegevens en retourbeleid ontbreken voor Google</h3><p>De productgegevens voor Google staan er netjes in: prijs, voorraad, merk en artikelnummer. Bij alle 30 bekeken producten ontbreken de verzendgegevens en het retourbeleid. Google gebruikt die om bij een product in de zoekresultaten te tonen hoe verzending en retour geregeld zijn. Bij 7 van de 30 ontbreekt ook de EAN-code.</p></div></div>
       <div class="li"><div class="L t">D</div><div><h3>Hetzelfde adres met en zonder hoofdletter</h3><p><code>/Merken</code> en <code>/merken</code> tonen allebei de merkenpagina, elk met een canonical naar zichzelf. Voor Google zijn dat twee pagina's met dezelfde inhoud. Een doorverwijzing naar de schrijfwijze met kleine letters lost dat op. De merkenpagina heeft bovendien geen H1-kop.</p></div></div>
-      <div class="li"><div class="L t">E</div><div><h3>Op mobiel kan de pagina sneller in beeld</h3><p>De grootste afbeelding staat op mobiel na 3,3 tot 4,5 seconden in beeld; Google noemt 2,5 seconden goed. Op de categoriepagina Serviezen laadt die afbeelding bewust later (lazy loading), terwijl hij als eerste in beeld komt. De server zelf reageert snel, rond 0,25 seconde, dus de winst zit in de opbouw van de pagina.</p></div></div>
+      <div class="li"><div class="L t">E</div><div><h3>Op mobiel kan de pagina sneller in beeld</h3><p>De grootste afbeelding staat op mobiel na 1,9 tot 4,4 seconden in beeld, afhankelijk van de pagina; Google noemt 2,5 seconden goed. Op de categoriepagina Serviezen laadt die afbeelding bewust later (lazy loading), terwijl hij als eerste in beeld komt. De server zelf reageert snel, rond 0,25 seconde, dus de winst zit in de opbouw van de pagina.</p></div></div>
     </div>
     <p class="terzijde"><b>Terzijde, buiten SEO:</b> de bel- en maillink bovenaan de site staan als <code>callto: 071 - 514 08 92</code> en <code>mailto: info@bestekenpannen.nl</code>, met spaties. Op veel telefoons opent een tik daarop niets. Met <code>tel:+31715140892</code> en een mailto zonder spatie werkt het wel.</p>
   </div>
@@ -348,22 +348,22 @@ footer .claim{font:800 18px "Host Grotesk",sans-serif;color:var(--head)}
     <p class="intro">Wie een Wedgwood-servies of een pan van Demeyere zoekt, stelt die vraag steeds vaker aan ChatGPT, Gemini of Google AI Overview. Het antwoord is dan geen lijst met links, maar een handvol namen. Daar hoort bestekenpannen.nl tussen te staan. De technische punten hierboven helpen daar ook bij: AI-modellen lezen dezelfde productgegevens als Google.</p>
 
     <h3 style="font-size:24px;margin:8px 0 12px">Wat we voor bestekenpannen.nl meten</h3>
-    <p style="color:#2A3B57;max-width:64ch;margin-bottom:12px">Sinds 25 oktober leggen we deze vragen elke dag voor aan de grote AI-diensten, en kijken we of jullie genoemd worden.</p>
+    <p style="color:#2A3B57;max-width:64ch;margin-bottom:12px">Sinds 25 oktober leggen we deze vragen regelmatig voor aan de grote AI-diensten, en kijken we of jullie genoemd worden.</p>
     <div class="vragen" id="vragen">
-      <div class="vr"><q>Ik ga trouwen en wil een mooi servies cadeau geven, waar vind ik Wedgwood of Rosenthal?</q><span class="uit nee">niet genoemd</span></div>
+      <div class="vr"><q>Ik ga trouwen en wil een mooi servies cadeau geven, waar vind ik Wedgwood of Rosenthal?</q><span class="uit">zelden genoemd</span></div>
       <div class="vr"><q>Ik zoek een goede pan van Demeyere, welke webshop verkoopt die in Nederland?</q><span class="uit nee">niet genoemd</span></div>
       <div class="vr"><q>Waar kan ik een compleet servies van Villeroy en Boch kopen in Nederland?</q><span class="uit nee">niet genoemd</span></div>
       <div class="vr"><q>Wat is een goede plek om Iittala servies online te kopen met persoonlijk advies?</q><span class="uit nee">niet genoemd</span></div>
-      <div class="vr"><q>Betrouwbare webshop voor bestek en pannen van topmerken</q><span class="uit nee">niet genoemd</span></div>
-      <div class="vr"><q>Ik zoek een alternatief voor de Bijenkorf voor servies en pannen, liever een specialist</q><span class="uit nee">niet genoemd</span></div>
-      <div class="vr"><q>Welke online winkel heeft een breed aanbod aan glaswerk en bestek van bekende merken?</q><span class="uit ja">genoemd, 40%</span></div>
+      <div class="vr"><q>Betrouwbare webshop voor bestek en pannen van topmerken</q><span class="uit">zelden genoemd</span></div>
+      <div class="vr"><q>Ik zoek een alternatief voor de Bijenkorf voor servies en pannen, liever een specialist</q><span class="uit">zelden genoemd</span></div>
+      <div class="vr"><q>Welke online winkel heeft een breed aanbod aan glaswerk en bestek van bekende merken?</q><span class="uit">zelden genoemd</span></div>
     </div>
     <div class="wel">
       <b>Wie er wél genoemd worden</b>
-      <div class="namen"><span>Cookinglife</span><span>Servies.nl</span><span>Anna Servies</span><span>Kookwinkel Oldenhof</span><span>De Bijenkorf</span></div>
-      <p>Bij zes van de zeven vragen staat bestekenpannen.nl nergens in het antwoord, terwijl jullie precies deze merken verkopen, met 150 jaar vakkennis en een 9,8 uit 3.695 klantbeoordelingen. Dat verhaal kent AI nog niet.</p>
+      <div class="namen"><span>Cookinglife</span><span>De Bijenkorf</span><span>Servies.nl</span><span>Dille &amp; Kamille</span></div>
+      <p>Bij de vragen naar Demeyere, Villeroy en Boch en Iittala staat bestekenpannen.nl in geen enkel antwoord, en bij de andere vier maar een enkele keer, terwijl jullie precies deze merken verkopen, met 150 jaar vakkennis en een 9,8 uit 3.695 klantbeoordelingen. Dat verhaal kent AI nog niet.</p>
     </div>
-    <p class="note">Eerste meting, 25 oktober 2026, in ChatGPT, Gemini en Google AI Overview. Een AI-antwoord verschilt per keer; het beeld wordt scherper naarmate we langer meten.</p>
+    <p class="note">Meting van 25 oktober tot en met 10 november 2026, in ChatGPT, Gemini en Google AI Overview. Een AI-antwoord verschilt per keer, daarom stellen we elke vraag meerdere keren.</p>
 
     <div class="bewijs">
       <h3>Zo staan we er zelf voor</h3>
