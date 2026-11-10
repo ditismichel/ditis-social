@@ -15,7 +15,7 @@ Zonder overlay lijkt een video een plaatje. Gebruik een poster zonder ondertitel
   eigen code (bijvoorbeeld hoofdstukknoppen) verbergt de overlay.
 - Duur in het label exact uit het bestand halen (ffprobe), niet afronden naar een mooi getal.
 
-Voorbeelden in gebruik: kadoburo, ditisdressing, chelsea.
+Voorbeeld in gebruik: veno.
 
 HTML per video:
 

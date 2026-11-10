@@ -1,7 +1,12 @@
 {
   "trailingSlash": true,
   "redirects": [
-    { "source": "/", "destination": "https://www.ditisabc.nl", "permanent": false }
+    { "source": "/", "destination": "https://www.ditisabc.nl", "permanent": false },
+    { "source": "/chelsea/:path*", "destination": "https://ditisabc.nl", "permanent": false },
+    { "source": "/ditisdressing/:path*", "destination": "https://ditisabc.nl", "permanent": false },
+    { "source": "/kadoburo/:path*", "destination": "https://ditisabc.nl", "permanent": false },
+    { "source": "/bekendvermogen/:path*", "destination": "https://ditisabc.nl", "permanent": false },
+    { "source": "/doublefonline/:path*", "destination": "https://ditisabc.nl", "permanent": false }
   ],
   "headers": [
     { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
