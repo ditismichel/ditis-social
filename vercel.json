@@ -2,7 +2,7 @@
   "trailingSlash": true,
   "redirects": [
     { "source": "/", "destination": "https://www.ditisabc.nl", "permanent": false },
-    { "source": "/:slug(chelsea|ditisdressing|kadoburo|bekendvermogen|doublefonline)/(.*)", "destination": "https://ditisabc.nl", "permanent": false }
+    { "source": "/:slug(chelsea|ditisdressing|kadoburo|bekendvermogen|doublefonline|foome)/(.*)", "destination": "https://ditisabc.nl", "permanent": false }
   ],
   "headers": [
     { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
