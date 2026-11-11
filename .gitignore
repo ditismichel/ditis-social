@@ -3,3 +3,6 @@
 _bron/*/out/
 _bron/*/audio/*.wav
 _bron/*/video/still-*.jpg
+
+# Onversleutelde bron van pagina's met wachtwoord: nooit in de publieke repo
+_prive/
